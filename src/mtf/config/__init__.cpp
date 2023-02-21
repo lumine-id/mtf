@@ -1425,7 +1425,7 @@ static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_2_7[] = "2.7";
+static const char __pyx_k_2_8[] = "2.8";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
@@ -1846,7 +1846,7 @@ static PyObject *__pyx_kp_u_0_2;
 static PyObject *__pyx_kp_u_1;
 static PyObject *__pyx_kp_u_1217981644879628;
 static PyObject *__pyx_kp_u_1_2;
-static PyObject *__pyx_kp_u_2_7;
+static PyObject *__pyx_kp_u_2_8;
 static PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
 static PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
 static PyObject *__pyx_n_s_AUTH_DIR;
@@ -3104,7 +3104,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
   {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
   {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-  {&__pyx_kp_u_2_7, __pyx_k_2_7, sizeof(__pyx_k_2_7), 0, 1, 0, 0},
+  {&__pyx_kp_u_2_8, __pyx_k_2_8, sizeof(__pyx_k_2_8), 0, 1, 0, 0},
   {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
   {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
   {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -3962,7 +3962,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_1);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_2_7) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_2_8) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
