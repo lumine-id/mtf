@@ -1,0 +1,6 @@
+setuptools
+requests
+bs4
+cython
+GitPython
+rich
