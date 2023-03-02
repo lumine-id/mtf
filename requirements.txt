@@ -4,3 +4,5 @@ bs4
 cython
 GitPython
 rich
+pycryptodome
+pyancl

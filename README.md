@@ -27,7 +27,7 @@ Link download Termux: [https://f-droid.org/repo/com.termux_118.apk](https://f-dr
 ```sh
 pkg update -y
 pkg upgrade -y
-pkg install python git clang curl
+pkg install python git clang curl libffi libsodium openssl
 python -m pip install --upgrade pip
 cd $HOME
 git clone https://github.com/lumine-id/mtf
