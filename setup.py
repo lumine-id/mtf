@@ -13,6 +13,7 @@ if sys.version_info.major != 3:
 from distutils.core import Extension, setup
 from Cython.Build import cythonize
 from sysconfig import get_paths
+from rich.console import Console
 
 import subprocess
 import hashlib
@@ -79,7 +80,13 @@ def compiled() -> None:
         "ext_modules": cythonize(extensions),
         "script_args": ["build_ext", "--inplace", "--force", "-j 5"]
     }
-    setup(**kwargs)
+
+    if sys.argv[1:2] == ["--hide-animate"] or sys.argv[2:3] == ["--hide-animate"]:
+        setup(**kwargs)
+    else:
+        with Console().status("[bold green]Mengompilasi file MTF..", spinner="aesthetic"):
+            setup(**kwargs)
+
     for key, values in all_files.items():
         for file in values:
             insert_sum(file)
