@@ -5,4 +5,4 @@ cython
 GitPython
 rich
 pycryptodome
-pyancl
+pynacl
