@@ -2834,6 +2834,7 @@ static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_keys = {0, &__pyx_n_s_key
 static PyObject *__pyx_float_1_0;
 static PyObject *__pyx_float_8_0;
 static PyObject *__pyx_float_10_0;
+static PyObject *__pyx_float_60_0;
 static PyObject *__pyx_float_100_0;
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
@@ -12847,7 +12848,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(2, __pyx_int_300, __pyx_int_700); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_tuple__36 = PyTuple_Pack(2, __pyx_float_10_0, __pyx_float_100_0); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 534, __pyx_L1_error)
+  __pyx_tuple__36 = PyTuple_Pack(2, __pyx_float_60_0, __pyx_float_100_0); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
   __pyx_tuple__37 = PyTuple_Pack(2, __pyx_int_1000, __pyx_int_9000); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 534, __pyx_L1_error)
@@ -13055,6 +13056,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   __pyx_float_1_0 = PyFloat_FromDouble(1.0); if (unlikely(!__pyx_float_1_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_8_0 = PyFloat_FromDouble(8.0); if (unlikely(!__pyx_float_8_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_10_0 = PyFloat_FromDouble(10.0); if (unlikely(!__pyx_float_10_0)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_float_60_0 = PyFloat_FromDouble(60.0); if (unlikely(!__pyx_float_60_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_100_0 = PyFloat_FromDouble(100.0); if (unlikely(!__pyx_float_100_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)

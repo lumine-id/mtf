@@ -1424,7 +1424,7 @@ static const char __pyx_k_fb[] = "fb";
 static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_3_3[] = "3.3";
+static const char __pyx_k_3_5[] = "3.5";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
@@ -1475,7 +1475,6 @@ static const char __pyx_k_utf_8[] = "utf-8";
 static const char __pyx_k_utils[] = "utils";
 static const char __pyx_k_vi_vn[] = "vi-vn";
 static const char __pyx_k_white[] = "white";
-static const char __pyx_k_EAAciL[] = "\"(EAAciL.*?)\"";
 static const char __pyx_k_Prompt[] = "Prompt";
 static const char __pyx_k_base64[] = "base64";
 static const char __pyx_k_config[] = "config";
@@ -1579,6 +1578,7 @@ static const char __pyx_k_sec_ch_ua_platform[] = "sec-ch-ua-platform";
 static const char __pyx_k_DEFAULT_THEME_COLOR[] = "DEFAULT_THEME_COLOR";
 static const char __pyx_k_progress_percentage[] = "progress.percentage";
 static const char __pyx_k_rich_default_styles[] = "rich.default_styles";
+static const char __pyx_k_window___accessToken[] = "window\\.__accessToken=\\\"(.*?)\\\"";
 static const char __pyx_k_CP_DETECTOR_USER_AGENT[] = "CP_DETECTOR_USER_AGENT";
 static const char __pyx_k_PATTERN_MATCH_FB_TOKEN[] = "PATTERN_MATCH_FB_TOKEN";
 static const char __pyx_k_illegal_choice_message[] = "illegal_choice_message";
@@ -1586,7 +1586,6 @@ static const char __pyx_k_mtf_config___init___py[] = "mtf/config/__init__.py";
 static const char __pyx_k_validate_error_message[] = "validate_error_message";
 static const char __pyx_k_DESKTOP_REQUEST_HEADERS[] = "DESKTOP_REQUEST_HEADERS";
 static const char __pyx_k_U2cuV2YpxWLoRXdh5yLulmY[] = "=U2cuV2YpxWLoRXdh5yLulmY";
-static const char __pyx_k_en_US_en_q_0_9_id_q_0_8[] = "en-US,en;q=0.9;id;q=0.8";
 static const char __pyx_k_upgrade_insecure_requests[] = "upgrade-insecure-requests";
 static const char __pyx_k_smirking_face_Silakan_Masukkan[] = ":smirking_face: Silakan Masukkan Y\\[a] atau T\\[idak]";
 static const char __pyx_k_FBAN_FB4A_FBAV_222_0_0_48_113_F[] = "[FBAN/FB4A;FBAV/222.0.0.48.113;FBBV/155323366;FBDM/{density=2.0,width=720,height=1360};FBLC/sr_RS;FBRV/156625696;FBCR/mt:s;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/LDN-L21;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]";
@@ -1874,7 +1873,7 @@ static PyObject *__pyx_kp_u_0;
 static PyObject *__pyx_kp_u_1;
 static PyObject *__pyx_kp_u_1217981644879628;
 static PyObject *__pyx_kp_u_1_2;
-static PyObject *__pyx_kp_u_3_3;
+static PyObject *__pyx_kp_u_3_5;
 static PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
 static PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
 static PyObject *__pyx_n_s_AUTH_DIR;
@@ -1892,7 +1891,6 @@ static PyObject *__pyx_kp_u_Dalvik_1_6_0_Linux_U_Android_4_4;
 static PyObject *__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_5_1;
 static PyObject *__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_8_0;
 static PyObject *__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_9_I;
-static PyObject *__pyx_kp_u_EAAciL;
 static PyObject *__pyx_n_s_FB;
 static PyObject *__pyx_kp_u_FBAN_FB4A_FBAV_222_0_0_48_113_F;
 static PyObject *__pyx_n_s_FB_USER_AGENT;
@@ -2223,7 +2221,6 @@ static PyObject *__pyx_n_u_document;
 static PyObject *__pyx_n_u_dots;
 static PyObject *__pyx_n_u_empty;
 static PyObject *__pyx_kp_u_en_US_en_q_0_9;
-static PyObject *__pyx_kp_u_en_US_en_q_0_9_id_q_0_8;
 static PyObject *__pyx_kp_u_en_us;
 static PyObject *__pyx_n_s_environ;
 static PyObject *__pyx_n_s_exist_ok;
@@ -2320,6 +2317,7 @@ static PyObject *__pyx_kp_u_vi_VN_vi_q_0_9;
 static PyObject *__pyx_kp_u_vi_vn;
 static PyObject *__pyx_n_u_web;
 static PyObject *__pyx_n_u_white;
+static PyObject *__pyx_kp_u_window___accessToken;
 static PyObject *__pyx_kp_u_x_asbd_id;
 static PyObject *__pyx_kp_u_x_ig_app_id;
 static PyObject *__pyx_kp_u_x_ig_www_claim;
@@ -3161,7 +3159,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
   {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
   {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-  {&__pyx_kp_u_3_3, __pyx_k_3_3, sizeof(__pyx_k_3_3), 0, 1, 0, 0},
+  {&__pyx_kp_u_3_5, __pyx_k_3_5, sizeof(__pyx_k_3_5), 0, 1, 0, 0},
   {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
   {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
   {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -3179,7 +3177,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_5_1, __pyx_k_Dalvik_2_1_0_Linux_U_Android_5_1, sizeof(__pyx_k_Dalvik_2_1_0_Linux_U_Android_5_1), 0, 1, 0, 0},
   {&__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_8_0, __pyx_k_Dalvik_2_1_0_Linux_U_Android_8_0, sizeof(__pyx_k_Dalvik_2_1_0_Linux_U_Android_8_0), 0, 1, 0, 0},
   {&__pyx_kp_u_Dalvik_2_1_0_Linux_U_Android_9_I, __pyx_k_Dalvik_2_1_0_Linux_U_Android_9_I, sizeof(__pyx_k_Dalvik_2_1_0_Linux_U_Android_9_I), 0, 1, 0, 0},
-  {&__pyx_kp_u_EAAciL, __pyx_k_EAAciL, sizeof(__pyx_k_EAAciL), 0, 1, 0, 0},
   {&__pyx_n_s_FB, __pyx_k_FB, sizeof(__pyx_k_FB), 0, 0, 1, 1},
   {&__pyx_kp_u_FBAN_FB4A_FBAV_222_0_0_48_113_F, __pyx_k_FBAN_FB4A_FBAV_222_0_0_48_113_F, sizeof(__pyx_k_FBAN_FB4A_FBAV_222_0_0_48_113_F), 0, 1, 0, 0},
   {&__pyx_n_s_FB_USER_AGENT, __pyx_k_FB_USER_AGENT, sizeof(__pyx_k_FB_USER_AGENT), 0, 0, 1, 1},
@@ -3510,7 +3507,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_dots, __pyx_k_dots, sizeof(__pyx_k_dots), 0, 1, 0, 1},
   {&__pyx_n_u_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 1, 0, 1},
   {&__pyx_kp_u_en_US_en_q_0_9, __pyx_k_en_US_en_q_0_9, sizeof(__pyx_k_en_US_en_q_0_9), 0, 1, 0, 0},
-  {&__pyx_kp_u_en_US_en_q_0_9_id_q_0_8, __pyx_k_en_US_en_q_0_9_id_q_0_8, sizeof(__pyx_k_en_US_en_q_0_9_id_q_0_8), 0, 1, 0, 0},
   {&__pyx_kp_u_en_us, __pyx_k_en_us, sizeof(__pyx_k_en_us), 0, 1, 0, 0},
   {&__pyx_n_s_environ, __pyx_k_environ, sizeof(__pyx_k_environ), 0, 0, 1, 1},
   {&__pyx_n_s_exist_ok, __pyx_k_exist_ok, sizeof(__pyx_k_exist_ok), 0, 0, 1, 1},
@@ -3607,6 +3603,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_vi_vn, __pyx_k_vi_vn, sizeof(__pyx_k_vi_vn), 0, 1, 0, 0},
   {&__pyx_n_u_web, __pyx_k_web, sizeof(__pyx_k_web), 0, 1, 0, 1},
   {&__pyx_n_u_white, __pyx_k_white, sizeof(__pyx_k_white), 0, 1, 0, 1},
+  {&__pyx_kp_u_window___accessToken, __pyx_k_window___accessToken, sizeof(__pyx_k_window___accessToken), 0, 1, 0, 0},
   {&__pyx_kp_u_x_asbd_id, __pyx_k_x_asbd_id, sizeof(__pyx_k_x_asbd_id), 0, 1, 0, 0},
   {&__pyx_kp_u_x_ig_app_id, __pyx_k_x_ig_app_id, sizeof(__pyx_k_x_ig_app_id), 0, 1, 0, 0},
   {&__pyx_kp_u_x_ig_www_claim, __pyx_k_x_ig_www_claim, sizeof(__pyx_k_x_ig_www_claim), 0, 1, 0, 0},
@@ -4049,7 +4046,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_1);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_3) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_5) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -4204,7 +4201,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_CONSOLE_SPINNER, __pyx_n_u_dots) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_PATTERN_MATCH_FB_TOKEN, __pyx_kp_u_EAAciL) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_PATTERN_MATCH_FB_TOKEN, __pyx_kp_u_window___accessToken) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
 
    
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_DEFAULT_THEME_COLOR, __pyx_n_u_deep_sky_blue2) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
@@ -4221,15 +4218,15 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
    
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_en_US_en_q_0_9_id_q_0_8) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ms_my, __pyx_kp_u_ms_MY_ms_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_hi_in, __pyx_kp_u_hi_IN_hi_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_vi_vn, __pyx_kp_u_vi_VN_vi_q_0_9) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ms_my, __pyx_kp_u_ms_MY_ms_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_hi_in, __pyx_kp_u_hi_IN_hi_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_vi_vn, __pyx_kp_u_vi_VN_vi_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_ACCEPT_LANGUAGE, __pyx_t_2) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
@@ -4266,7 +4263,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
    
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_DESKTOP_USER_AGENT);
   if (unlikely(!__pyx_t_6)) {
@@ -4277,7 +4274,6 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_6);
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_user_agent, __pyx_t_6) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_upgrade_insecure_requests, __pyx_kp_u_1) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
 
    
   __pyx_t_6 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_ACCEPT_LANGUAGE);
