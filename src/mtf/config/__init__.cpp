@@ -1413,7 +1413,7 @@ int __pyx_module_is_main_config____init__ = 0;
 
  
 static const char __pyx_k_[] = "/";
-static const char __pyx_k_0[] = "0";
+static const char __pyx_k_0[] = "?0";
 static const char __pyx_k_1[] = "1";
 static const char __pyx_k_t[] = "t";
 static const char __pyx_k_y[] = "y";
@@ -1423,8 +1423,9 @@ static const char __pyx_k_IP[] = "IP";
 static const char __pyx_k_fb[] = "fb";
 static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
+static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_3_6[] = "3.6";
+static const char __pyx_k_3_7[] = "3.7";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
@@ -1559,6 +1560,7 @@ static const char __pyx_k_sec_fetch_site[] = "sec-fetch-site";
 static const char __pyx_k_sec_fetch_user[] = "sec-fetch-user";
 static const char __pyx_k_vi_VN_vi_q_0_9[] = "vi-VN,vi;q=0.9";
 static const char __pyx_k_x_ig_www_claim[] = "x-ig-www-claim";
+static const char __pyx_k_zh_TW_zh_q_0_9[] = "zh-TW,zh;q=0.9";
 static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
 static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
 static const char __pyx_k_LIST_USER_AGENT[] = "LIST_USER_AGENT";
@@ -1870,10 +1872,11 @@ static const char __pyx_k_Mozilla_5_0_X11_Linux_x86_64_App_19[] = "Mozilla/5.0 (
 static const char __pyx_k_Mozilla_5_0_X11_Linux_x86_64_App_20[] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34";
 static PyObject *__pyx_kp_u_;
 static PyObject *__pyx_kp_u_0;
+static PyObject *__pyx_kp_u_0_2;
 static PyObject *__pyx_kp_u_1;
 static PyObject *__pyx_kp_u_1217981644879628;
 static PyObject *__pyx_kp_u_1_2;
-static PyObject *__pyx_kp_u_3_6;
+static PyObject *__pyx_kp_u_3_7;
 static PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
 static PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
 static PyObject *__pyx_n_s_AUTH_DIR;
@@ -2325,6 +2328,7 @@ static PyObject *__pyx_n_u_y;
 static PyObject *__pyx_n_u_yellow;
 static PyObject *__pyx_n_u_yellow1;
 static PyObject *__pyx_n_u_yellow2;
+static PyObject *__pyx_kp_u_zh_TW_zh_q_0_9;
 static PyObject *__pyx_pf_6config_8__init___init(CYTHON_UNUSED PyObject *__pyx_self);  
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_511;
@@ -3156,10 +3160,11 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
   {&__pyx_kp_u_0, __pyx_k_0, sizeof(__pyx_k_0), 0, 1, 0, 0},
+  {&__pyx_kp_u_0_2, __pyx_k_0_2, sizeof(__pyx_k_0_2), 0, 1, 0, 0},
   {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
   {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
   {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-  {&__pyx_kp_u_3_6, __pyx_k_3_6, sizeof(__pyx_k_3_6), 0, 1, 0, 0},
+  {&__pyx_kp_u_3_7, __pyx_k_3_7, sizeof(__pyx_k_3_7), 0, 1, 0, 0},
   {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
   {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
   {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -3611,6 +3616,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_yellow, __pyx_k_yellow, sizeof(__pyx_k_yellow), 0, 1, 0, 1},
   {&__pyx_n_u_yellow1, __pyx_k_yellow1, sizeof(__pyx_k_yellow1), 0, 1, 0, 1},
   {&__pyx_n_u_yellow2, __pyx_k_yellow2, sizeof(__pyx_k_yellow2), 0, 1, 0, 1},
+  {&__pyx_kp_u_zh_TW_zh_q_0_9, __pyx_k_zh_TW_zh_q_0_9, sizeof(__pyx_k_zh_TW_zh_q_0_9), 0, 1, 0, 0},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
@@ -4046,7 +4052,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_1);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_6) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_7) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -4220,7 +4226,7 @@ if (!__Pyx_RefNanny) {
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_zh_TW_zh_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
@@ -4231,7 +4237,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
    
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_USER_AGENT);
   if (unlikely(!__pyx_t_3)) {
@@ -4242,6 +4248,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_user_agent, __pyx_t_3) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_upgrade_insecure_requests, __pyx_kp_u_1) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
 
    
   __pyx_t_3 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_ACCEPT_LANGUAGE);
@@ -4259,11 +4266,13 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_dest, __pyx_n_u_empty) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_mode, __pyx_n_u_cors) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_site, __pyx_kp_u_same_origin) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_user, __pyx_kp_u_1_2) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_ch_ua_mobile, __pyx_kp_u_1_2) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_REQUEST_HEADERS, __pyx_t_2) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
    
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_DESKTOP_USER_AGENT);
   if (unlikely(!__pyx_t_6)) {
@@ -4274,6 +4283,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_6);
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_user_agent, __pyx_t_6) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_upgrade_insecure_requests, __pyx_kp_u_1) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
 
    
   __pyx_t_6 = PyObject_GetItem(__pyx_t_1, __pyx_n_s_ACCEPT_LANGUAGE);
@@ -4291,6 +4301,8 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_dest, __pyx_n_u_empty) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_mode, __pyx_n_u_cors) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_site, __pyx_kp_u_same_origin) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_fetch_user, __pyx_kp_u_1_2) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_ch_ua_mobile, __pyx_kp_u_0) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_DESKTOP_REQUEST_HEADERS, __pyx_t_2) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
@@ -4329,7 +4341,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_ch_ua_mobile, __pyx_kp_u_1_2) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_sec_ch_ua_platform, __pyx_kp_u_Android) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_x_ig_app_id, __pyx_kp_u_1217981644879628) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_x_ig_www_claim, __pyx_kp_u_0) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_x_ig_www_claim, __pyx_kp_u_0_2) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
 
    
   __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_random); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)

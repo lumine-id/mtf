@@ -5,4 +5,5 @@ cython
 GitPython
 rich
 pycryptodome
+ua-parser
 pynacl
