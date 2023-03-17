@@ -1409,7 +1409,7 @@ static const char __pyx_k_filters_check_login[] = "filters.check_login";
 static const char __pyx_k_Filter_access_denied[] = "Filter.access_denied";
 static const char __pyx_k_mtf_app_filters_check_login_py[] = "mtf/app/filters/check_login.py";
 static const char __pyx_k_theme_Tekan_enter_untuk_login_k[] = "[ [theme]Tekan enter untuk login ke Facebook[/] ]";
-static const char __pyx_k_Login_ke_theme_Facebook_terlebih[] = "Login ke [theme]Facebook[/] terlebih dahulu jika ingin menggunakan fitur ini";
+static const char __pyx_k_Login_ke_theme_Facebook_terlebih[] = "Login ke [theme]Facebook[/] terlebih dahulu untuk menggunakan fitur ini";
 static PyObject *__pyx_n_s_Base;
 static PyObject *__pyx_n_s_Controller;
 static PyObject *__pyx_n_s_Filter;

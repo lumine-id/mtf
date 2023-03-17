@@ -1425,7 +1425,7 @@ static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_3_7[] = "3.7";
+static const char __pyx_k_3_8[] = "3.8";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
@@ -1560,7 +1560,7 @@ static const char __pyx_k_sec_fetch_site[] = "sec-fetch-site";
 static const char __pyx_k_sec_fetch_user[] = "sec-fetch-user";
 static const char __pyx_k_vi_VN_vi_q_0_9[] = "vi-VN,vi;q=0.9";
 static const char __pyx_k_x_ig_www_claim[] = "x-ig-www-claim";
-static const char __pyx_k_zh_TW_zh_q_0_9[] = "zh-TW,zh;q=0.9";
+static const char __pyx_k_zh_CN_zh_q_0_9[] = "zh-CN,zh;q=0.9";
 static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
 static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
 static const char __pyx_k_LIST_USER_AGENT[] = "LIST_USER_AGENT";
@@ -1876,7 +1876,7 @@ static PyObject *__pyx_kp_u_0_2;
 static PyObject *__pyx_kp_u_1;
 static PyObject *__pyx_kp_u_1217981644879628;
 static PyObject *__pyx_kp_u_1_2;
-static PyObject *__pyx_kp_u_3_7;
+static PyObject *__pyx_kp_u_3_8;
 static PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
 static PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
 static PyObject *__pyx_n_s_AUTH_DIR;
@@ -2328,7 +2328,7 @@ static PyObject *__pyx_n_u_y;
 static PyObject *__pyx_n_u_yellow;
 static PyObject *__pyx_n_u_yellow1;
 static PyObject *__pyx_n_u_yellow2;
-static PyObject *__pyx_kp_u_zh_TW_zh_q_0_9;
+static PyObject *__pyx_kp_u_zh_CN_zh_q_0_9;
 static PyObject *__pyx_pf_6config_8__init___init(CYTHON_UNUSED PyObject *__pyx_self);  
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_511;
@@ -3164,7 +3164,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
   {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
   {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-  {&__pyx_kp_u_3_7, __pyx_k_3_7, sizeof(__pyx_k_3_7), 0, 1, 0, 0},
+  {&__pyx_kp_u_3_8, __pyx_k_3_8, sizeof(__pyx_k_3_8), 0, 1, 0, 0},
   {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
   {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
   {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -3616,7 +3616,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_yellow, __pyx_k_yellow, sizeof(__pyx_k_yellow), 0, 1, 0, 1},
   {&__pyx_n_u_yellow1, __pyx_k_yellow1, sizeof(__pyx_k_yellow1), 0, 1, 0, 1},
   {&__pyx_n_u_yellow2, __pyx_k_yellow2, sizeof(__pyx_k_yellow2), 0, 1, 0, 1},
-  {&__pyx_kp_u_zh_TW_zh_q_0_9, __pyx_k_zh_TW_zh_q_0_9, sizeof(__pyx_k_zh_TW_zh_q_0_9), 0, 1, 0, 0},
+  {&__pyx_kp_u_zh_CN_zh_q_0_9, __pyx_k_zh_CN_zh_q_0_9, sizeof(__pyx_k_zh_CN_zh_q_0_9), 0, 1, 0, 0},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
@@ -4052,7 +4052,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_1);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_7) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_VERSION, __pyx_kp_u_3_8) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -4226,7 +4226,7 @@ if (!__Pyx_RefNanny) {
    
   __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_zh_TW_zh_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_other, __pyx_kp_u_zh_CN_zh_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
