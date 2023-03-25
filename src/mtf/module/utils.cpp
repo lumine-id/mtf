@@ -1813,7 +1813,6 @@ static const char __pyx_k_shell[] = "shell";
 static const char __pyx_k_split[] = "split";
 static const char __pyx_k_start[] = "start";
 static const char __pyx_k_strip[] = "strip";
-static const char __pyx_k_title[] = "title";
 static const char __pyx_k_utf_8[] = "utf-8";
 static const char __pyx_k_utils[] = "utils";
 static const char __pyx_k_value[] = "value";
@@ -2824,7 +2823,6 @@ static PyObject *__pyx_n_s_terminate;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_text;
 static PyObject *__pyx_n_s_then;
-static PyObject *__pyx_n_s_title;
 static PyObject *__pyx_n_s_total_duration;
 static PyObject *__pyx_n_s_total_seconds;
 static PyObject *__pyx_n_u_unicode_escape;
@@ -5241,8 +5239,7 @@ static PyObject *__pyx_pf_5utils_22generate_passsword_from_name(CYTHON_UNUSED Py
   int __pyx_t_10;
   PyObject *__pyx_t_11 = NULL;
   PyObject *__pyx_t_12 = NULL;
-  PyObject *__pyx_t_13 = NULL;
-  int __pyx_t_14;
+  int __pyx_t_13;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -5407,45 +5404,27 @@ static PyObject *__pyx_pf_5utils_22generate_passsword_from_name(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_8;
           __pyx_t_8 = 0;
         } else {
-          __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_string_password, __pyx_n_s_lower); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 107, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_12);
-          __pyx_t_13 = NULL;
-          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_12))) {
-            __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_12);
-            if (likely(__pyx_t_13)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_12);
-              __Pyx_INCREF(__pyx_t_13);
-              __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_12, function);
-            }
-          }
-          __pyx_t_11 = (__pyx_t_13) ? __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_13) : __Pyx_PyObject_CallNoArg(__pyx_t_12);
-          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 107, __pyx_L1_error)
+          __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_string_password, __pyx_n_s_lower); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 107, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
-          __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_title); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 107, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_12);
-          __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-          __pyx_t_11 = NULL;
-          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_12))) {
-            __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_12);
-            if (likely(__pyx_t_11)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_12);
-              __Pyx_INCREF(__pyx_t_11);
+          __pyx_t_12 = NULL;
+          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
+            __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_11);
+            if (likely(__pyx_t_12)) {
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
+              __Pyx_INCREF(__pyx_t_12);
               __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_12, function);
+              __Pyx_DECREF_SET(__pyx_t_11, function);
             }
           }
-          __pyx_t_8 = (__pyx_t_11) ? __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_11) : __Pyx_PyObject_CallNoArg(__pyx_t_12);
-          __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+          __pyx_t_8 = (__pyx_t_12) ? __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12) : __Pyx_PyObject_CallNoArg(__pyx_t_11);
+          __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
           if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 107, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
-          __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+          __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           __pyx_t_3 = __pyx_t_8;
           __pyx_t_8 = 0;
         }
-        __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_3); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 107, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_3); if (unlikely(__pyx_t_13 == ((int)-1))) __PYX_ERR(0, 107, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
          
@@ -5475,7 +5454,6 @@ static PyObject *__pyx_pf_5utils_22generate_passsword_from_name(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_XDECREF(__pyx_t_13);
   __Pyx_AddTraceback("utils.generate_passsword_from_name", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -14106,7 +14084,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_text, __pyx_k_text, sizeof(__pyx_k_text), 0, 0, 1, 1},
   {&__pyx_n_s_then, __pyx_k_then, sizeof(__pyx_k_then), 0, 0, 1, 1},
-  {&__pyx_n_s_title, __pyx_k_title, sizeof(__pyx_k_title), 0, 0, 1, 1},
   {&__pyx_n_s_total_duration, __pyx_k_total_duration, sizeof(__pyx_k_total_duration), 0, 0, 1, 1},
   {&__pyx_n_s_total_seconds, __pyx_k_total_seconds, sizeof(__pyx_k_total_seconds), 0, 0, 1, 1},
   {&__pyx_n_u_unicode_escape, __pyx_k_unicode_escape, sizeof(__pyx_k_unicode_escape), 0, 1, 0, 1},
