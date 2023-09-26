@@ -1956,6 +1956,7 @@ static const char __pyx_k_Premium[] = "Premium ";
 static const char __pyx_k_Selamat[] = "Selamat ";
 static const char __pyx_k_Timeout[] = "Timeout";
 static const char __pyx_k_VERSION[] = "VERSION";
+static const char __pyx_k_act_0_9[] = "act=([0-9]+)";
 static const char __pyx_k_add_row[] = "add_row";
 static const char __pyx_k_android[] = "android";
 static const char __pyx_k_api_jwt[] = "api_jwt";
@@ -2190,7 +2191,6 @@ static const char __pyx_k_dtsg_token[] = "{\"dtsg\":{\"token\":\"(.*?)\"";
     static const char __pyx_k_set_useragent[] = "set_useragent";
     static const char __pyx_k_Lumine_is_auth[] = "Lumine.is_auth";
     static const char __pyx_k_USER_ENCRYPTED[] = "USER_ENCRYPTED";
-    static const char __pyx_k_act_nav_source[] = "act=(.*?)&nav_source";
     static const char __pyx_k_change_license[] = "change_license";
     static const char __pyx_k_check_fb_login[] = "check_fb_login";
     static const char __pyx_k_mtf_module_jwt[] = "mtf.module.jwt";
@@ -2270,6 +2270,7 @@ static const char __pyx_k_dtsg_token[] = "{\"dtsg\":{\"token\":\"(.*?)\"";
     static const char __pyx_k_Lumine_register_menu[] = "Lumine.register_menu";
     static const char __pyx_k_Menginstall_module_s[] = "Menginstall module '%s'";
     static const char __pyx_k_birthday_captcha_day[] = "birthday_captcha_day";
+    static const char __pyx_k_breakdown_regrouping[] = "breakdown_regrouping";
     static const char __pyx_k_bruteforce_followers[] = "bruteforce.followers";
     static const char __pyx_k_bruteforce_reactions[] = "bruteforce.reactions";
     static const char __pyx_k_checkpoint_detectors[] = "checkpoint_detectors";
@@ -2661,7 +2662,7 @@ static const char __pyx_k_dtsg_token[] = "{\"dtsg\":{\"token\":\"(.*?)\"";
     static PyObject *__pyx_n_s_access_token;
     static PyObject *__pyx_n_s_act;
     static PyObject *__pyx_n_u_act;
-    static PyObject *__pyx_kp_u_act_nav_source;
+    static PyObject *__pyx_kp_u_act_0_9;
     static PyObject *__pyx_n_s_action;
     static PyObject *__pyx_n_u_action;
     static PyObject *__pyx_n_s_active;
@@ -2727,6 +2728,7 @@ static const char __pyx_k_dtsg_token[] = "{\"dtsg\":{\"token\":\"(.*?)\"";
     static PyObject *__pyx_kp_u_bold_white_on;
     static PyObject *__pyx_kp_u_bold_yellow;
     static PyObject *__pyx_n_s_box;
+    static PyObject *__pyx_n_u_breakdown_regrouping;
     static PyObject *__pyx_kp_u_bruteforce_comments;
     static PyObject *__pyx_kp_u_bruteforce_files;
     static PyObject *__pyx_kp_u_bruteforce_followers;
@@ -4054,7 +4056,7 @@ static PyObject *__pyx_pf_3run_7Auth_FB_2cookies(CYTHON_UNUSED PyObject *__pyx_s
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_kp_u_act_nav_source, __pyx_v_response};
+        PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_kp_u_act_0_9, __pyx_v_response};
         __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L3_error)
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_GOTREF(__pyx_t_5);
@@ -4062,7 +4064,7 @@ static PyObject *__pyx_pf_3run_7Auth_FB_2cookies(CYTHON_UNUSED PyObject *__pyx_s
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_kp_u_act_nav_source, __pyx_v_response};
+        PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_kp_u_act_0_9, __pyx_v_response};
         __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L3_error)
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_GOTREF(__pyx_t_5);
@@ -4074,9 +4076,9 @@ static PyObject *__pyx_pf_3run_7Auth_FB_2cookies(CYTHON_UNUSED PyObject *__pyx_s
         if (__pyx_t_7) {
           __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7); __pyx_t_7 = NULL;
         }
-        __Pyx_INCREF(__pyx_kp_u_act_nav_source);
-        __Pyx_GIVEREF(__pyx_kp_u_act_nav_source);
-        PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_8, __pyx_kp_u_act_nav_source);
+        __Pyx_INCREF(__pyx_kp_u_act_0_9);
+        __Pyx_GIVEREF(__pyx_kp_u_act_0_9);
+        PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_8, __pyx_kp_u_act_0_9);
         __Pyx_INCREF(__pyx_v_response);
         __Pyx_GIVEREF(__pyx_v_response);
         PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_8, __pyx_v_response);
@@ -4124,7 +4126,7 @@ static PyObject *__pyx_pf_3run_7Auth_FB_2cookies(CYTHON_UNUSED PyObject *__pyx_s
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_url);
       __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L3_error)
+      __pyx_t_7 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_7);
       __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_act, __pyx_n_s_group); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 127, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_12);
@@ -4146,6 +4148,7 @@ static PyObject *__pyx_pf_3run_7Auth_FB_2cookies(CYTHON_UNUSED PyObject *__pyx_s
       if (PyDict_SetItem(__pyx_t_7, __pyx_n_u_act, __pyx_t_11) < 0) __PYX_ERR(0, 127, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       if (PyDict_SetItem(__pyx_t_7, __pyx_n_u_nav_source, __pyx_n_u_no_referer) < 0) __PYX_ERR(0, 127, __pyx_L3_error)
+      if (PyDict_SetItem(__pyx_t_7, __pyx_n_u_breakdown_regrouping, __pyx_kp_u_0) < 0) __PYX_ERR(0, 127, __pyx_L3_error)
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_params, __pyx_t_7) < 0) __PYX_ERR(0, 127, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L3_error)
@@ -30013,7 +30016,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_access_token, __pyx_k_access_token, sizeof(__pyx_k_access_token), 0, 0, 1, 1},
   {&__pyx_n_s_act, __pyx_k_act, sizeof(__pyx_k_act), 0, 0, 1, 1},
   {&__pyx_n_u_act, __pyx_k_act, sizeof(__pyx_k_act), 0, 1, 0, 1},
-  {&__pyx_kp_u_act_nav_source, __pyx_k_act_nav_source, sizeof(__pyx_k_act_nav_source), 0, 1, 0, 0},
+  {&__pyx_kp_u_act_0_9, __pyx_k_act_0_9, sizeof(__pyx_k_act_0_9), 0, 1, 0, 0},
   {&__pyx_n_s_action, __pyx_k_action, sizeof(__pyx_k_action), 0, 0, 1, 1},
   {&__pyx_n_u_action, __pyx_k_action, sizeof(__pyx_k_action), 0, 1, 0, 1},
   {&__pyx_n_s_active, __pyx_k_active, sizeof(__pyx_k_active), 0, 0, 1, 1},
@@ -30079,6 +30082,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_bold_white_on, __pyx_k_bold_white_on, sizeof(__pyx_k_bold_white_on), 0, 1, 0, 0},
   {&__pyx_kp_u_bold_yellow, __pyx_k_bold_yellow, sizeof(__pyx_k_bold_yellow), 0, 1, 0, 0},
   {&__pyx_n_s_box, __pyx_k_box, sizeof(__pyx_k_box), 0, 0, 1, 1},
+  {&__pyx_n_u_breakdown_regrouping, __pyx_k_breakdown_regrouping, sizeof(__pyx_k_breakdown_regrouping), 0, 1, 0, 1},
   {&__pyx_kp_u_bruteforce_comments, __pyx_k_bruteforce_comments, sizeof(__pyx_k_bruteforce_comments), 0, 1, 0, 0},
   {&__pyx_kp_u_bruteforce_files, __pyx_k_bruteforce_files, sizeof(__pyx_k_bruteforce_files), 0, 1, 0, 0},
   {&__pyx_kp_u_bruteforce_followers, __pyx_k_bruteforce_followers, sizeof(__pyx_k_bruteforce_followers), 0, 1, 0, 0},
