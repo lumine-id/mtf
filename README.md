@@ -27,10 +27,18 @@ Link download Termux: [https://f-droid.org/repo/com.termux_118.apk](https://f-dr
 ```sh
 pkg update -y
 pkg upgrade -y
-pkg install python git clang curl libffi libsodium openssl
-python -m pip install --upgrade pip
+pkg install git clang curl libffi libsodium openssl
 cd $HOME
 git clone https://github.com/lumine-id/mtf
+```
+
+## Instalasi Python 3.10
+Dikarenakan pada python 3.11 atau lebih tinggi belum mendukung cython maka anda harus menginstall pyhton versi 3.10 atau dibawahnya
+```sh
+pkg install tur-repo
+pkg uninstall python -y
+pkg install python3.10
+ln -s $PREFIX/bin/python3.10 $PREFIX/bin/python
 ```
 
 ## Masuk ke folder MTF
@@ -41,7 +49,8 @@ cd $HOME/mtf
 ## Setup
 Jika kamu baru pertama pasang MTF silahkan jalankan perintah dibawah ini
 ```sh
-pip install setuptools cython rich
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 python setup.py
 ```
 Tunggu sampe proses compile selesai, mungkin memerlukan waktu sedikit lama.
