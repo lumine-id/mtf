@@ -77,8 +77,11 @@ def compiled() -> None:
     # setup conf
     kwargs = {
         "name": "mtf",
-        "ext_modules": cythonize(extensions),
-        "script_args": ["build_ext", "--inplace", "--force", "-j 5"]
+        "ext_modules": cythonize(extensions, compiler_directives=dict(
+             language_level=3,
+             annotation_typing=False
+        )),
+        "script_args": ["build_ext", "--inplace", "--force", "-j 5"],
     }
 
     if sys.argv[1:2] == ["--hide-animate"] or sys.argv[2:3] == ["--hide-animate"]:
