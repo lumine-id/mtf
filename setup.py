@@ -77,10 +77,7 @@ def compiled() -> None:
     # setup conf
     kwargs = {
         "name": "mtf",
-        "ext_modules": cythonize(extensions, compiler_directives=dict(
-             language_level=3,
-             annotation_typing=False
-        )),
+        "ext_modules": cythonize(extensions),
         "script_args": ["build_ext", "--inplace", "--force", "-j 5"],
     }
 
