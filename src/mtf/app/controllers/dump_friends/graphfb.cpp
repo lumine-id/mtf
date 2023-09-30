@@ -2312,7 +2312,7 @@ static const char __pyx_k_Jika_kamu_ingin_dari_daftar_tema[] = "Jika kamu ingin 
 static const char __pyx_k_Masukkan_ID_atau_Username_publik[] = "Masukkan ID atau Username publik [?]";
 static const char __pyx_k_controllers_dump_friends_graphfb[] = "controllers.dump_friends.graphfb";
 static const char __pyx_k_mtf_app_controllers_dump_friends[] = "mtf/app/controllers/dump_friends/graphfb.py";
-static const char __pyx_k_name_friends_fields_id_name_birt[] = "name,friends.fields(id,name,birthday).limit(1000)";
+static const char __pyx_k_name_friends_fields_id_name_birt[] = "name,friends.fields(id,name,birthday).limit(5000)";
  
 static PyObject *__pyx_pf_11controllers_12dump_friends_7graphfb_10Controller___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kwargs);  
 static PyObject *__pyx_pf_11controllers_12dump_friends_7graphfb_10Controller_6handle_generate_panel(PyObject *__pyx_self, PyObject *__pyx_v_total_id, PyObject *__pyx_v_name, PyObject *__pyx_v_title);  
