@@ -8,8 +8,16 @@
 import sys
 
 if sys.version_info.major != 3:
-    sys.exit("Sorry, but this script is only for python 3")
+    sys.exit("Maaf, script ini hanya mendukung versi python 3")
  
+if sys.version_info.minor >= 11:
+    sys.exit('''
+Maaf, versi python %s.%s saat ini tidak mendukung
+Silahkan downgrade versi python kamu
+
+Baca cara pasang yang benar disini: https://github.com/lumine-id/mtf#instalasi-python-310
+'''%(sys.version_info.major, sys.version_info.minor))
+
 from distutils.core import Extension, setup
 from Cython.Build import cythonize
 from sysconfig import get_paths

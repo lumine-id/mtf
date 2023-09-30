@@ -33,7 +33,7 @@ git clone https://github.com/lumine-id/mtf
 ```
 
 ## Instalasi Python 3.10
-Dikarenakan pada python 3.11 atau lebih tinggi belum mendukung cython maka anda harus menginstall pyhton versi 3.10 atau dibawahnya
+Dikarenakan pada python 3.11 atau lebih tinggi belum mendukung cython maka anda harus menginstall python versi 3.10 atau dibawahnya
 ```sh
 pkg install tur-repo
 pkg uninstall python -y
