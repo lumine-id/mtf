@@ -50,7 +50,7 @@ cd $HOME/mtf
 Jika kamu baru pertama pasang MTF silahkan jalankan perintah dibawah ini
 ```sh
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install rich cython
 python setup.py
 ```
 Tunggu sampe proses compile selesai, mungkin memerlukan waktu sedikit lama.
