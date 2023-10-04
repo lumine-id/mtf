@@ -3360,8 +3360,8 @@ typedef struct {
   PyObject *__pyx_n_s_zero_optin_write;
   PyObject *__pyx_int_0;
   PyObject *__pyx_int_1;
-  PyObject *__pyx_int_20;
   PyObject *__pyx_int_30;
+  PyObject *__pyx_int_40;
   PyObject *__pyx_int_123;
   PyObject *__pyx_int_12345;
   PyObject *__pyx_tuple_;
@@ -3940,8 +3940,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_zero_optin_write);
   Py_CLEAR(clear_module_state->__pyx_int_0);
   Py_CLEAR(clear_module_state->__pyx_int_1);
-  Py_CLEAR(clear_module_state->__pyx_int_20);
   Py_CLEAR(clear_module_state->__pyx_int_30);
+  Py_CLEAR(clear_module_state->__pyx_int_40);
   Py_CLEAR(clear_module_state->__pyx_int_123);
   Py_CLEAR(clear_module_state->__pyx_int_12345);
   Py_CLEAR(clear_module_state->__pyx_tuple_);
@@ -4498,8 +4498,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_zero_optin_write);
   Py_VISIT(traverse_module_state->__pyx_int_0);
   Py_VISIT(traverse_module_state->__pyx_int_1);
-  Py_VISIT(traverse_module_state->__pyx_int_20);
   Py_VISIT(traverse_module_state->__pyx_int_30);
+  Py_VISIT(traverse_module_state->__pyx_int_40);
   Py_VISIT(traverse_module_state->__pyx_int_123);
   Py_VISIT(traverse_module_state->__pyx_int_12345);
   Py_VISIT(traverse_module_state->__pyx_tuple_);
@@ -5066,8 +5066,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_zero_optin_write __pyx_mstate_global->__pyx_n_s_zero_optin_write
 #define __pyx_int_0 __pyx_mstate_global->__pyx_int_0
 #define __pyx_int_1 __pyx_mstate_global->__pyx_int_1
-#define __pyx_int_20 __pyx_mstate_global->__pyx_int_20
 #define __pyx_int_30 __pyx_mstate_global->__pyx_int_30
+#define __pyx_int_40 __pyx_mstate_global->__pyx_int_40
 #define __pyx_int_123 __pyx_mstate_global->__pyx_int_123
 #define __pyx_int_12345 __pyx_mstate_global->__pyx_int_12345
 #define __pyx_tuple_ __pyx_mstate_global->__pyx_tuple_
@@ -6910,7 +6910,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_4Base_5start___map(PyObject
   if (__pyx_t_5) {
 
      
-    __pyx_t_2 = __Pyx_PyInt_RemainderObjC(__pyx_v_index, __pyx_int_20, 20, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_RemainderObjC(__pyx_v_index, __pyx_int_40, 40, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = (__Pyx_PyInt_BoolEqObjC(__pyx_t_2, __pyx_int_0, 0, 0)); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -20214,8 +20214,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
   if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_20 = PyInt_FromLong(20); if (unlikely(!__pyx_int_20)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_30 = PyInt_FromLong(30); if (unlikely(!__pyx_int_30)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_40 = PyInt_FromLong(40); if (unlikely(!__pyx_int_40)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_123 = PyInt_FromLong(123); if (unlikely(!__pyx_int_123)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_12345 = PyInt_FromLong(12345L); if (unlikely(!__pyx_int_12345)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;

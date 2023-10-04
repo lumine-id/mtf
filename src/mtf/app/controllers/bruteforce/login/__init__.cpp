@@ -2144,10 +2144,8 @@ static PyObject *__pyx_builtin_round;
 static const char __pyx_k_0[] = "?0";
 static const char __pyx_k_1[] = "?1";
 static const char __pyx_k_s[] = "\"%s\"";
-static const char __pyx_k_v[] = "v";
 static const char __pyx_k_10[] = "10";
 static const char __pyx_k__6[] = ":";
-static const char __pyx_k__8[] = "*";
 static const char __pyx_k_lj[] = "lj";
 static const char __pyx_k_lk[] = "lk";
 static const char __pyx_k_ll[] = "ll";
@@ -2156,9 +2154,11 @@ static const char __pyx_k_os[] = "os";
 static const char __pyx_k_re[] = "re";
 static const char __pyx_k_ts[] = "ts";
 static const char __pyx_k_ua[] = "ua";
+static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_AES[] = "AES";
-static const char __pyx_k__10[] = ".";
-static const char __pyx_k__16[] = "?";
+static const char __pyx_k__10[] = "*";
+static const char __pyx_k__12[] = ".";
+static const char __pyx_k__18[] = "?";
 static const char __pyx_k_api[] = "api";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
@@ -2186,9 +2186,11 @@ static const char __pyx_k_lower[] = "lower";
 static const char __pyx_k_macOS[] = "macOS";
 static const char __pyx_k_major[] = "major";
 static const char __pyx_k_match[] = "match";
+static const char __pyx_k_minor[] = "minor";
 static const char __pyx_k_model[] = "model";
 static const char __pyx_k_nonce[] = "nonce";
 static const char __pyx_k_other[] = "other";
+static const char __pyx_k_patch[] = "patch";
 static const char __pyx_k_round[] = "round";
 static const char __pyx_k_super[] = "super";
 static const char __pyx_k_token[] = "token";
@@ -2271,10 +2273,12 @@ static const char __pyx_k_sec_ch_ua_platform[] = "sec-ch-ua-platform";
 static const char __pyx_k_INVALID_CREDENTIALS_CODE[] = "INVALID_CREDENTIALS_CODE";
 static const char __pyx_k_ENABLE_ENCRYPTION_PASSWORD[] = "ENABLE_ENCRYPTION_PASSWORD";
 static const char __pyx_k_sec_ch_ua_platform_version[] = "sec-ch-ua-platform-version";
+static const char __pyx_k_sec_ch_ua_full_version_list[] = "sec-ch-ua-full-version-list";
 static const char __pyx_k_controllers_bruteforce_login[] = "controllers.bruteforce.login";
 static const char __pyx_k_key_id_is_not_a_valid_number[] = "key id is not a valid number";
+static const char __pyx_k_Chromium_v_major_Not_A_Brand_v[] = "\"Chromium\";v=\"{major}\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"{major}\"";
 static const char __pyx_k_INVALID_CREDENTIALS_CODE_wrong[] = "\n    INVALID_CREDENTIALS_CODE (wrong credentials)\n    MUST_VERIFY_CODE (checkpoint)\n    OK_CODE (good)\n    ";
-static const char __pyx_k_Chromium_v_v_Not_A_Brand_v_24_G[] = "\"Chromium\";v=\"{v}\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"{v}\"";
+static const char __pyx_k_Chromium_v_major_Not_A_Brand_v_2[] = "\"Chromium\";v=\"{major}\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"{major}.{minor}.{patch}\"";
 static const char __pyx_k_controllers_bruteforce_login___i[] = "controllers.bruteforce.login.__init__";
 static const char __pyx_k_encrypted_key_is_the_wrong_lengt[] = "encrypted key is the wrong length";
 static const char __pyx_k_get_platform_header_from_userage[] = "get_platform_header_from_useragent";
@@ -2314,10 +2318,12 @@ typedef struct {
   #if CYTHON_USE_MODULE_STATE
   #endif
   PyObject *__pyx_kp_u_0;
+  PyObject *__pyx_kp_u_0_2;
   PyObject *__pyx_kp_u_1;
   PyObject *__pyx_kp_u_10;
   PyObject *__pyx_n_s_AES;
-  PyObject *__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G;
+  PyObject *__pyx_kp_u_Chromium_v_major_Not_A_Brand_v;
+  PyObject *__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2;
   PyObject *__pyx_n_s_Crypto_Cipher;
   PyObject *__pyx_n_s_ENABLE_ENCRYPTION_PASSWORD;
   PyObject *__pyx_n_s_INVALID_CREDENTIALS_CODE;
@@ -2336,10 +2342,10 @@ typedef struct {
   PyObject *__pyx_n_u_Unknown;
   PyObject *__pyx_n_s_ValueError;
   PyObject *__pyx_n_s_Variables;
-  PyObject *__pyx_kp_u__10;
-  PyObject *__pyx_n_s__16;
+  PyObject *__pyx_n_s__10;
+  PyObject *__pyx_kp_u__12;
+  PyObject *__pyx_n_s__18;
   PyObject *__pyx_kp_u__6;
-  PyObject *__pyx_n_s__8;
   PyObject *__pyx_n_s_aes_pass;
   PyObject *__pyx_n_u_android;
   PyObject *__pyx_n_s_api;
@@ -2397,9 +2403,12 @@ typedef struct {
   PyObject *__pyx_n_s_mac_len;
   PyObject *__pyx_kp_u_mac_os_x;
   PyObject *__pyx_n_s_main;
+  PyObject *__pyx_n_s_major;
   PyObject *__pyx_n_u_major;
   PyObject *__pyx_n_s_match;
   PyObject *__pyx_n_s_metaclass;
+  PyObject *__pyx_n_s_minor;
+  PyObject *__pyx_n_u_minor;
   PyObject *__pyx_n_s_mobile_async;
   PyObject *__pyx_n_s_mobile_regular;
   PyObject *__pyx_n_s_mobile_validate;
@@ -2417,6 +2426,8 @@ typedef struct {
   PyObject *__pyx_n_u_os;
   PyObject *__pyx_n_u_other;
   PyObject *__pyx_n_s_password;
+  PyObject *__pyx_n_s_patch;
+  PyObject *__pyx_n_u_patch;
   PyObject *__pyx_n_s_prefix;
   PyObject *__pyx_n_s_prepare;
   PyObject *__pyx_n_s_public;
@@ -2428,6 +2439,7 @@ typedef struct {
   PyObject *__pyx_kp_u_s;
   PyObject *__pyx_n_s_sealed;
   PyObject *__pyx_kp_u_sec_ch_ua;
+  PyObject *__pyx_kp_u_sec_ch_ua_full_version_list;
   PyObject *__pyx_kp_u_sec_ch_ua_mobile;
   PyObject *__pyx_kp_u_sec_ch_ua_model;
   PyObject *__pyx_kp_u_sec_ch_ua_platform;
@@ -2451,7 +2463,6 @@ typedef struct {
   PyObject *__pyx_n_s_user_agent_parser;
   PyObject *__pyx_n_s_userid;
   PyObject *__pyx_kp_u_utf_8;
-  PyObject *__pyx_n_s_v;
   PyObject *__pyx_n_s_version;
   PyObject *__pyx_n_s_web_desktop;
   PyObject *__pyx_n_s_web_messenger;
@@ -2472,12 +2483,14 @@ typedef struct {
   PyObject *__pyx_tuple__4;
   PyObject *__pyx_tuple__5;
   PyObject *__pyx_tuple__7;
+  PyObject *__pyx_tuple__8;
   PyObject *__pyx_tuple__9;
   PyObject *__pyx_tuple__11;
   PyObject *__pyx_tuple__13;
-  PyObject *__pyx_tuple__14;
-  PyObject *__pyx_codeobj__12;
-  PyObject *__pyx_codeobj__15;
+  PyObject *__pyx_tuple__15;
+  PyObject *__pyx_tuple__16;
+  PyObject *__pyx_codeobj__14;
+  PyObject *__pyx_codeobj__17;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2521,10 +2534,12 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
   Py_CLEAR(clear_module_state->__pyx_kp_u_0);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_0_2);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1);
   Py_CLEAR(clear_module_state->__pyx_kp_u_10);
   Py_CLEAR(clear_module_state->__pyx_n_s_AES);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_Crypto_Cipher);
   Py_CLEAR(clear_module_state->__pyx_n_s_ENABLE_ENCRYPTION_PASSWORD);
   Py_CLEAR(clear_module_state->__pyx_n_s_INVALID_CREDENTIALS_CODE);
@@ -2543,10 +2558,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_Unknown);
   Py_CLEAR(clear_module_state->__pyx_n_s_ValueError);
   Py_CLEAR(clear_module_state->__pyx_n_s_Variables);
-  Py_CLEAR(clear_module_state->__pyx_kp_u__10);
-  Py_CLEAR(clear_module_state->__pyx_n_s__16);
+  Py_CLEAR(clear_module_state->__pyx_n_s__10);
+  Py_CLEAR(clear_module_state->__pyx_kp_u__12);
+  Py_CLEAR(clear_module_state->__pyx_n_s__18);
   Py_CLEAR(clear_module_state->__pyx_kp_u__6);
-  Py_CLEAR(clear_module_state->__pyx_n_s__8);
   Py_CLEAR(clear_module_state->__pyx_n_s_aes_pass);
   Py_CLEAR(clear_module_state->__pyx_n_u_android);
   Py_CLEAR(clear_module_state->__pyx_n_s_api);
@@ -2604,9 +2619,12 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_mac_len);
   Py_CLEAR(clear_module_state->__pyx_kp_u_mac_os_x);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
+  Py_CLEAR(clear_module_state->__pyx_n_s_major);
   Py_CLEAR(clear_module_state->__pyx_n_u_major);
   Py_CLEAR(clear_module_state->__pyx_n_s_match);
   Py_CLEAR(clear_module_state->__pyx_n_s_metaclass);
+  Py_CLEAR(clear_module_state->__pyx_n_s_minor);
+  Py_CLEAR(clear_module_state->__pyx_n_u_minor);
   Py_CLEAR(clear_module_state->__pyx_n_s_mobile_async);
   Py_CLEAR(clear_module_state->__pyx_n_s_mobile_regular);
   Py_CLEAR(clear_module_state->__pyx_n_s_mobile_validate);
@@ -2624,6 +2642,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_os);
   Py_CLEAR(clear_module_state->__pyx_n_u_other);
   Py_CLEAR(clear_module_state->__pyx_n_s_password);
+  Py_CLEAR(clear_module_state->__pyx_n_s_patch);
+  Py_CLEAR(clear_module_state->__pyx_n_u_patch);
   Py_CLEAR(clear_module_state->__pyx_n_s_prefix);
   Py_CLEAR(clear_module_state->__pyx_n_s_prepare);
   Py_CLEAR(clear_module_state->__pyx_n_s_public);
@@ -2635,6 +2655,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_s);
   Py_CLEAR(clear_module_state->__pyx_n_s_sealed);
   Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_ua);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_ua_full_version_list);
   Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_ua_mobile);
   Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_ua_model);
   Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_ua_platform);
@@ -2658,7 +2679,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_user_agent_parser);
   Py_CLEAR(clear_module_state->__pyx_n_s_userid);
   Py_CLEAR(clear_module_state->__pyx_kp_u_utf_8);
-  Py_CLEAR(clear_module_state->__pyx_n_s_v);
   Py_CLEAR(clear_module_state->__pyx_n_s_version);
   Py_CLEAR(clear_module_state->__pyx_n_s_web_desktop);
   Py_CLEAR(clear_module_state->__pyx_n_s_web_messenger);
@@ -2679,12 +2699,14 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__4);
   Py_CLEAR(clear_module_state->__pyx_tuple__5);
   Py_CLEAR(clear_module_state->__pyx_tuple__7);
+  Py_CLEAR(clear_module_state->__pyx_tuple__8);
   Py_CLEAR(clear_module_state->__pyx_tuple__9);
   Py_CLEAR(clear_module_state->__pyx_tuple__11);
   Py_CLEAR(clear_module_state->__pyx_tuple__13);
-  Py_CLEAR(clear_module_state->__pyx_tuple__14);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__12);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__15);
+  Py_CLEAR(clear_module_state->__pyx_tuple__15);
+  Py_CLEAR(clear_module_state->__pyx_tuple__16);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__14);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__17);
   return 0;
 }
 #endif
@@ -2706,10 +2728,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
   Py_VISIT(traverse_module_state->__pyx_kp_u_0);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_0_2);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1);
   Py_VISIT(traverse_module_state->__pyx_kp_u_10);
   Py_VISIT(traverse_module_state->__pyx_n_s_AES);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_Crypto_Cipher);
   Py_VISIT(traverse_module_state->__pyx_n_s_ENABLE_ENCRYPTION_PASSWORD);
   Py_VISIT(traverse_module_state->__pyx_n_s_INVALID_CREDENTIALS_CODE);
@@ -2728,10 +2752,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_Unknown);
   Py_VISIT(traverse_module_state->__pyx_n_s_ValueError);
   Py_VISIT(traverse_module_state->__pyx_n_s_Variables);
-  Py_VISIT(traverse_module_state->__pyx_kp_u__10);
-  Py_VISIT(traverse_module_state->__pyx_n_s__16);
+  Py_VISIT(traverse_module_state->__pyx_n_s__10);
+  Py_VISIT(traverse_module_state->__pyx_kp_u__12);
+  Py_VISIT(traverse_module_state->__pyx_n_s__18);
   Py_VISIT(traverse_module_state->__pyx_kp_u__6);
-  Py_VISIT(traverse_module_state->__pyx_n_s__8);
   Py_VISIT(traverse_module_state->__pyx_n_s_aes_pass);
   Py_VISIT(traverse_module_state->__pyx_n_u_android);
   Py_VISIT(traverse_module_state->__pyx_n_s_api);
@@ -2789,9 +2813,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_mac_len);
   Py_VISIT(traverse_module_state->__pyx_kp_u_mac_os_x);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
+  Py_VISIT(traverse_module_state->__pyx_n_s_major);
   Py_VISIT(traverse_module_state->__pyx_n_u_major);
   Py_VISIT(traverse_module_state->__pyx_n_s_match);
   Py_VISIT(traverse_module_state->__pyx_n_s_metaclass);
+  Py_VISIT(traverse_module_state->__pyx_n_s_minor);
+  Py_VISIT(traverse_module_state->__pyx_n_u_minor);
   Py_VISIT(traverse_module_state->__pyx_n_s_mobile_async);
   Py_VISIT(traverse_module_state->__pyx_n_s_mobile_regular);
   Py_VISIT(traverse_module_state->__pyx_n_s_mobile_validate);
@@ -2809,6 +2836,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_os);
   Py_VISIT(traverse_module_state->__pyx_n_u_other);
   Py_VISIT(traverse_module_state->__pyx_n_s_password);
+  Py_VISIT(traverse_module_state->__pyx_n_s_patch);
+  Py_VISIT(traverse_module_state->__pyx_n_u_patch);
   Py_VISIT(traverse_module_state->__pyx_n_s_prefix);
   Py_VISIT(traverse_module_state->__pyx_n_s_prepare);
   Py_VISIT(traverse_module_state->__pyx_n_s_public);
@@ -2820,6 +2849,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_s);
   Py_VISIT(traverse_module_state->__pyx_n_s_sealed);
   Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_ua);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_ua_full_version_list);
   Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_ua_mobile);
   Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_ua_model);
   Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_ua_platform);
@@ -2843,7 +2873,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_user_agent_parser);
   Py_VISIT(traverse_module_state->__pyx_n_s_userid);
   Py_VISIT(traverse_module_state->__pyx_kp_u_utf_8);
-  Py_VISIT(traverse_module_state->__pyx_n_s_v);
   Py_VISIT(traverse_module_state->__pyx_n_s_version);
   Py_VISIT(traverse_module_state->__pyx_n_s_web_desktop);
   Py_VISIT(traverse_module_state->__pyx_n_s_web_messenger);
@@ -2864,12 +2893,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__4);
   Py_VISIT(traverse_module_state->__pyx_tuple__5);
   Py_VISIT(traverse_module_state->__pyx_tuple__7);
+  Py_VISIT(traverse_module_state->__pyx_tuple__8);
   Py_VISIT(traverse_module_state->__pyx_tuple__9);
   Py_VISIT(traverse_module_state->__pyx_tuple__11);
   Py_VISIT(traverse_module_state->__pyx_tuple__13);
-  Py_VISIT(traverse_module_state->__pyx_tuple__14);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__12);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__15);
+  Py_VISIT(traverse_module_state->__pyx_tuple__15);
+  Py_VISIT(traverse_module_state->__pyx_tuple__16);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__14);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__17);
   return 0;
 }
 #endif
@@ -2901,10 +2932,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #if CYTHON_USE_MODULE_STATE
 #endif
 #define __pyx_kp_u_0 __pyx_mstate_global->__pyx_kp_u_0
+#define __pyx_kp_u_0_2 __pyx_mstate_global->__pyx_kp_u_0_2
 #define __pyx_kp_u_1 __pyx_mstate_global->__pyx_kp_u_1
 #define __pyx_kp_u_10 __pyx_mstate_global->__pyx_kp_u_10
 #define __pyx_n_s_AES __pyx_mstate_global->__pyx_n_s_AES
-#define __pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G __pyx_mstate_global->__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G
+#define __pyx_kp_u_Chromium_v_major_Not_A_Brand_v __pyx_mstate_global->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v
+#define __pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2 __pyx_mstate_global->__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2
 #define __pyx_n_s_Crypto_Cipher __pyx_mstate_global->__pyx_n_s_Crypto_Cipher
 #define __pyx_n_s_ENABLE_ENCRYPTION_PASSWORD __pyx_mstate_global->__pyx_n_s_ENABLE_ENCRYPTION_PASSWORD
 #define __pyx_n_s_INVALID_CREDENTIALS_CODE __pyx_mstate_global->__pyx_n_s_INVALID_CREDENTIALS_CODE
@@ -2923,10 +2956,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_Unknown __pyx_mstate_global->__pyx_n_u_Unknown
 #define __pyx_n_s_ValueError __pyx_mstate_global->__pyx_n_s_ValueError
 #define __pyx_n_s_Variables __pyx_mstate_global->__pyx_n_s_Variables
-#define __pyx_kp_u__10 __pyx_mstate_global->__pyx_kp_u__10
-#define __pyx_n_s__16 __pyx_mstate_global->__pyx_n_s__16
+#define __pyx_n_s__10 __pyx_mstate_global->__pyx_n_s__10
+#define __pyx_kp_u__12 __pyx_mstate_global->__pyx_kp_u__12
+#define __pyx_n_s__18 __pyx_mstate_global->__pyx_n_s__18
 #define __pyx_kp_u__6 __pyx_mstate_global->__pyx_kp_u__6
-#define __pyx_n_s__8 __pyx_mstate_global->__pyx_n_s__8
 #define __pyx_n_s_aes_pass __pyx_mstate_global->__pyx_n_s_aes_pass
 #define __pyx_n_u_android __pyx_mstate_global->__pyx_n_u_android
 #define __pyx_n_s_api __pyx_mstate_global->__pyx_n_s_api
@@ -2984,9 +3017,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_mac_len __pyx_mstate_global->__pyx_n_s_mac_len
 #define __pyx_kp_u_mac_os_x __pyx_mstate_global->__pyx_kp_u_mac_os_x
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
+#define __pyx_n_s_major __pyx_mstate_global->__pyx_n_s_major
 #define __pyx_n_u_major __pyx_mstate_global->__pyx_n_u_major
 #define __pyx_n_s_match __pyx_mstate_global->__pyx_n_s_match
 #define __pyx_n_s_metaclass __pyx_mstate_global->__pyx_n_s_metaclass
+#define __pyx_n_s_minor __pyx_mstate_global->__pyx_n_s_minor
+#define __pyx_n_u_minor __pyx_mstate_global->__pyx_n_u_minor
 #define __pyx_n_s_mobile_async __pyx_mstate_global->__pyx_n_s_mobile_async
 #define __pyx_n_s_mobile_regular __pyx_mstate_global->__pyx_n_s_mobile_regular
 #define __pyx_n_s_mobile_validate __pyx_mstate_global->__pyx_n_s_mobile_validate
@@ -3004,6 +3040,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_os __pyx_mstate_global->__pyx_n_u_os
 #define __pyx_n_u_other __pyx_mstate_global->__pyx_n_u_other
 #define __pyx_n_s_password __pyx_mstate_global->__pyx_n_s_password
+#define __pyx_n_s_patch __pyx_mstate_global->__pyx_n_s_patch
+#define __pyx_n_u_patch __pyx_mstate_global->__pyx_n_u_patch
 #define __pyx_n_s_prefix __pyx_mstate_global->__pyx_n_s_prefix
 #define __pyx_n_s_prepare __pyx_mstate_global->__pyx_n_s_prepare
 #define __pyx_n_s_public __pyx_mstate_global->__pyx_n_s_public
@@ -3015,6 +3053,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_s __pyx_mstate_global->__pyx_kp_u_s
 #define __pyx_n_s_sealed __pyx_mstate_global->__pyx_n_s_sealed
 #define __pyx_kp_u_sec_ch_ua __pyx_mstate_global->__pyx_kp_u_sec_ch_ua
+#define __pyx_kp_u_sec_ch_ua_full_version_list __pyx_mstate_global->__pyx_kp_u_sec_ch_ua_full_version_list
 #define __pyx_kp_u_sec_ch_ua_mobile __pyx_mstate_global->__pyx_kp_u_sec_ch_ua_mobile
 #define __pyx_kp_u_sec_ch_ua_model __pyx_mstate_global->__pyx_kp_u_sec_ch_ua_model
 #define __pyx_kp_u_sec_ch_ua_platform __pyx_mstate_global->__pyx_kp_u_sec_ch_ua_platform
@@ -3038,7 +3077,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_user_agent_parser __pyx_mstate_global->__pyx_n_s_user_agent_parser
 #define __pyx_n_s_userid __pyx_mstate_global->__pyx_n_s_userid
 #define __pyx_kp_u_utf_8 __pyx_mstate_global->__pyx_kp_u_utf_8
-#define __pyx_n_s_v __pyx_mstate_global->__pyx_n_s_v
 #define __pyx_n_s_version __pyx_mstate_global->__pyx_n_s_version
 #define __pyx_n_s_web_desktop __pyx_mstate_global->__pyx_n_s_web_desktop
 #define __pyx_n_s_web_messenger __pyx_mstate_global->__pyx_n_s_web_messenger
@@ -3059,12 +3097,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__4 __pyx_mstate_global->__pyx_tuple__4
 #define __pyx_tuple__5 __pyx_mstate_global->__pyx_tuple__5
 #define __pyx_tuple__7 __pyx_mstate_global->__pyx_tuple__7
+#define __pyx_tuple__8 __pyx_mstate_global->__pyx_tuple__8
 #define __pyx_tuple__9 __pyx_mstate_global->__pyx_tuple__9
 #define __pyx_tuple__11 __pyx_mstate_global->__pyx_tuple__11
 #define __pyx_tuple__13 __pyx_mstate_global->__pyx_tuple__13
-#define __pyx_tuple__14 __pyx_mstate_global->__pyx_tuple__14
-#define __pyx_codeobj__12 __pyx_mstate_global->__pyx_codeobj__12
-#define __pyx_codeobj__15 __pyx_mstate_global->__pyx_codeobj__15
+#define __pyx_tuple__15 __pyx_mstate_global->__pyx_tuple__15
+#define __pyx_tuple__16 __pyx_mstate_global->__pyx_tuple__16
+#define __pyx_codeobj__14 __pyx_mstate_global->__pyx_codeobj__14
+#define __pyx_codeobj__17 __pyx_mstate_global->__pyx_codeobj__17
  
 
  
@@ -4799,26 +4839,80 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_2get_platform_header
         if (__pyx_t_10) {
 
            
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L6_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_Chromium_v_major_Not_A_Brand_v, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 120, __pyx_L6_error)
+
+           
+          __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 121, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_ua, __pyx_n_u_user_agent); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 120, __pyx_L6_error)
+          __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_ua, __pyx_n_u_user_agent); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 121, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 120, __pyx_L6_error)
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 121, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-          __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 120, __pyx_L6_error)
+          __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 121, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_v, __pyx_t_6) < 0) __PYX_ERR(0, 120, __pyx_L6_error)
+          if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_major, __pyx_t_6) < 0) __PYX_ERR(0, 121, __pyx_L6_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+           
           __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 120, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           if (unlikely((PyDict_SetItem(__pyx_v_headers, __pyx_kp_u_sec_ch_ua, __pyx_t_6) < 0))) __PYX_ERR(0, 120, __pyx_L6_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+           
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2, __pyx_n_s_format); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 123, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_6);
+
+           
+          __pyx_t_5 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_5);
+          __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_ua, __pyx_n_u_user_agent); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_major, __pyx_t_1) < 0) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+           
+          __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_ua, __pyx_n_u_user_agent); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 125, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_minor, __pyx_t_1) < 0) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+           
+          __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_ua, __pyx_n_u_user_agent); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 126, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_patch, __pyx_t_1) < 0) __PYX_ERR(0, 124, __pyx_L6_error)
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+           
+          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+          __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+          if (unlikely((PyDict_SetItem(__pyx_v_headers, __pyx_kp_u_sec_ch_ua_full_version_list, __pyx_t_1) < 0))) __PYX_ERR(0, 123, __pyx_L6_error)
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
            
         }
@@ -4898,10 +4992,12 @@ static PyMethodDef __pyx_methods[] = {
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
     {&__pyx_kp_u_0, __pyx_k_0, sizeof(__pyx_k_0), 0, 1, 0, 0},
+    {&__pyx_kp_u_0_2, __pyx_k_0_2, sizeof(__pyx_k_0_2), 0, 1, 0, 0},
     {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
     {&__pyx_kp_u_10, __pyx_k_10, sizeof(__pyx_k_10), 0, 1, 0, 0},
     {&__pyx_n_s_AES, __pyx_k_AES, sizeof(__pyx_k_AES), 0, 0, 1, 1},
-    {&__pyx_kp_u_Chromium_v_v_Not_A_Brand_v_24_G, __pyx_k_Chromium_v_v_Not_A_Brand_v_24_G, sizeof(__pyx_k_Chromium_v_v_Not_A_Brand_v_24_G), 0, 1, 0, 0},
+    {&__pyx_kp_u_Chromium_v_major_Not_A_Brand_v, __pyx_k_Chromium_v_major_Not_A_Brand_v, sizeof(__pyx_k_Chromium_v_major_Not_A_Brand_v), 0, 1, 0, 0},
+    {&__pyx_kp_u_Chromium_v_major_Not_A_Brand_v_2, __pyx_k_Chromium_v_major_Not_A_Brand_v_2, sizeof(__pyx_k_Chromium_v_major_Not_A_Brand_v_2), 0, 1, 0, 0},
     {&__pyx_n_s_Crypto_Cipher, __pyx_k_Crypto_Cipher, sizeof(__pyx_k_Crypto_Cipher), 0, 0, 1, 1},
     {&__pyx_n_s_ENABLE_ENCRYPTION_PASSWORD, __pyx_k_ENABLE_ENCRYPTION_PASSWORD, sizeof(__pyx_k_ENABLE_ENCRYPTION_PASSWORD), 0, 0, 1, 1},
     {&__pyx_n_s_INVALID_CREDENTIALS_CODE, __pyx_k_INVALID_CREDENTIALS_CODE, sizeof(__pyx_k_INVALID_CREDENTIALS_CODE), 0, 0, 1, 1},
@@ -4920,10 +5016,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_Unknown, __pyx_k_Unknown, sizeof(__pyx_k_Unknown), 0, 1, 0, 1},
     {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
     {&__pyx_n_s_Variables, __pyx_k_Variables, sizeof(__pyx_k_Variables), 0, 0, 1, 1},
-    {&__pyx_kp_u__10, __pyx_k__10, sizeof(__pyx_k__10), 0, 1, 0, 0},
-    {&__pyx_n_s__16, __pyx_k__16, sizeof(__pyx_k__16), 0, 0, 1, 1},
+    {&__pyx_n_s__10, __pyx_k__10, sizeof(__pyx_k__10), 0, 0, 1, 1},
+    {&__pyx_kp_u__12, __pyx_k__12, sizeof(__pyx_k__12), 0, 1, 0, 0},
+    {&__pyx_n_s__18, __pyx_k__18, sizeof(__pyx_k__18), 0, 0, 1, 1},
     {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
-    {&__pyx_n_s__8, __pyx_k__8, sizeof(__pyx_k__8), 0, 0, 1, 1},
     {&__pyx_n_s_aes_pass, __pyx_k_aes_pass, sizeof(__pyx_k_aes_pass), 0, 0, 1, 1},
     {&__pyx_n_u_android, __pyx_k_android, sizeof(__pyx_k_android), 0, 1, 0, 1},
     {&__pyx_n_s_api, __pyx_k_api, sizeof(__pyx_k_api), 0, 0, 1, 1},
@@ -4981,9 +5077,12 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_mac_len, __pyx_k_mac_len, sizeof(__pyx_k_mac_len), 0, 0, 1, 1},
     {&__pyx_kp_u_mac_os_x, __pyx_k_mac_os_x, sizeof(__pyx_k_mac_os_x), 0, 1, 0, 0},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
+    {&__pyx_n_s_major, __pyx_k_major, sizeof(__pyx_k_major), 0, 0, 1, 1},
     {&__pyx_n_u_major, __pyx_k_major, sizeof(__pyx_k_major), 0, 1, 0, 1},
     {&__pyx_n_s_match, __pyx_k_match, sizeof(__pyx_k_match), 0, 0, 1, 1},
     {&__pyx_n_s_metaclass, __pyx_k_metaclass, sizeof(__pyx_k_metaclass), 0, 0, 1, 1},
+    {&__pyx_n_s_minor, __pyx_k_minor, sizeof(__pyx_k_minor), 0, 0, 1, 1},
+    {&__pyx_n_u_minor, __pyx_k_minor, sizeof(__pyx_k_minor), 0, 1, 0, 1},
     {&__pyx_n_s_mobile_async, __pyx_k_mobile_async, sizeof(__pyx_k_mobile_async), 0, 0, 1, 1},
     {&__pyx_n_s_mobile_regular, __pyx_k_mobile_regular, sizeof(__pyx_k_mobile_regular), 0, 0, 1, 1},
     {&__pyx_n_s_mobile_validate, __pyx_k_mobile_validate, sizeof(__pyx_k_mobile_validate), 0, 0, 1, 1},
@@ -5001,6 +5100,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_os, __pyx_k_os, sizeof(__pyx_k_os), 0, 1, 0, 1},
     {&__pyx_n_u_other, __pyx_k_other, sizeof(__pyx_k_other), 0, 1, 0, 1},
     {&__pyx_n_s_password, __pyx_k_password, sizeof(__pyx_k_password), 0, 0, 1, 1},
+    {&__pyx_n_s_patch, __pyx_k_patch, sizeof(__pyx_k_patch), 0, 0, 1, 1},
+    {&__pyx_n_u_patch, __pyx_k_patch, sizeof(__pyx_k_patch), 0, 1, 0, 1},
     {&__pyx_n_s_prefix, __pyx_k_prefix, sizeof(__pyx_k_prefix), 0, 0, 1, 1},
     {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
     {&__pyx_n_s_public, __pyx_k_public, sizeof(__pyx_k_public), 0, 0, 1, 1},
@@ -5012,6 +5113,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 1, 0, 0},
     {&__pyx_n_s_sealed, __pyx_k_sealed, sizeof(__pyx_k_sealed), 0, 0, 1, 1},
     {&__pyx_kp_u_sec_ch_ua, __pyx_k_sec_ch_ua, sizeof(__pyx_k_sec_ch_ua), 0, 1, 0, 0},
+    {&__pyx_kp_u_sec_ch_ua_full_version_list, __pyx_k_sec_ch_ua_full_version_list, sizeof(__pyx_k_sec_ch_ua_full_version_list), 0, 1, 0, 0},
     {&__pyx_kp_u_sec_ch_ua_mobile, __pyx_k_sec_ch_ua_mobile, sizeof(__pyx_k_sec_ch_ua_mobile), 0, 1, 0, 0},
     {&__pyx_kp_u_sec_ch_ua_model, __pyx_k_sec_ch_ua_model, sizeof(__pyx_k_sec_ch_ua_model), 0, 1, 0, 0},
     {&__pyx_kp_u_sec_ch_ua_platform, __pyx_k_sec_ch_ua_platform, sizeof(__pyx_k_sec_ch_ua_platform), 0, 1, 0, 0},
@@ -5035,7 +5137,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_user_agent_parser, __pyx_k_user_agent_parser, sizeof(__pyx_k_user_agent_parser), 0, 0, 1, 1},
     {&__pyx_n_s_userid, __pyx_k_userid, sizeof(__pyx_k_userid), 0, 0, 1, 1},
     {&__pyx_kp_u_utf_8, __pyx_k_utf_8, sizeof(__pyx_k_utf_8), 0, 1, 0, 0},
-    {&__pyx_n_s_v, __pyx_k_v, sizeof(__pyx_k_v), 0, 0, 1, 1},
     {&__pyx_n_s_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 0, 1, 1},
     {&__pyx_n_s_web_desktop, __pyx_k_web_desktop, sizeof(__pyx_k_web_desktop), 0, 0, 1, 1},
     {&__pyx_n_s_web_messenger, __pyx_k_web_messenger, sizeof(__pyx_k_web_messenger), 0, 0, 1, 1},
@@ -5083,29 +5184,39 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__5);
 
    
-  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_n_u_major, __pyx_kp_u_10); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_n_u_major, __pyx_kp_u_10); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
    
-  __pyx_tuple__9 = PyTuple_Pack(2, __pyx_n_s_nacl, __pyx_n_s_public); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_u_minor, __pyx_kp_u_0_2); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__8);
+  __Pyx_GIVEREF(__pyx_tuple__8);
+
+   
+  __pyx_tuple__9 = PyTuple_Pack(2, __pyx_n_u_patch, __pyx_kp_u_0_2); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
    
-  __pyx_tuple__11 = PyTuple_Pack(22, __pyx_n_s_password, __pyx_n_s_keyid, __pyx_n_s_key, __pyx_n_s_lhex, __pyx_n_s_loverhead, __pyx_n_s_l16, __pyx_n_s_l32, __pyx_n_s_lj, __pyx_n_s_lk, __pyx_n_s_ll, __pyx_n_s_lm, __pyx_n_s_byte_key, __pyx_n_s_ts, __pyx_n_s_byte_pass, __pyx_n_s_index, __pyx_n_s_cipher, __pyx_n_s_aes_pass, __pyx_n_s_ciphertext, __pyx_n_s_sealed, __pyx_n_s_prefix, __pyx_n_s_version, __pyx_n_s_result); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(2, __pyx_n_s_nacl, __pyx_n_s_public); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mtf_app_controllers_bruteforce_l, __pyx_n_s_generate_encpass, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 36, __pyx_L1_error)
-  __pyx_tuple__13 = PyTuple_Pack(2, Py_None, Py_None); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 36, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__13);
-  __Pyx_GIVEREF(__pyx_tuple__13);
 
    
-  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_n_s_user_agent, __pyx_n_s_headers, __pyx_n_s_ua); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 99, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mtf_app_controllers_bruteforce_l, __pyx_n_s_get_platform_header_from_userage, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(22, __pyx_n_s_password, __pyx_n_s_keyid, __pyx_n_s_key, __pyx_n_s_lhex, __pyx_n_s_loverhead, __pyx_n_s_l16, __pyx_n_s_l32, __pyx_n_s_lj, __pyx_n_s_lk, __pyx_n_s_ll, __pyx_n_s_lm, __pyx_n_s_byte_key, __pyx_n_s_ts, __pyx_n_s_byte_pass, __pyx_n_s_index, __pyx_n_s_cipher, __pyx_n_s_aes_pass, __pyx_n_s_ciphertext, __pyx_n_s_sealed, __pyx_n_s_prefix, __pyx_n_s_version, __pyx_n_s_result); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mtf_app_controllers_bruteforce_l, __pyx_n_s_generate_encpass, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(2, Py_None, Py_None); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__15);
+  __Pyx_GIVEREF(__pyx_tuple__15);
+
+   
+  __pyx_tuple__16 = PyTuple_Pack(3, __pyx_n_s_user_agent, __pyx_n_s_headers, __pyx_n_s_ua); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__16);
+  __Pyx_GIVEREF(__pyx_tuple__16);
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mtf_app_controllers_bruteforce_l, __pyx_n_s_get_platform_header_from_userage, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5653,16 +5764,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_password, __pyx_n_s_str) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_keyid, __pyx_n_s_int) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_key, __pyx_n_s_str) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_11controllers_10bruteforce_5login_1generate_encpass, 0, __pyx_n_s_generate_encpass, NULL, __pyx_n_s_controllers_bruteforce_login, __pyx_d, ((PyObject *)__pyx_codeobj__12)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_11controllers_10bruteforce_5login_1generate_encpass, 0, __pyx_n_s_generate_encpass, NULL, __pyx_n_s_controllers_bruteforce_login, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__13);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__15);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_encpass, __pyx_t_2) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
    
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_11controllers_10bruteforce_5login_3get_platform_header_from_useragent, 0, __pyx_n_s_get_platform_header_from_userage, NULL, __pyx_n_s_controllers_bruteforce_login, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_11controllers_10bruteforce_5login_3get_platform_header_from_useragent, 0, __pyx_n_s_get_platform_header_from_userage, NULL, __pyx_n_s_controllers_bruteforce_login, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_platform_header_from_userage, __pyx_t_2) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -7941,7 +8052,7 @@ static PyObject *__Pyx_ImportDottedModule_WalkParts(PyObject *module, PyObject *
 #endif
 static PyObject *__Pyx__ImportDottedModule(PyObject *name, PyObject *parts_tuple) {
 #if PY_MAJOR_VERSION < 3
-    PyObject *module, *from_list, *star = __pyx_n_s__8;
+    PyObject *module, *from_list, *star = __pyx_n_s__10;
     CYTHON_UNUSED_VAR(parts_tuple);
     from_list = PyList_New(1);
     if (unlikely(!from_list))
@@ -8004,7 +8115,7 @@ static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
         if (unlikely(!module_name_str)) { goto modbad; }
         module_name = PyUnicode_FromString(module_name_str);
         if (unlikely(!module_name)) { goto modbad; }
-        module_dot = PyUnicode_Concat(module_name, __pyx_kp_u__10);
+        module_dot = PyUnicode_Concat(module_name, __pyx_kp_u__12);
         if (unlikely(!module_dot)) { goto modbad; }
         full_name = PyUnicode_Concat(module_dot, name);
         if (unlikely(!full_name)) { goto modbad; }
@@ -9946,7 +10057,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__16);
+        name = __Pyx_NewRef(__pyx_n_s__18);
     }
     return name;
 }
