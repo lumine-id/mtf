@@ -2097,7 +2097,7 @@ static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_4_9[] = "4.9";
+static const char __pyx_k_5_0[] = "5.0";
 static const char __pyx_k__12[] = "?";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
@@ -2130,6 +2130,7 @@ static const char __pyx_k_Style[] = "Style";
 static const char __pyx_k_black[] = "black";
 static const char __pyx_k_color[] = "color";
 static const char __pyx_k_empty[] = "empty";
+static const char __pyx_k_en_US[] = "en-US";
 static const char __pyx_k_en_us[] = "en-us";
 static const char __pyx_k_gold1[] = "gold1";
 static const char __pyx_k_green[] = "green";
@@ -2269,7 +2270,6 @@ static const char __pyx_k_mtf_config___init___py[] = "mtf/config/__init__.py";
 static const char __pyx_k_validate_error_message[] = "validate_error_message";
 static const char __pyx_k_DESKTOP_REQUEST_HEADERS[] = "DESKTOP_REQUEST_HEADERS";
 static const char __pyx_k_U2cuV2YpxWLoRXdh5yLulmY[] = "=U2cuV2YpxWLoRXdh5yLulmY";
-static const char __pyx_k_id_ID_id_q_0_9_ms_q_0_8[] = "id-ID,id;q=0.9,ms;q=0.8";
 static const char __pyx_k_upgrade_insecure_requests[] = "upgrade-insecure-requests";
 static const char __pyx_k_smirking_face_Silakan_Masukkan[] = ":smirking_face: Silakan Masukkan Y\\[a] atau T\\[idak]";
 static const char __pyx_k_FBAN_FB4A_FBAV_222_0_0_48_113_F[] = "[FBAN/FB4A;FBAV/222.0.0.48.113;FBBV/155323366;FBDM/{density=2.0,width=720,height=1360};FBLC/sr_RS;FBRV/156625696;FBCR/mt:s;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/LDN-L21;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]";
@@ -2589,7 +2589,7 @@ typedef struct {
   PyObject *__pyx_kp_u_1;
   PyObject *__pyx_kp_u_1217981644879628;
   PyObject *__pyx_kp_u_1_2;
-  PyObject *__pyx_kp_u_4_9;
+  PyObject *__pyx_kp_u_5_0;
   PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
   PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
   PyObject *__pyx_n_s_AUTH_DIR;
@@ -2941,6 +2941,7 @@ typedef struct {
   PyObject *__pyx_n_u_document;
   PyObject *__pyx_n_u_dots;
   PyObject *__pyx_n_u_empty;
+  PyObject *__pyx_kp_u_en_US;
   PyObject *__pyx_kp_u_en_US_en_q_0_9;
   PyObject *__pyx_kp_u_en_us;
   PyObject *__pyx_n_s_environ;
@@ -2960,7 +2961,6 @@ typedef struct {
   PyObject *__pyx_kp_u_hi_IN_hi_q_0_9;
   PyObject *__pyx_kp_u_hi_in;
   PyObject *__pyx_kp_u_id_ID_id_q_0_9;
-  PyObject *__pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8;
   PyObject *__pyx_kp_u_id_id;
   PyObject *__pyx_n_u_ig;
   PyObject *__pyx_n_s_illegal_choice_message;
@@ -3114,7 +3114,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_1);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1217981644879628);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1_2);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_4_9);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_5_0);
   Py_CLEAR(clear_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_CLEAR(clear_module_state->__pyx_n_s_ANSI_COLOR_NAMES);
   Py_CLEAR(clear_module_state->__pyx_n_s_AUTH_DIR);
@@ -3466,6 +3466,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_document);
   Py_CLEAR(clear_module_state->__pyx_n_u_dots);
   Py_CLEAR(clear_module_state->__pyx_n_u_empty);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_en_US);
   Py_CLEAR(clear_module_state->__pyx_kp_u_en_US_en_q_0_9);
   Py_CLEAR(clear_module_state->__pyx_kp_u_en_us);
   Py_CLEAR(clear_module_state->__pyx_n_s_environ);
@@ -3485,7 +3486,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_hi_IN_hi_q_0_9);
   Py_CLEAR(clear_module_state->__pyx_kp_u_hi_in);
   Py_CLEAR(clear_module_state->__pyx_kp_u_id_ID_id_q_0_9);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8);
   Py_CLEAR(clear_module_state->__pyx_kp_u_id_id);
   Py_CLEAR(clear_module_state->__pyx_n_u_ig);
   Py_CLEAR(clear_module_state->__pyx_n_s_illegal_choice_message);
@@ -3617,7 +3617,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_1);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1217981644879628);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1_2);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_4_9);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_5_0);
   Py_VISIT(traverse_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_VISIT(traverse_module_state->__pyx_n_s_ANSI_COLOR_NAMES);
   Py_VISIT(traverse_module_state->__pyx_n_s_AUTH_DIR);
@@ -3969,6 +3969,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_document);
   Py_VISIT(traverse_module_state->__pyx_n_u_dots);
   Py_VISIT(traverse_module_state->__pyx_n_u_empty);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_en_US);
   Py_VISIT(traverse_module_state->__pyx_kp_u_en_US_en_q_0_9);
   Py_VISIT(traverse_module_state->__pyx_kp_u_en_us);
   Py_VISIT(traverse_module_state->__pyx_n_s_environ);
@@ -3988,7 +3989,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_hi_IN_hi_q_0_9);
   Py_VISIT(traverse_module_state->__pyx_kp_u_hi_in);
   Py_VISIT(traverse_module_state->__pyx_kp_u_id_ID_id_q_0_9);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8);
   Py_VISIT(traverse_module_state->__pyx_kp_u_id_id);
   Py_VISIT(traverse_module_state->__pyx_n_u_ig);
   Py_VISIT(traverse_module_state->__pyx_n_s_illegal_choice_message);
@@ -4130,7 +4130,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_1 __pyx_mstate_global->__pyx_kp_u_1
 #define __pyx_kp_u_1217981644879628 __pyx_mstate_global->__pyx_kp_u_1217981644879628
 #define __pyx_kp_u_1_2 __pyx_mstate_global->__pyx_kp_u_1_2
-#define __pyx_kp_u_4_9 __pyx_mstate_global->__pyx_kp_u_4_9
+#define __pyx_kp_u_5_0 __pyx_mstate_global->__pyx_kp_u_5_0
 #define __pyx_n_s_ACCEPT_LANGUAGE __pyx_mstate_global->__pyx_n_s_ACCEPT_LANGUAGE
 #define __pyx_n_s_ANSI_COLOR_NAMES __pyx_mstate_global->__pyx_n_s_ANSI_COLOR_NAMES
 #define __pyx_n_s_AUTH_DIR __pyx_mstate_global->__pyx_n_s_AUTH_DIR
@@ -4482,6 +4482,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_document __pyx_mstate_global->__pyx_n_u_document
 #define __pyx_n_u_dots __pyx_mstate_global->__pyx_n_u_dots
 #define __pyx_n_u_empty __pyx_mstate_global->__pyx_n_u_empty
+#define __pyx_kp_u_en_US __pyx_mstate_global->__pyx_kp_u_en_US
 #define __pyx_kp_u_en_US_en_q_0_9 __pyx_mstate_global->__pyx_kp_u_en_US_en_q_0_9
 #define __pyx_kp_u_en_us __pyx_mstate_global->__pyx_kp_u_en_us
 #define __pyx_n_s_environ __pyx_mstate_global->__pyx_n_s_environ
@@ -4501,7 +4502,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_hi_IN_hi_q_0_9 __pyx_mstate_global->__pyx_kp_u_hi_IN_hi_q_0_9
 #define __pyx_kp_u_hi_in __pyx_mstate_global->__pyx_kp_u_hi_in
 #define __pyx_kp_u_id_ID_id_q_0_9 __pyx_mstate_global->__pyx_kp_u_id_ID_id_q_0_9
-#define __pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8 __pyx_mstate_global->__pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8
 #define __pyx_kp_u_id_id __pyx_mstate_global->__pyx_kp_u_id_id
 #define __pyx_n_u_ig __pyx_mstate_global->__pyx_n_u_ig
 #define __pyx_n_s_illegal_choice_message __pyx_mstate_global->__pyx_n_s_illegal_choice_message
@@ -5404,7 +5404,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
     {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
     {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-    {&__pyx_kp_u_4_9, __pyx_k_4_9, sizeof(__pyx_k_4_9), 0, 1, 0, 0},
+    {&__pyx_kp_u_5_0, __pyx_k_5_0, sizeof(__pyx_k_5_0), 0, 1, 0, 0},
     {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
     {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
     {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -5756,6 +5756,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_document, __pyx_k_document, sizeof(__pyx_k_document), 0, 1, 0, 1},
     {&__pyx_n_u_dots, __pyx_k_dots, sizeof(__pyx_k_dots), 0, 1, 0, 1},
     {&__pyx_n_u_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 1, 0, 1},
+    {&__pyx_kp_u_en_US, __pyx_k_en_US, sizeof(__pyx_k_en_US), 0, 1, 0, 0},
     {&__pyx_kp_u_en_US_en_q_0_9, __pyx_k_en_US_en_q_0_9, sizeof(__pyx_k_en_US_en_q_0_9), 0, 1, 0, 0},
     {&__pyx_kp_u_en_us, __pyx_k_en_us, sizeof(__pyx_k_en_us), 0, 1, 0, 0},
     {&__pyx_n_s_environ, __pyx_k_environ, sizeof(__pyx_k_environ), 0, 0, 1, 1},
@@ -5775,7 +5776,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_hi_IN_hi_q_0_9, __pyx_k_hi_IN_hi_q_0_9, sizeof(__pyx_k_hi_IN_hi_q_0_9), 0, 1, 0, 0},
     {&__pyx_kp_u_hi_in, __pyx_k_hi_in, sizeof(__pyx_k_hi_in), 0, 1, 0, 0},
     {&__pyx_kp_u_id_ID_id_q_0_9, __pyx_k_id_ID_id_q_0_9, sizeof(__pyx_k_id_ID_id_q_0_9), 0, 1, 0, 0},
-    {&__pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8, __pyx_k_id_ID_id_q_0_9_ms_q_0_8, sizeof(__pyx_k_id_ID_id_q_0_9_ms_q_0_8), 0, 1, 0, 0},
     {&__pyx_kp_u_id_id, __pyx_k_id_id, sizeof(__pyx_k_id_id), 0, 1, 0, 0},
     {&__pyx_n_u_ig, __pyx_k_ig, sizeof(__pyx_k_ig), 0, 1, 0, 1},
     {&__pyx_n_s_illegal_choice_message, __pyx_k_illegal_choice_message, sizeof(__pyx_k_illegal_choice_message), 0, 0, 1, 1},
@@ -6400,7 +6400,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_VERSION, __pyx_kp_u_4_9) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_VERSION, __pyx_kp_u_5_0) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -6563,7 +6563,7 @@ if (!__Pyx_RefNanny) {
    
   __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_other, __pyx_kp_u_id_ID_id_q_0_9_ms_q_0_8) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_other, __pyx_kp_u_en_US) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
