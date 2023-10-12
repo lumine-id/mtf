@@ -2097,7 +2097,7 @@ static const char __pyx_k_ig[] = "ig";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_0_2[] = "0";
 static const char __pyx_k_1_2[] = "?1";
-static const char __pyx_k_5_0[] = "5.0";
+static const char __pyx_k_5_1[] = "5.1";
 static const char __pyx_k__12[] = "?";
 static const char __pyx_k_app[] = "app";
 static const char __pyx_k_doc[] = "__doc__";
@@ -2130,7 +2130,6 @@ static const char __pyx_k_Style[] = "Style";
 static const char __pyx_k_black[] = "black";
 static const char __pyx_k_color[] = "color";
 static const char __pyx_k_empty[] = "empty";
-static const char __pyx_k_en_US[] = "en-US";
 static const char __pyx_k_en_us[] = "en-us";
 static const char __pyx_k_gold1[] = "gold1";
 static const char __pyx_k_green[] = "green";
@@ -2301,6 +2300,7 @@ static const char __pyx_k_Mozilla_5_0_Linux_U_Android_4_3[] = "Mozilla/5.0 (Linu
 static const char __pyx_k_Mozilla_5_0_Linux_U_Android_4_4[] = "Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; 2013023 Build/HM2013023) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.6.2.599 U3/0.8.0 Mobile Safari/534.30";
 static const char __pyx_k_Mozilla_5_0_Linux_U_Android_5_0[] = "Mozilla/5.0 (Linux; U; Android 5.0.2; en-us; Mi 4i Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Mobile Safari/537.36 XiaoMi/MiuiBrowser/2.1.1";
 static const char __pyx_k_Mozilla_5_0_X11_Linux_x86_64_rv[] = "Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Firefox/24.0";
+static const char __pyx_k_en_US_en_q_0_9_id_ID_q_0_8_id_q[] = "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7";
 static const char __pyx_k_smirking_face_Silakan_pilih_sal[] = ":smirking_face: Silakan pilih salah satu opsi yang tersedia";
 static const char __pyx_k_Dalvik_1_6_0_Linux_U_Android_4_4[] = "Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]";
 static const char __pyx_k_Dalvik_2_1_0_Linux_U_Android_5_1[] = "Dalvik/2.1.0 (Linux; U; Android 5.1.1; F1 Build/LMY47V) [FBAN/FB4A;FBAV/43.0.0.29.147;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/14274161;FBCR/Tele2 LT;FBMF/Oppo;FBBD/Oppo;FBDV/F1;FBSV/5.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=720,height=1280};FB_FW/1;]";
@@ -2589,7 +2589,7 @@ typedef struct {
   PyObject *__pyx_kp_u_1;
   PyObject *__pyx_kp_u_1217981644879628;
   PyObject *__pyx_kp_u_1_2;
-  PyObject *__pyx_kp_u_5_0;
+  PyObject *__pyx_kp_u_5_1;
   PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
   PyObject *__pyx_n_s_ANSI_COLOR_NAMES;
   PyObject *__pyx_n_s_AUTH_DIR;
@@ -2941,8 +2941,8 @@ typedef struct {
   PyObject *__pyx_n_u_document;
   PyObject *__pyx_n_u_dots;
   PyObject *__pyx_n_u_empty;
-  PyObject *__pyx_kp_u_en_US;
   PyObject *__pyx_kp_u_en_US_en_q_0_9;
+  PyObject *__pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q;
   PyObject *__pyx_kp_u_en_us;
   PyObject *__pyx_n_s_environ;
   PyObject *__pyx_n_s_exist_ok;
@@ -3114,7 +3114,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_1);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1217981644879628);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1_2);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_5_0);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_5_1);
   Py_CLEAR(clear_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_CLEAR(clear_module_state->__pyx_n_s_ANSI_COLOR_NAMES);
   Py_CLEAR(clear_module_state->__pyx_n_s_AUTH_DIR);
@@ -3466,8 +3466,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_document);
   Py_CLEAR(clear_module_state->__pyx_n_u_dots);
   Py_CLEAR(clear_module_state->__pyx_n_u_empty);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_en_US);
   Py_CLEAR(clear_module_state->__pyx_kp_u_en_US_en_q_0_9);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q);
   Py_CLEAR(clear_module_state->__pyx_kp_u_en_us);
   Py_CLEAR(clear_module_state->__pyx_n_s_environ);
   Py_CLEAR(clear_module_state->__pyx_n_s_exist_ok);
@@ -3617,7 +3617,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_1);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1217981644879628);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1_2);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_5_0);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_5_1);
   Py_VISIT(traverse_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_VISIT(traverse_module_state->__pyx_n_s_ANSI_COLOR_NAMES);
   Py_VISIT(traverse_module_state->__pyx_n_s_AUTH_DIR);
@@ -3969,8 +3969,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_document);
   Py_VISIT(traverse_module_state->__pyx_n_u_dots);
   Py_VISIT(traverse_module_state->__pyx_n_u_empty);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_en_US);
   Py_VISIT(traverse_module_state->__pyx_kp_u_en_US_en_q_0_9);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q);
   Py_VISIT(traverse_module_state->__pyx_kp_u_en_us);
   Py_VISIT(traverse_module_state->__pyx_n_s_environ);
   Py_VISIT(traverse_module_state->__pyx_n_s_exist_ok);
@@ -4130,7 +4130,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_1 __pyx_mstate_global->__pyx_kp_u_1
 #define __pyx_kp_u_1217981644879628 __pyx_mstate_global->__pyx_kp_u_1217981644879628
 #define __pyx_kp_u_1_2 __pyx_mstate_global->__pyx_kp_u_1_2
-#define __pyx_kp_u_5_0 __pyx_mstate_global->__pyx_kp_u_5_0
+#define __pyx_kp_u_5_1 __pyx_mstate_global->__pyx_kp_u_5_1
 #define __pyx_n_s_ACCEPT_LANGUAGE __pyx_mstate_global->__pyx_n_s_ACCEPT_LANGUAGE
 #define __pyx_n_s_ANSI_COLOR_NAMES __pyx_mstate_global->__pyx_n_s_ANSI_COLOR_NAMES
 #define __pyx_n_s_AUTH_DIR __pyx_mstate_global->__pyx_n_s_AUTH_DIR
@@ -4482,8 +4482,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_document __pyx_mstate_global->__pyx_n_u_document
 #define __pyx_n_u_dots __pyx_mstate_global->__pyx_n_u_dots
 #define __pyx_n_u_empty __pyx_mstate_global->__pyx_n_u_empty
-#define __pyx_kp_u_en_US __pyx_mstate_global->__pyx_kp_u_en_US
 #define __pyx_kp_u_en_US_en_q_0_9 __pyx_mstate_global->__pyx_kp_u_en_US_en_q_0_9
+#define __pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q __pyx_mstate_global->__pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q
 #define __pyx_kp_u_en_us __pyx_mstate_global->__pyx_kp_u_en_us
 #define __pyx_n_s_environ __pyx_mstate_global->__pyx_n_s_environ
 #define __pyx_n_s_exist_ok __pyx_mstate_global->__pyx_n_s_exist_ok
@@ -5404,7 +5404,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
     {&__pyx_kp_u_1217981644879628, __pyx_k_1217981644879628, sizeof(__pyx_k_1217981644879628), 0, 1, 0, 0},
     {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-    {&__pyx_kp_u_5_0, __pyx_k_5_0, sizeof(__pyx_k_5_0), 0, 1, 0, 0},
+    {&__pyx_kp_u_5_1, __pyx_k_5_1, sizeof(__pyx_k_5_1), 0, 1, 0, 0},
     {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
     {&__pyx_n_s_ANSI_COLOR_NAMES, __pyx_k_ANSI_COLOR_NAMES, sizeof(__pyx_k_ANSI_COLOR_NAMES), 0, 0, 1, 1},
     {&__pyx_n_s_AUTH_DIR, __pyx_k_AUTH_DIR, sizeof(__pyx_k_AUTH_DIR), 0, 0, 1, 1},
@@ -5756,8 +5756,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_document, __pyx_k_document, sizeof(__pyx_k_document), 0, 1, 0, 1},
     {&__pyx_n_u_dots, __pyx_k_dots, sizeof(__pyx_k_dots), 0, 1, 0, 1},
     {&__pyx_n_u_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 1, 0, 1},
-    {&__pyx_kp_u_en_US, __pyx_k_en_US, sizeof(__pyx_k_en_US), 0, 1, 0, 0},
     {&__pyx_kp_u_en_US_en_q_0_9, __pyx_k_en_US_en_q_0_9, sizeof(__pyx_k_en_US_en_q_0_9), 0, 1, 0, 0},
+    {&__pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q, __pyx_k_en_US_en_q_0_9_id_ID_q_0_8_id_q, sizeof(__pyx_k_en_US_en_q_0_9_id_ID_q_0_8_id_q), 0, 1, 0, 0},
     {&__pyx_kp_u_en_us, __pyx_k_en_us, sizeof(__pyx_k_en_us), 0, 1, 0, 0},
     {&__pyx_n_s_environ, __pyx_k_environ, sizeof(__pyx_k_environ), 0, 0, 1, 1},
     {&__pyx_n_s_exist_ok, __pyx_k_exist_ok, sizeof(__pyx_k_exist_ok), 0, 0, 1, 1},
@@ -6400,7 +6400,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
 
    
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_VERSION, __pyx_kp_u_5_0) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_VERSION, __pyx_kp_u_5_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
    
   __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
@@ -6563,7 +6563,7 @@ if (!__Pyx_RefNanny) {
    
   __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_other, __pyx_kp_u_en_US) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_other, __pyx_kp_u_en_US_en_q_0_9_id_ID_q_0_8_id_q) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_en_us, __pyx_kp_u_en_US_en_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_ja_jp, __pyx_kp_u_ja_JP_jp_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_kp_u_id_id, __pyx_kp_u_id_ID_id_q_0_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)

@@ -2137,12 +2137,11 @@ static const char __pyx_k_int[] = "int";
 static const char __pyx_k_key[] = "key";
 static const char __pyx_k_str[] = "str";
 static const char __pyx_k_uid[] = "uid";
-static const char __pyx_k_2_25[] = "2.25";
+static const char __pyx_k_2_75[] = "2.75";
 static const char __pyx_k_Http[] = "Http";
 static const char __pyx_k_NAME[] = "NAME";
 static const char __pyx_k_bool[] = "bool";
 static const char __pyx_k_copy[] = "copy";
-static const char __pyx_k_dark[] = "dark";
 static const char __pyx_k_data[] = "data";
 static const char __pyx_k_flow[] = "flow";
 static const char __pyx_k_form[] = "form";
@@ -2204,6 +2203,8 @@ static const char __pyx_k_Variables[] = "Variables";
 static const char __pyx_k_b64encode[] = "b64encode";
 static const char __pyx_k_isnumeric[] = "isnumeric";
 static const char __pyx_k_urlencode[] = "urlencode";
+static const char __pyx_k_2_56133626[] = "2.56133626";
+static const char __pyx_k_2_69163727[] = "2.69163727";
 static const char __pyx_k_checkpoint[] = "checkpoint";
 static const char __pyx_k_depercated[] = "depercated";
 static const char __pyx_k_login_name[] = "login_name";
@@ -2251,12 +2252,11 @@ static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
 static const char __pyx_k_ChunkedEncodingError[] = "ChunkedEncodingError";
 static const char __pyx_k_login_device_based_0[] = "/login/device-based/{0}";
 static const char __pyx_k_attempt_locals_lambda[] = "attempt.<locals>.<lambda>";
+static const char __pyx_k_https_m_facebook_com_0[] = "https://m.facebook.com{0}";
 static const char __pyx_k_INVALID_CREDENTIALS_CODE[] = "INVALID_CREDENTIALS_CODE";
 static const char __pyx_k_validate_password_shbl_0[] = "validate-password/?shbl=0";
 static const char __pyx_k_upgrade_insecure_requests[] = "upgrade-insecure-requests";
 static const char __pyx_k_ENABLE_ENCRYPTION_PASSWORD[] = "ENABLE_ENCRYPTION_PASSWORD";
-static const char __pyx_k_https_touch_facebook_com_0[] = "https://touch.facebook.com{0}";
-static const char __pyx_k_sec_ch_prefers_color_scheme[] = "sec-ch-prefers-color-scheme";
 static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
 static const char __pyx_k_controllers_bruteforce_login_mob[] = "controllers.bruteforce.login.mobile_validate";
 static const char __pyx_k_get_platform_header_from_userage[] = "get_platform_header_from_useragent";
@@ -2299,7 +2299,9 @@ typedef struct {
   PyObject *__pyx_kp_u_0;
   PyObject *__pyx_kp_u_1;
   PyObject *__pyx_kp_u_1_2;
-  PyObject *__pyx_kp_u_2_25;
+  PyObject *__pyx_kp_u_2_56133626;
+  PyObject *__pyx_kp_u_2_69163727;
+  PyObject *__pyx_kp_u_2_75;
   PyObject *__pyx_n_s_ACCEPT_LANGUAGE;
   PyObject *__pyx_n_s_BS4;
   PyObject *__pyx_n_s_ChunkedEncodingError;
@@ -2349,7 +2351,6 @@ typedef struct {
   PyObject *__pyx_n_s_cookies;
   PyObject *__pyx_n_u_cookies;
   PyObject *__pyx_n_s_copy;
-  PyObject *__pyx_n_u_dark;
   PyObject *__pyx_n_s_data;
   PyObject *__pyx_n_s_decode;
   PyObject *__pyx_n_u_depercated;
@@ -2373,7 +2374,7 @@ typedef struct {
   PyObject *__pyx_n_u_hidden;
   PyObject *__pyx_kp_u_html_parser;
   PyObject *__pyx_n_s_http;
-  PyObject *__pyx_kp_u_https_touch_facebook_com_0;
+  PyObject *__pyx_kp_u_https_m_facebook_com_0;
   PyObject *__pyx_n_s_id;
   PyObject *__pyx_n_u_id;
   PyObject *__pyx_n_s_import;
@@ -2430,7 +2431,6 @@ typedef struct {
   PyObject *__pyx_n_s_screen_sizes;
   PyObject *__pyx_n_u_screen_sizes;
   PyObject *__pyx_n_s_search;
-  PyObject *__pyx_kp_u_sec_ch_prefers_color_scheme;
   PyObject *__pyx_kp_u_sec_fetch_user;
   PyObject *__pyx_n_s_session;
   PyObject *__pyx_n_s_spec;
@@ -2521,7 +2521,9 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_0);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1_2);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_2_25);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_2_56133626);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_2_69163727);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_2_75);
   Py_CLEAR(clear_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_CLEAR(clear_module_state->__pyx_n_s_BS4);
   Py_CLEAR(clear_module_state->__pyx_n_s_ChunkedEncodingError);
@@ -2571,7 +2573,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_cookies);
   Py_CLEAR(clear_module_state->__pyx_n_u_cookies);
   Py_CLEAR(clear_module_state->__pyx_n_s_copy);
-  Py_CLEAR(clear_module_state->__pyx_n_u_dark);
   Py_CLEAR(clear_module_state->__pyx_n_s_data);
   Py_CLEAR(clear_module_state->__pyx_n_s_decode);
   Py_CLEAR(clear_module_state->__pyx_n_u_depercated);
@@ -2595,7 +2596,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_hidden);
   Py_CLEAR(clear_module_state->__pyx_kp_u_html_parser);
   Py_CLEAR(clear_module_state->__pyx_n_s_http);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_https_touch_facebook_com_0);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_https_m_facebook_com_0);
   Py_CLEAR(clear_module_state->__pyx_n_s_id);
   Py_CLEAR(clear_module_state->__pyx_n_u_id);
   Py_CLEAR(clear_module_state->__pyx_n_s_import);
@@ -2652,7 +2653,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_screen_sizes);
   Py_CLEAR(clear_module_state->__pyx_n_u_screen_sizes);
   Py_CLEAR(clear_module_state->__pyx_n_s_search);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_sec_ch_prefers_color_scheme);
   Py_CLEAR(clear_module_state->__pyx_kp_u_sec_fetch_user);
   Py_CLEAR(clear_module_state->__pyx_n_s_session);
   Py_CLEAR(clear_module_state->__pyx_n_s_spec);
@@ -2721,7 +2721,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_0);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1_2);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_2_25);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_2_56133626);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_2_69163727);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_2_75);
   Py_VISIT(traverse_module_state->__pyx_n_s_ACCEPT_LANGUAGE);
   Py_VISIT(traverse_module_state->__pyx_n_s_BS4);
   Py_VISIT(traverse_module_state->__pyx_n_s_ChunkedEncodingError);
@@ -2771,7 +2773,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_cookies);
   Py_VISIT(traverse_module_state->__pyx_n_u_cookies);
   Py_VISIT(traverse_module_state->__pyx_n_s_copy);
-  Py_VISIT(traverse_module_state->__pyx_n_u_dark);
   Py_VISIT(traverse_module_state->__pyx_n_s_data);
   Py_VISIT(traverse_module_state->__pyx_n_s_decode);
   Py_VISIT(traverse_module_state->__pyx_n_u_depercated);
@@ -2795,7 +2796,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_hidden);
   Py_VISIT(traverse_module_state->__pyx_kp_u_html_parser);
   Py_VISIT(traverse_module_state->__pyx_n_s_http);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_https_touch_facebook_com_0);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_https_m_facebook_com_0);
   Py_VISIT(traverse_module_state->__pyx_n_s_id);
   Py_VISIT(traverse_module_state->__pyx_n_u_id);
   Py_VISIT(traverse_module_state->__pyx_n_s_import);
@@ -2852,7 +2853,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_screen_sizes);
   Py_VISIT(traverse_module_state->__pyx_n_u_screen_sizes);
   Py_VISIT(traverse_module_state->__pyx_n_s_search);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_sec_ch_prefers_color_scheme);
   Py_VISIT(traverse_module_state->__pyx_kp_u_sec_fetch_user);
   Py_VISIT(traverse_module_state->__pyx_n_s_session);
   Py_VISIT(traverse_module_state->__pyx_n_s_spec);
@@ -2931,7 +2931,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_0 __pyx_mstate_global->__pyx_kp_u_0
 #define __pyx_kp_u_1 __pyx_mstate_global->__pyx_kp_u_1
 #define __pyx_kp_u_1_2 __pyx_mstate_global->__pyx_kp_u_1_2
-#define __pyx_kp_u_2_25 __pyx_mstate_global->__pyx_kp_u_2_25
+#define __pyx_kp_u_2_56133626 __pyx_mstate_global->__pyx_kp_u_2_56133626
+#define __pyx_kp_u_2_69163727 __pyx_mstate_global->__pyx_kp_u_2_69163727
+#define __pyx_kp_u_2_75 __pyx_mstate_global->__pyx_kp_u_2_75
 #define __pyx_n_s_ACCEPT_LANGUAGE __pyx_mstate_global->__pyx_n_s_ACCEPT_LANGUAGE
 #define __pyx_n_s_BS4 __pyx_mstate_global->__pyx_n_s_BS4
 #define __pyx_n_s_ChunkedEncodingError __pyx_mstate_global->__pyx_n_s_ChunkedEncodingError
@@ -2981,7 +2983,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_cookies __pyx_mstate_global->__pyx_n_s_cookies
 #define __pyx_n_u_cookies __pyx_mstate_global->__pyx_n_u_cookies
 #define __pyx_n_s_copy __pyx_mstate_global->__pyx_n_s_copy
-#define __pyx_n_u_dark __pyx_mstate_global->__pyx_n_u_dark
 #define __pyx_n_s_data __pyx_mstate_global->__pyx_n_s_data
 #define __pyx_n_s_decode __pyx_mstate_global->__pyx_n_s_decode
 #define __pyx_n_u_depercated __pyx_mstate_global->__pyx_n_u_depercated
@@ -3005,7 +3006,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_hidden __pyx_mstate_global->__pyx_n_u_hidden
 #define __pyx_kp_u_html_parser __pyx_mstate_global->__pyx_kp_u_html_parser
 #define __pyx_n_s_http __pyx_mstate_global->__pyx_n_s_http
-#define __pyx_kp_u_https_touch_facebook_com_0 __pyx_mstate_global->__pyx_kp_u_https_touch_facebook_com_0
+#define __pyx_kp_u_https_m_facebook_com_0 __pyx_mstate_global->__pyx_kp_u_https_m_facebook_com_0
 #define __pyx_n_s_id __pyx_mstate_global->__pyx_n_s_id
 #define __pyx_n_u_id __pyx_mstate_global->__pyx_n_u_id
 #define __pyx_n_s_import __pyx_mstate_global->__pyx_n_s_import
@@ -3062,7 +3063,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_screen_sizes __pyx_mstate_global->__pyx_n_s_screen_sizes
 #define __pyx_n_u_screen_sizes __pyx_mstate_global->__pyx_n_u_screen_sizes
 #define __pyx_n_s_search __pyx_mstate_global->__pyx_n_s_search
-#define __pyx_kp_u_sec_ch_prefers_color_scheme __pyx_mstate_global->__pyx_kp_u_sec_ch_prefers_color_scheme
 #define __pyx_kp_u_sec_fetch_user __pyx_mstate_global->__pyx_kp_u_sec_fetch_user
 #define __pyx_n_s_session __pyx_mstate_global->__pyx_n_s_session
 #define __pyx_n_s_spec __pyx_mstate_global->__pyx_n_s_spec
@@ -3673,8 +3673,8 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
   }
 
    
-  __Pyx_INCREF(__pyx_kp_u_https_touch_facebook_com_0);
-  __pyx_v_domain = __pyx_kp_u_https_touch_facebook_com_0;
+  __Pyx_INCREF(__pyx_kp_u_https_m_facebook_com_0);
+  __pyx_v_domain = __pyx_kp_u_https_m_facebook_com_0;
 
    
   __pyx_t_1 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PyUnicode_Type_format, __pyx_v_domain, __pyx_kp_u_login_device_based_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
@@ -3850,9 +3850,9 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
      
     __pyx_t_1 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_dpr, __pyx_kp_u_2_75) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
     if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_upgrade_insecure_requests, __pyx_kp_u_1) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
     if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_sec_fetch_user, __pyx_kp_u_1_2) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_sec_ch_prefers_color_scheme, __pyx_n_u_dark) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
 
      
     if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_user_agent_2, __pyx_v_user_agent) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
@@ -4340,8 +4340,8 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
          
         __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L12_error)
         __Pyx_GOTREF(__pyx_t_3);
-        if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_m_pixel_ratio, __pyx_kp_u_2_25) < 0) __PYX_ERR(0, 77, __pyx_L12_error)
-        if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_dpr, __pyx_kp_u_2_25) < 0) __PYX_ERR(0, 77, __pyx_L12_error)
+        if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_m_pixel_ratio, __pyx_kp_u_2_56133626) < 0) __PYX_ERR(0, 77, __pyx_L12_error)
+        if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_dpr, __pyx_kp_u_2_69163727) < 0) __PYX_ERR(0, 77, __pyx_L12_error)
 
          
         __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L12_error)
@@ -5005,7 +5005,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
   __pyx_t_3 = 0;
 
    
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __pyx_t_8 = NULL;
   __pyx_t_4 = 0;
@@ -5025,21 +5025,21 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
     PyObject *__pyx_callargs[2] = {__pyx_t_8, __pyx_n_u_c_user};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_15, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   }
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_5) {
 
      
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_base64); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_base64); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_b64encode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_b64encode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyUnicode_AsEncodedString(__pyx_v_user_agent, NULL, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_8 = PyUnicode_AsEncodedString(__pyx_v_user_agent, NULL, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
@@ -5060,11 +5060,11 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
       __pyx_t_15 = __Pyx_PyObject_FastCall(__pyx_t_16, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 112, __pyx_L1_error)
+      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 113, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
     }
-    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_decode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_decode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __pyx_t_15 = NULL;
@@ -5085,21 +5085,21 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
       PyObject *__pyx_callargs[1] = {__pyx_t_15, };
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_16, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
     }
-    if (unlikely((PyObject_SetItem(__pyx_v_cookie, __pyx_n_u_ua, __pyx_t_3) < 0))) __PYX_ERR(0, 112, __pyx_L1_error)
+    if (unlikely((PyObject_SetItem(__pyx_v_cookie, __pyx_n_u_ua, __pyx_t_3) < 0))) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
      
-    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_results, __pyx_n_s_update); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_results, __pyx_n_s_update); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
 
      
-    __pyx_t_15 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = NULL;
     __pyx_t_4 = 0;
@@ -5119,26 +5119,26 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
       PyObject *__pyx_callargs[3] = {__pyx_t_1, __pyx_n_u_c_user, __pyx_v_userid};
       __pyx_t_8 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 115, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 116, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
-    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_userid, __pyx_t_2) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_userid, __pyx_t_2) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
      
-    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_cookies, __pyx_v_cookie) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_cookies, __pyx_v_cookie) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
 
      
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Variables); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Variables); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_OK_CODE); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 117, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_OK_CODE); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_status, __pyx_t_8) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_15, __pyx_n_u_status, __pyx_t_8) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_8 = NULL;
     __pyx_t_4 = 0;
@@ -5159,7 +5159,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_16, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
     }
@@ -5170,7 +5170,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
   }
 
    
-  __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_cookie, __pyx_n_s_get); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
   __pyx_t_15 = NULL;
   __pyx_t_4 = 0;
@@ -5190,11 +5190,11 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
     PyObject *__pyx_callargs[2] = {__pyx_t_15, __pyx_n_u_checkpoint};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_16, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 120, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 121, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
   }
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_5) {
 
@@ -5209,14 +5209,14 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
         {
 
          
-        __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_json); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 122, __pyx_L44_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_json); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 123, __pyx_L44_error)
         __Pyx_GOTREF(__pyx_t_16);
-        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_16, __pyx_n_s_loads); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 122, __pyx_L44_error)
+        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_16, __pyx_n_s_loads); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 123, __pyx_L44_error)
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_unquote); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 122, __pyx_L44_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_unquote); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 123, __pyx_L44_error)
         __Pyx_GOTREF(__pyx_t_8);
-        __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_cookie, __pyx_n_u_checkpoint); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L44_error)
+        __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_cookie, __pyx_n_u_checkpoint); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L44_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_1 = NULL;
         __pyx_t_4 = 0;
@@ -5237,7 +5237,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
           __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_8, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 122, __pyx_L44_error)
+          if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 123, __pyx_L44_error)
           __Pyx_GOTREF(__pyx_t_16);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -5260,7 +5260,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
           __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_15, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L44_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L44_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
@@ -5268,7 +5268,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
         __pyx_t_3 = 0;
 
          
-        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_checkpoint, __pyx_n_s_get); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 123, __pyx_L44_error)
+        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_checkpoint, __pyx_n_s_get); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 124, __pyx_L44_error)
         __Pyx_GOTREF(__pyx_t_15);
         __pyx_t_16 = NULL;
         __pyx_t_4 = 0;
@@ -5288,11 +5288,11 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
           PyObject *__pyx_callargs[3] = {__pyx_t_16, __pyx_n_u_u, __pyx_v_userid};
           __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_15, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L44_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 124, __pyx_L44_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
-        if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("unicode", __pyx_t_3))) __PYX_ERR(0, 123, __pyx_L44_error)
+        if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("unicode", __pyx_t_3))) __PYX_ERR(0, 124, __pyx_L44_error)
         __Pyx_DECREF_SET(__pyx_v_userid, ((PyObject*)__pyx_t_3));
         __pyx_t_3 = 0;
 
@@ -5327,24 +5327,24 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
     }
 
      
-    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_results, __pyx_n_s_update); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_results, __pyx_n_s_update); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
 
      
-    __pyx_t_16 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
-    __pyx_t_8 = __Pyx_PyObject_Str(__pyx_v_userid); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_Str(__pyx_v_userid); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    if (PyDict_SetItem(__pyx_t_16, __pyx_n_u_userid, __pyx_t_8) < 0) __PYX_ERR(0, 127, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_16, __pyx_n_u_userid, __pyx_t_8) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
      
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Variables); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Variables); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_MUST_VERIFY_CODE); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_MUST_VERIFY_CODE); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (PyDict_SetItem(__pyx_t_16, __pyx_n_u_status, __pyx_t_2) < 0) __PYX_ERR(0, 127, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_16, __pyx_n_u_status, __pyx_t_2) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
@@ -5365,7 +5365,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_15, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 125, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 126, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     }
@@ -5377,54 +5377,54 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_5login_15mobile_validate_at
 
    
     {
-    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_save_session); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 132, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_save_session); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 133, __pyx_L1_error)
     if (__pyx_t_5) {
 
        
-      __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 133, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_http, __pyx_n_s_headers); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 133, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_http, __pyx_n_s_headers); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_headers, __pyx_t_15) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_headers, __pyx_t_15) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
        
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_cookies, __pyx_v_cookie) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_cookies, __pyx_v_cookie) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
 
        
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_payload, __pyx_v_payload) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_payload, __pyx_v_payload) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
 
        
-      if (unlikely(!__pyx_v_public_key)) { __Pyx_RaiseUnboundLocalError("public_key"); __PYX_ERR(0, 136, __pyx_L1_error) }
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_public_key, __pyx_v_public_key) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+      if (unlikely(!__pyx_v_public_key)) { __Pyx_RaiseUnboundLocalError("public_key"); __PYX_ERR(0, 137, __pyx_L1_error) }
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_public_key, __pyx_v_public_key) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
 
        
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_screen_sizes, __pyx_v_screen_sizes) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_screen_sizes, __pyx_v_screen_sizes) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
 
        
-      __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_Variables); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_Variables); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
-      __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_SESSION_LOGIN); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_SESSION_LOGIN); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_NAME); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_NAME); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
-      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_16, __pyx_t_15); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_16, __pyx_t_15); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      if (unlikely((PyObject_SetItem(__pyx_t_2, __pyx_v_userid, __pyx_t_3) < 0))) __PYX_ERR(0, 132, __pyx_L1_error)
+      if (unlikely((PyObject_SetItem(__pyx_t_2, __pyx_v_userid, __pyx_t_3) < 0))) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
 
      
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Variables); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Variables); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_INVALID_CREDENTIALS_CODE); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_INVALID_CREDENTIALS_CODE); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely((PyObject_SetItem(__pyx_v_results, __pyx_n_u_status, __pyx_t_2) < 0))) __PYX_ERR(0, 139, __pyx_L1_error)
+    if (unlikely((PyObject_SetItem(__pyx_v_results, __pyx_n_u_status, __pyx_t_2) < 0))) __PYX_ERR(0, 140, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_L43:;
@@ -5492,7 +5492,9 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_0, __pyx_k_0, sizeof(__pyx_k_0), 0, 1, 0, 0},
     {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
     {&__pyx_kp_u_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 1, 0, 0},
-    {&__pyx_kp_u_2_25, __pyx_k_2_25, sizeof(__pyx_k_2_25), 0, 1, 0, 0},
+    {&__pyx_kp_u_2_56133626, __pyx_k_2_56133626, sizeof(__pyx_k_2_56133626), 0, 1, 0, 0},
+    {&__pyx_kp_u_2_69163727, __pyx_k_2_69163727, sizeof(__pyx_k_2_69163727), 0, 1, 0, 0},
+    {&__pyx_kp_u_2_75, __pyx_k_2_75, sizeof(__pyx_k_2_75), 0, 1, 0, 0},
     {&__pyx_n_s_ACCEPT_LANGUAGE, __pyx_k_ACCEPT_LANGUAGE, sizeof(__pyx_k_ACCEPT_LANGUAGE), 0, 0, 1, 1},
     {&__pyx_n_s_BS4, __pyx_k_BS4, sizeof(__pyx_k_BS4), 0, 0, 1, 1},
     {&__pyx_n_s_ChunkedEncodingError, __pyx_k_ChunkedEncodingError, sizeof(__pyx_k_ChunkedEncodingError), 0, 0, 1, 1},
@@ -5542,7 +5544,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_cookies, __pyx_k_cookies, sizeof(__pyx_k_cookies), 0, 0, 1, 1},
     {&__pyx_n_u_cookies, __pyx_k_cookies, sizeof(__pyx_k_cookies), 0, 1, 0, 1},
     {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
-    {&__pyx_n_u_dark, __pyx_k_dark, sizeof(__pyx_k_dark), 0, 1, 0, 1},
     {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
     {&__pyx_n_s_decode, __pyx_k_decode, sizeof(__pyx_k_decode), 0, 0, 1, 1},
     {&__pyx_n_u_depercated, __pyx_k_depercated, sizeof(__pyx_k_depercated), 0, 1, 0, 1},
@@ -5566,7 +5567,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_hidden, __pyx_k_hidden, sizeof(__pyx_k_hidden), 0, 1, 0, 1},
     {&__pyx_kp_u_html_parser, __pyx_k_html_parser, sizeof(__pyx_k_html_parser), 0, 1, 0, 0},
     {&__pyx_n_s_http, __pyx_k_http, sizeof(__pyx_k_http), 0, 0, 1, 1},
-    {&__pyx_kp_u_https_touch_facebook_com_0, __pyx_k_https_touch_facebook_com_0, sizeof(__pyx_k_https_touch_facebook_com_0), 0, 1, 0, 0},
+    {&__pyx_kp_u_https_m_facebook_com_0, __pyx_k_https_m_facebook_com_0, sizeof(__pyx_k_https_m_facebook_com_0), 0, 1, 0, 0},
     {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
     {&__pyx_n_u_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 1, 0, 1},
     {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
@@ -5623,7 +5624,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_screen_sizes, __pyx_k_screen_sizes, sizeof(__pyx_k_screen_sizes), 0, 0, 1, 1},
     {&__pyx_n_u_screen_sizes, __pyx_k_screen_sizes, sizeof(__pyx_k_screen_sizes), 0, 1, 0, 1},
     {&__pyx_n_s_search, __pyx_k_search, sizeof(__pyx_k_search), 0, 0, 1, 1},
-    {&__pyx_kp_u_sec_ch_prefers_color_scheme, __pyx_k_sec_ch_prefers_color_scheme, sizeof(__pyx_k_sec_ch_prefers_color_scheme), 0, 1, 0, 0},
     {&__pyx_kp_u_sec_fetch_user, __pyx_k_sec_fetch_user, sizeof(__pyx_k_sec_fetch_user), 0, 1, 0, 0},
     {&__pyx_n_s_session, __pyx_k_session, sizeof(__pyx_k_session), 0, 0, 1, 1},
     {&__pyx_n_s_spec, __pyx_k_spec, sizeof(__pyx_k_spec), 0, 0, 1, 1},
