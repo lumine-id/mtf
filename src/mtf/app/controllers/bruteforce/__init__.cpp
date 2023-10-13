@@ -2544,6 +2544,7 @@ static const char __pyx_k_ubuntu[] = "ubuntu";
 static const char __pyx_k_unique[] = "unique";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_userid[] = "userid";
+static const char __pyx_k_window[] = "window";
 static const char __pyx_k_xiaomi[] = "xiaomi";
 static const char __pyx_k_Infinix[] = "Infinix";
 static const char __pyx_k_OK_CODE[] = "OK_CODE";
@@ -3347,6 +3348,7 @@ typedef struct {
   PyObject *__pyx_n_u_web_desktop;
   PyObject *__pyx_n_s_web_messenger;
   PyObject *__pyx_n_u_web_messenger;
+  PyObject *__pyx_n_u_window;
   PyObject *__pyx_n_u_windows;
   PyObject *__pyx_n_s_x;
   PyObject *__pyx_n_u_xiaomi;
@@ -3922,6 +3924,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_web_desktop);
   Py_CLEAR(clear_module_state->__pyx_n_s_web_messenger);
   Py_CLEAR(clear_module_state->__pyx_n_u_web_messenger);
+  Py_CLEAR(clear_module_state->__pyx_n_u_window);
   Py_CLEAR(clear_module_state->__pyx_n_u_windows);
   Py_CLEAR(clear_module_state->__pyx_n_s_x);
   Py_CLEAR(clear_module_state->__pyx_n_u_xiaomi);
@@ -4475,6 +4478,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_web_desktop);
   Py_VISIT(traverse_module_state->__pyx_n_s_web_messenger);
   Py_VISIT(traverse_module_state->__pyx_n_u_web_messenger);
+  Py_VISIT(traverse_module_state->__pyx_n_u_window);
   Py_VISIT(traverse_module_state->__pyx_n_u_windows);
   Py_VISIT(traverse_module_state->__pyx_n_s_x);
   Py_VISIT(traverse_module_state->__pyx_n_u_xiaomi);
@@ -5038,6 +5042,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_web_desktop __pyx_mstate_global->__pyx_n_u_web_desktop
 #define __pyx_n_s_web_messenger __pyx_mstate_global->__pyx_n_s_web_messenger
 #define __pyx_n_u_web_messenger __pyx_mstate_global->__pyx_n_u_web_messenger
+#define __pyx_n_u_window __pyx_mstate_global->__pyx_n_u_window
 #define __pyx_n_u_windows __pyx_mstate_global->__pyx_n_u_windows
 #define __pyx_n_s_x __pyx_mstate_global->__pyx_n_s_x
 #define __pyx_n_u_xiaomi __pyx_mstate_global->__pyx_n_u_xiaomi
@@ -10688,7 +10693,7 @@ static PyObject *__pyx_pf_11controllers_10bruteforce_4Base_8start(CYTHON_UNUSED 
       __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_name, __pyx_n_u_Windows) < 0) __PYX_ERR(0, 250, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_call, __pyx_n_u_windows) < 0) __PYX_ERR(0, 250, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_call, __pyx_n_u_window) < 0) __PYX_ERR(0, 250, __pyx_L1_error)
 
        
       __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
@@ -20056,6 +20061,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_web_desktop, __pyx_k_web_desktop, sizeof(__pyx_k_web_desktop), 0, 1, 0, 1},
     {&__pyx_n_s_web_messenger, __pyx_k_web_messenger, sizeof(__pyx_k_web_messenger), 0, 0, 1, 1},
     {&__pyx_n_u_web_messenger, __pyx_k_web_messenger, sizeof(__pyx_k_web_messenger), 0, 1, 0, 1},
+    {&__pyx_n_u_window, __pyx_k_window, sizeof(__pyx_k_window), 0, 1, 0, 1},
     {&__pyx_n_u_windows, __pyx_k_windows, sizeof(__pyx_k_windows), 0, 1, 0, 1},
     {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
     {&__pyx_n_u_xiaomi, __pyx_k_xiaomi, sizeof(__pyx_k_xiaomi), 0, 1, 0, 1},
