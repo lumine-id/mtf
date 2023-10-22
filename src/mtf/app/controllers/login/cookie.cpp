@@ -2083,7 +2083,7 @@ int __pyx_module_is_main_controllers__login__cookie = 0;
  
 static PyObject *__pyx_builtin_super;
  
-static const char __pyx_k_0[] = "0";
+static const char __pyx_k_1[] = "1";
 static const char __pyx_k_e[] = "e";
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k__7[] = "";
@@ -2269,7 +2269,7 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
-  PyObject *__pyx_kp_u_0;
+  PyObject *__pyx_kp_u_1;
   PyObject *__pyx_kp_u_1348564698517390_007c0a9101b9e1c;
   PyObject *__pyx_n_s_AUTH_COOKIES;
   PyObject *__pyx_kp_u_Access_Token;
@@ -2482,7 +2482,7 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_CLEAR(clear_module_state->__pyx_kp_u_0);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_1);
   Py_CLEAR(clear_module_state->__pyx_kp_u_1348564698517390_007c0a9101b9e1c);
   Py_CLEAR(clear_module_state->__pyx_n_s_AUTH_COOKIES);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Access_Token);
@@ -2673,7 +2673,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_VISIT(traverse_module_state->__pyx_kp_u_0);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_1);
   Py_VISIT(traverse_module_state->__pyx_kp_u_1348564698517390_007c0a9101b9e1c);
   Py_VISIT(traverse_module_state->__pyx_n_s_AUTH_COOKIES);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Access_Token);
@@ -2874,7 +2874,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
-#define __pyx_kp_u_0 __pyx_mstate_global->__pyx_kp_u_0
+#define __pyx_kp_u_1 __pyx_mstate_global->__pyx_kp_u_1
 #define __pyx_kp_u_1348564698517390_007c0a9101b9e1c __pyx_mstate_global->__pyx_kp_u_1348564698517390_007c0a9101b9e1c
 #define __pyx_n_s_AUTH_COOKIES __pyx_mstate_global->__pyx_n_s_AUTH_COOKIES
 #define __pyx_kp_u_Access_Token __pyx_mstate_global->__pyx_kp_u_Access_Token
@@ -3800,7 +3800,7 @@ static PyObject *__pyx_pf_11controllers_5login_6cookie_10Controller_2handle(CYTH
                   if (PyDict_SetItem(__pyx_t_4, __pyx_n_u_act, __pyx_t_3) < 0) __PYX_ERR(0, 29, __pyx_L19_error)
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                   if (PyDict_SetItem(__pyx_t_4, __pyx_n_u_nav_source, __pyx_n_u_no_referrer) < 0) __PYX_ERR(0, 29, __pyx_L19_error)
-                  if (PyDict_SetItem(__pyx_t_4, __pyx_n_u_breakdown_regrouping, __pyx_kp_u_0) < 0) __PYX_ERR(0, 29, __pyx_L19_error)
+                  if (PyDict_SetItem(__pyx_t_4, __pyx_n_u_breakdown_regrouping, __pyx_kp_u_1) < 0) __PYX_ERR(0, 29, __pyx_L19_error)
                   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_params, __pyx_t_4) < 0) __PYX_ERR(0, 29, __pyx_L19_error)
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                   __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L19_error)
@@ -5625,7 +5625,7 @@ static PyMethodDef __pyx_methods[] = {
 
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
-    {&__pyx_kp_u_0, __pyx_k_0, sizeof(__pyx_k_0), 0, 1, 0, 0},
+    {&__pyx_kp_u_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 1, 0, 0},
     {&__pyx_kp_u_1348564698517390_007c0a9101b9e1c, __pyx_k_1348564698517390_007c0a9101b9e1c, sizeof(__pyx_k_1348564698517390_007c0a9101b9e1c), 0, 1, 0, 0},
     {&__pyx_n_s_AUTH_COOKIES, __pyx_k_AUTH_COOKIES, sizeof(__pyx_k_AUTH_COOKIES), 0, 0, 1, 1},
     {&__pyx_kp_u_Access_Token, __pyx_k_Access_Token, sizeof(__pyx_k_Access_Token), 0, 1, 0, 0},
