@@ -2629,6 +2629,7 @@ static const char __pyx_k_exit_2[] = "exit";
 static const char __pyx_k_expand[] = "expand";
 static const char __pyx_k_expire[] = "expire";
 static const char __pyx_k_f_code[] = "f_code";
+static const char __pyx_k_fields[] = "fields";
 static const char __pyx_k_file_2[] = "file";
 static const char __pyx_k_format[] = "format";
 static const char __pyx_k_hashed[] = "hashed";
@@ -2695,6 +2696,7 @@ static const char __pyx_k_findall[] = "findall";
 static const char __pyx_k_handler[] = "handler";
 static const char __pyx_k_hashlib[] = "hashlib";
 static const char __pyx_k_headers[] = "headers";
+static const char __pyx_k_id_name[] = "id,name";
 static const char __pyx_k_invalid[] = "invalid";
 static const char __pyx_k_is_auth[] = "is_auth";
 static const char __pyx_k_is_list[] = "is_list";
@@ -3690,6 +3692,7 @@ typedef struct {
   PyObject *__pyx_n_u_fb_noscript;
   PyObject *__pyx_n_u_fb_user_agent;
   PyObject *__pyx_n_s_fetch;
+  PyObject *__pyx_n_s_fields;
   PyObject *__pyx_n_s_file;
   PyObject *__pyx_n_s_file_2;
   PyObject *__pyx_n_s_find;
@@ -3765,6 +3768,7 @@ typedef struct {
   PyObject *__pyx_n_s_id;
   PyObject *__pyx_n_u_id;
   PyObject *__pyx_n_u_id_ID;
+  PyObject *__pyx_kp_u_id_name;
   PyObject *__pyx_n_u_ig;
   PyObject *__pyx_n_u_ig_access;
   PyObject *__pyx_n_s_import;
@@ -4753,6 +4757,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_u_fb_noscript);
   Py_CLEAR(clear_module_state->__pyx_n_u_fb_user_agent);
   Py_CLEAR(clear_module_state->__pyx_n_s_fetch);
+  Py_CLEAR(clear_module_state->__pyx_n_s_fields);
   Py_CLEAR(clear_module_state->__pyx_n_s_file);
   Py_CLEAR(clear_module_state->__pyx_n_s_file_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_find);
@@ -4828,6 +4833,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_id);
   Py_CLEAR(clear_module_state->__pyx_n_u_id);
   Py_CLEAR(clear_module_state->__pyx_n_u_id_ID);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_id_name);
   Py_CLEAR(clear_module_state->__pyx_n_u_ig);
   Py_CLEAR(clear_module_state->__pyx_n_u_ig_access);
   Py_CLEAR(clear_module_state->__pyx_n_s_import);
@@ -5794,6 +5800,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_u_fb_noscript);
   Py_VISIT(traverse_module_state->__pyx_n_u_fb_user_agent);
   Py_VISIT(traverse_module_state->__pyx_n_s_fetch);
+  Py_VISIT(traverse_module_state->__pyx_n_s_fields);
   Py_VISIT(traverse_module_state->__pyx_n_s_file);
   Py_VISIT(traverse_module_state->__pyx_n_s_file_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_find);
@@ -5869,6 +5876,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_id);
   Py_VISIT(traverse_module_state->__pyx_n_u_id);
   Py_VISIT(traverse_module_state->__pyx_n_u_id_ID);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_id_name);
   Py_VISIT(traverse_module_state->__pyx_n_u_ig);
   Py_VISIT(traverse_module_state->__pyx_n_u_ig_access);
   Py_VISIT(traverse_module_state->__pyx_n_s_import);
@@ -6845,6 +6853,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_u_fb_noscript __pyx_mstate_global->__pyx_n_u_fb_noscript
 #define __pyx_n_u_fb_user_agent __pyx_mstate_global->__pyx_n_u_fb_user_agent
 #define __pyx_n_s_fetch __pyx_mstate_global->__pyx_n_s_fetch
+#define __pyx_n_s_fields __pyx_mstate_global->__pyx_n_s_fields
 #define __pyx_n_s_file __pyx_mstate_global->__pyx_n_s_file
 #define __pyx_n_s_file_2 __pyx_mstate_global->__pyx_n_s_file_2
 #define __pyx_n_s_find __pyx_mstate_global->__pyx_n_s_find
@@ -6920,6 +6929,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_id __pyx_mstate_global->__pyx_n_s_id
 #define __pyx_n_u_id __pyx_mstate_global->__pyx_n_u_id
 #define __pyx_n_u_id_ID __pyx_mstate_global->__pyx_n_u_id_ID
+#define __pyx_kp_u_id_name __pyx_mstate_global->__pyx_kp_u_id_name
 #define __pyx_n_u_ig __pyx_mstate_global->__pyx_n_u_ig
 #define __pyx_n_u_ig_access __pyx_mstate_global->__pyx_n_u_ig_access
 #define __pyx_n_s_import __pyx_mstate_global->__pyx_n_s_import
@@ -7805,9 +7815,10 @@ static PyObject *__pyx_pf_3run_7Auth_FB_token(CYTHON_UNUSED PyObject *__pyx_self
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_5 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 102, __pyx_L3_error)
+      __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 102, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_6);
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_access_token, __pyx_v_token) < 0) __PYX_ERR(0, 102, __pyx_L3_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_fields, __pyx_kp_u_id_name) < 0) __PYX_ERR(0, 102, __pyx_L3_error)
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_params, __pyx_t_6) < 0) __PYX_ERR(0, 102, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_app); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 102, __pyx_L3_error)
@@ -8741,9 +8752,10 @@ static PyObject *__pyx_pf_3run_7Auth_FB_6get_user_data(CYTHON_UNUSED PyObject *_
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 146, __pyx_L3_error)
+      __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 146, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_6);
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_access_token, __pyx_v_token) < 0) __PYX_ERR(0, 146, __pyx_L3_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_fields, __pyx_kp_u_id_name) < 0) __PYX_ERR(0, 146, __pyx_L3_error)
       if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_params, __pyx_t_6) < 0) __PYX_ERR(0, 146, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__3, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 146, __pyx_L3_error)
@@ -38337,6 +38349,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_u_fb_noscript, __pyx_k_fb_noscript, sizeof(__pyx_k_fb_noscript), 0, 1, 0, 1},
     {&__pyx_n_u_fb_user_agent, __pyx_k_fb_user_agent, sizeof(__pyx_k_fb_user_agent), 0, 1, 0, 1},
     {&__pyx_n_s_fetch, __pyx_k_fetch, sizeof(__pyx_k_fetch), 0, 0, 1, 1},
+    {&__pyx_n_s_fields, __pyx_k_fields, sizeof(__pyx_k_fields), 0, 0, 1, 1},
     {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
     {&__pyx_n_s_file_2, __pyx_k_file_2, sizeof(__pyx_k_file_2), 0, 0, 1, 1},
     {&__pyx_n_s_find, __pyx_k_find, sizeof(__pyx_k_find), 0, 0, 1, 1},
@@ -38412,6 +38425,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
     {&__pyx_n_u_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 1, 0, 1},
     {&__pyx_n_u_id_ID, __pyx_k_id_ID, sizeof(__pyx_k_id_ID), 0, 1, 0, 1},
+    {&__pyx_kp_u_id_name, __pyx_k_id_name, sizeof(__pyx_k_id_name), 0, 1, 0, 0},
     {&__pyx_n_u_ig, __pyx_k_ig, sizeof(__pyx_k_ig), 0, 1, 0, 1},
     {&__pyx_n_u_ig_access, __pyx_k_ig_access, sizeof(__pyx_k_ig_access), 0, 1, 0, 1},
     {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
