@@ -24,10 +24,10 @@
 #else
 #define __PYX_EXTRA_ABI_MODULE_NAME ""
 #endif
-#define CYTHON_ABI "3_0_9" __PYX_EXTRA_ABI_MODULE_NAME
+#define CYTHON_ABI "3_0_7" __PYX_EXTRA_ABI_MODULE_NAME
 #define __PYX_ABI_MODULE_NAME "_cython_" CYTHON_ABI
 #define __PYX_TYPE_MODULE_PREFIX __PYX_ABI_MODULE_NAME "."
-#define CYTHON_HEX_VERSION 0x030009F0
+#define CYTHON_HEX_VERSION 0x030007F0
 #define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
@@ -582,14 +582,14 @@ class __Pyx_FakeReference {
         PyObject *exception_table = NULL;
         PyObject *types_module=NULL, *code_type=NULL, *result=NULL;
         #if __PYX_LIMITED_VERSION_HEX < 0x030B0000
-        PyObject *version_info;
+        PyObject *version_info;  
         PyObject *py_minor_version = NULL;
         #endif
         long minor_version = 0;
         PyObject *type, *value, *traceback;
         PyErr_Fetch(&type, &value, &traceback);
         #if __PYX_LIMITED_VERSION_HEX >= 0x030B0000
-        minor_version = 11;
+        minor_version = 11;  
         #else
         if (!(version_info = PySys_GetObject("version_info"))) goto end;
         if (!(py_minor_version = PySequence_GetItem(version_info, 1))) goto end;
@@ -647,7 +647,7 @@ class __Pyx_FakeReference {
                                                     PyObject *fv, PyObject *cell, PyObject* fn,
                                                     PyObject *name, int fline, PyObject *lnos) {
     PyCodeObject *result;
-    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);
+    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);   
     if (!empty_bytes) return NULL;
     result =
       #if PY_VERSION_HEX >= 0x030C0000
@@ -733,13 +733,8 @@ class __Pyx_FakeReference {
   typedef PyObject *(*__Pyx_PyCFunctionFastWithKeywords) (PyObject *self, PyObject *const *args,
                                                           Py_ssize_t nargs, PyObject *kwnames);
 #else
-  #if PY_VERSION_HEX >= 0x030d00A4
-  #  define __Pyx_PyCFunctionFast PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords PyCFunctionFastWithKeywords
-  #else
-  #  define __Pyx_PyCFunctionFast _PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
-  #endif
+  #define __Pyx_PyCFunctionFast _PyCFunctionFast
+  #define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
 #endif
 #if CYTHON_METH_FASTCALL
   #define __Pyx_METH_FASTCALL METH_FASTCALL
@@ -1091,7 +1086,7 @@ static CYTHON_INLINE PyObject * __Pyx_PyDict_GetItemStrWithError(PyObject *dict,
   #define __Pyx_PyBytes_GET_SIZE(o) PyBytes_Size(o)
   #define __Pyx_PyByteArray_GET_SIZE(o) PyByteArray_Size(o)
 #endif
-#if __PYX_LIMITED_VERSION_HEX >= 0x030d00A1
+#if PY_VERSION_HEX >= 0x030d00A1
   #define __Pyx_PyImport_AddModuleRef(name) PyImport_AddModuleRef(name)
 #else
   static CYTHON_INLINE PyObject *__Pyx_PyImport_AddModuleRef(const char *name) {
@@ -1178,7 +1173,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #endif
 
 #define __PYX_MARK_ERR_POS(f_index, lineno) \
-    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__;  (void)__pyx_clineno; }
+    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__; (void)__pyx_clineno; }
 #define __PYX_ERR(f_index, lineno, Ln_error) \
     { __PYX_MARK_ERR_POS(f_index, lineno) goto Ln_error; }
 
@@ -1277,7 +1272,24 @@ static CYTHON_INLINE PyObject* __Pyx_PyUnicode_FromString(const char*);
 #define __Pyx_PyByteArray_FromCString(s)   __Pyx_PyByteArray_FromString((const char*)s)
 #define __Pyx_PyStr_FromCString(s)     __Pyx_PyStr_FromString((const char*)s)
 #define __Pyx_PyUnicode_FromCString(s) __Pyx_PyUnicode_FromString((const char*)s)
+#if CYTHON_COMPILING_IN_LIMITED_API
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const wchar_t *u)
+{
+    const wchar_t *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#else
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const Py_UNICODE *u)
+{
+    const Py_UNICODE *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#endif
 #define __Pyx_PyUnicode_FromOrdinal(o)       PyUnicode_FromOrdinal((int)o)
+#define __Pyx_PyUnicode_FromUnicode(u)       PyUnicode_FromUnicode(u, __Pyx_Py_UNICODE_strlen(u))
+#define __Pyx_PyUnicode_FromUnicodeAndLength PyUnicode_FromUnicode
 #define __Pyx_PyUnicode_AsUnicode            PyUnicode_AsUnicode
 #define __Pyx_NewRef(obj) (Py_INCREF(obj), obj)
 #define __Pyx_Owned_Py_None(b) __Pyx_NewRef(Py_None)
@@ -1327,7 +1339,7 @@ static CYTHON_INLINE Py_hash_t __Pyx_PyIndex_AsHash_t(PyObject*);
   #endif
   typedef Py_ssize_t  __Pyx_compact_pylong;
   typedef size_t  __Pyx_compact_upylong;
-  #else
+  #else   
   #define __Pyx_PyLong_IsNeg(x)  (Py_SIZE(x) < 0)
   #define __Pyx_PyLong_IsNonNeg(x)  (Py_SIZE(x) >= 0)
   #define __Pyx_PyLong_IsZero(x)  (Py_SIZE(x) == 0)
@@ -1632,8 +1644,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
     #define __Pyx_Arg_NewRef_VARARGS(arg) __Pyx_NewRef(arg)
     #define __Pyx_Arg_XDECREF_VARARGS(arg) Py_XDECREF(arg)
 #else
-    #define __Pyx_Arg_NewRef_VARARGS(arg) arg
-    #define __Pyx_Arg_XDECREF_VARARGS(arg)
+    #define __Pyx_Arg_NewRef_VARARGS(arg) arg  
+    #define __Pyx_Arg_XDECREF_VARARGS(arg)  
 #endif
 #define __Pyx_NumKwargs_VARARGS(kwds) PyDict_Size(kwds)
 #define __Pyx_KwValues_VARARGS(args, nargs) NULL
@@ -1649,8 +1661,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
   #else
     #define __Pyx_KwargsAsDict_FASTCALL(kw, kwvalues) _PyStack_AsDict(kwvalues, kw)
   #endif
-    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg   
-    #define __Pyx_Arg_XDECREF_FASTCALL(arg)
+    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg  
+    #define __Pyx_Arg_XDECREF_FASTCALL(arg)   
 #else
     #define __Pyx_Arg_FASTCALL __Pyx_Arg_VARARGS
     #define __Pyx_NumKwargs_FASTCALL __Pyx_NumKwargs_VARARGS
@@ -2074,7 +2086,7 @@ typedef struct {
 #endif
     void *defaults;
     int defaults_pyobjects;
-    size_t defaults_size;
+    size_t defaults_size;   
     int flags;
     PyObject *defaults_tuple;
     PyObject *defaults_kwdict;
@@ -2354,79 +2366,79 @@ static const char __pyx_k_auth_token[] = "auth.token";
 static const char __pyx_k_bold_green[] = "[bold green]";
 static const char __pyx_k_checkpoint[] = "checkpoint";
 static const char __pyx_k_dtsg_token[] = "\\\"dtsg\\\":{\\\"token\\\":\\\"(.*?)\\\"";
-static const char __pyx_k_error_code[] = "error_code";
-static const char __pyx_k_login_form[] = "login_form";
-static const char __pyx_k_machine_id[] = "machine_id";
-static const char __pyx_k_short_name[] = "short_name";
-static const char __pyx_k_user_agent[] = "user-agent";
-static const char __pyx_k_HORIZONTALS[] = "HORIZONTALS";
-static const char __pyx_k_auth_cookie[] = "auth.cookie";
-static const char __pyx_k_controllers[] = "controllers";
-static const char __pyx_k_fb_noscript[] = "_fb_noscript";
-static const char __pyx_k_html_parser[] = "html.parser";
-static const char __pyx_k_mro_entries[] = "__mro_entries__";
-static const char __pyx_k_sort_object[] = "sort_object";
-static const char __pyx_k_theme_Token[] = "[theme]Token";
-static const char __pyx_k_Mohon_Dibaca[] = "Mohon Dibaca";
-static const char __pyx_k_access_token[] = "access_token";
-static const char __pyx_k_content_type[] = "content-type";
-static const char __pyx_k_initializing[] = "_initializing";
-static const char __pyx_k_is_coroutine[] = "_is_coroutine";
-static const char __pyx_k_theme_Cookie[] = "[theme]Cookie";
-static const char __pyx_k_init_subclass[] = "__init_subclass__";
-static const char __pyx_k_random_string[] = "random_string";
-static const char __pyx_k_XMLHttpRequest[] = "XMLHttpRequest";
-static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
-static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
-static const char __pyx_k_ConnectionError[] = "ConnectionError";
-static const char __pyx_k_LIST_USER_AGENT[] = "LIST_USER_AGENT";
-static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
-static const char __pyx_k_accept_language[] = "accept-language";
-static const char __pyx_k_AUTH_CREDENTIALS[] = "AUTH_CREDENTIALS";
-static const char __pyx_k_Controller_login[] = "Controller.login";
-static const char __pyx_k_Password_akun_FB[] = "Password akun FB [?]";
-static const char __pyx_k_application_json[] = "application/json";
-static const char __pyx_k_credentials_type[] = "credentials_type";
-static const char __pyx_k_x_requested_with[] = "x-requested-with";
-static const char __pyx_k_Controller___init[] = "Controller.__init__";
-static const char __pyx_k_Controller_handle[] = "Controller.handle";
-static const char __pyx_k_x_response_format[] = "x-response-format";
-static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
-static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_submit_Submit_Code[] = "submit[Submit Code]";
-static const char __pyx_k_client_country_code[] = "client_country_code";
-static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
-static const char __pyx_k_Password_wajib_diisi[] = "Password wajib diisi";
-static const char __pyx_k_return_ssl_resources[] = "return_ssl_resources";
-static const char __pyx_k_cookie_dict_to_string[] = "cookie_dict_to_string";
-static const char __pyx_k_Login_Dengan_Kredensial[] = "Login Dengan Kredensial";
-static const char __pyx_k_bold_green_Mencoba_login[] = "[bold green]Mencoba login...";
-static const char __pyx_k_generate_session_cookies[] = "generate_session_cookies";
-static const char __pyx_k_pensive_face_Login_gagal[] = ":pensive_face: Login gagal.";
-static const char __pyx_k_PWD_BROWSER_0_ts_password[] = "#PWD_BROWSER:0:{ts}:{password}";
-static const char __pyx_k_controllers_login_credential[] = "controllers.login.credential";
-static const char __pyx_k_Email_ID_Usermame_wajib_diisi[] = "Email / ID / Usermame wajib diisi";
-static const char __pyx_k_pensive_face_Login_gagal_Mohon[] = ":pensive_face: Login gagal, Mohon periksa email / id / username yang kamu masukkan";
-static const char __pyx_k_pensive_face_Login_gagal_Tidak[] = ":pensive_face: Login gagal. Tidak dapat mengambil Token Facebook";
-static const char __pyx_k_Login_berhasil_Salin_Token_atau[] = "\360\237\244\227 Login berhasil. Salin Token atau Cookie jika diperlukan !!";
-static const char __pyx_k_bold_green_Mengambil_CSRF_token[] = "[bold green] Mengambil CSRF token...";
-static const char __pyx_k_bold_green_Sedang_mengambil_Tok[] = "[bold green]Sedang mengambil Token...";
-static const char __pyx_k_https_b_api_facebook_com_method[] = "https://b-api.facebook.com/method/auth.login";
-static const char __pyx_k_https_m_facebook_com_login_next[] = "https://m.facebook.com/login/?next&ref=dbl&fl&refid=8";
-static const char __pyx_k_hwc_true_hwcr_true_has_dnt_true[] = "{\"hwc\":true,\"hwcr\":true,\"has_dnt\":true,\"has_standalone\":false,\"wnd_toStr_toStr\":\"function toString() { [native code] }\",\"hasPerm\":true,\"permission_query_toString\":\"function query() { [native code] }\",\"permission_query_toString_toString\":\"function toString() { [native code] }\",\"has_seWo\":true,\"has_meDe\":true,\"has_creds\":true,\"has_hwi_bt\":false,\"has_agjsi\":false,\"iframeProto\":\"function get contentWindow() { [native code] }\",\"remap\":false,\"iframeData\":{\"hwc\":true,\"hwcr\":false,\"has_dnt\":true,\"has_standalone\":false,\"wnd_toStr_toStr\":\"function toString() { [native code] }\",\"hasPerm\":true,\"permission_query_toString\":\"function query() { [native code] }\",\"permission_query_toString_toString\":\"function toString() { [native code] }\",\"has_seWo\":true,\"has_meDe\":true,\"has_creds\":true,\"has_hwi_bt\":false,\"has_agjsi\":false}}";
-static const char __pyx_k_locked_Akun_Cekpoint_mohon_veri[] = ":locked: Akun Cekpoint mohon verifikasi terlebih dahulu lalu Login kembali";
-static const char __pyx_k_locked_with_key_Akun_menggunaka[] = ":locked_with_key: Akun menggunakan Autentikasi dua Faktor (A2F) mohon matikan terlebih dahulu lalu coba Login kembali";
-static const char __pyx_k_pensive_face_Login_gagal_Akun_C[] = ":pensive_face: Login gagal. Akun Cekpoint";
-static const char __pyx_k_pensive_face_Tidak_dapat_mengam[] = ":pensive_face: Tidak dapat mengambil CSRF. Coba lagi";
-static const char __pyx_k_350685531728_7C62f8ce9f74b12f84c[] = "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32";
-static const char __pyx_k_882a8490361da98702bf97a021ddc14d[] = "882a8490361da98702bf97a021ddc14d";
-static const char __pyx_k_Jika_kamu_menggunakan_Autentikas[] = "Jika kamu menggunakan Autentikasi dua Faktor (A2F) matikan terlebih dahulu sebelum Login";
-static const char __pyx_k_Masukkan_Email_atau_ID_atau_User[] = "Masukkan Email atau ID atau Username akun FB [?]";
-static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
-static const char __pyx_k_https_m_facebook_com_login_devic[] = "https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100";
-static const char __pyx_k_https_mbasic_facebook_com_checkp[] = "https://mbasic.facebook.com/checkpoint/?__req=e";
-static const char __pyx_k_login_facebook_dengan_kredensial[] = "login facebook dengan kredensial";
-static const char __pyx_k_mtf_app_controllers_login_creden[] = "mtf/app/controllers/login/credential.py";
+  static const char __pyx_k_error_code[] = "error_code";
+  static const char __pyx_k_login_form[] = "login_form";
+  static const char __pyx_k_machine_id[] = "machine_id";
+  static const char __pyx_k_short_name[] = "short_name";
+  static const char __pyx_k_user_agent[] = "user-agent";
+  static const char __pyx_k_HORIZONTALS[] = "HORIZONTALS";
+  static const char __pyx_k_auth_cookie[] = "auth.cookie";
+  static const char __pyx_k_controllers[] = "controllers";
+  static const char __pyx_k_fb_noscript[] = "_fb_noscript";
+  static const char __pyx_k_html_parser[] = "html.parser";
+  static const char __pyx_k_mro_entries[] = "__mro_entries__";
+  static const char __pyx_k_sort_object[] = "sort_object";
+  static const char __pyx_k_theme_Token[] = "[theme]Token";
+  static const char __pyx_k_Mohon_Dibaca[] = "Mohon Dibaca";
+  static const char __pyx_k_access_token[] = "access_token";
+  static const char __pyx_k_content_type[] = "content-type";
+  static const char __pyx_k_initializing[] = "_initializing";
+  static const char __pyx_k_is_coroutine[] = "_is_coroutine";
+  static const char __pyx_k_theme_Cookie[] = "[theme]Cookie";
+  static const char __pyx_k_init_subclass[] = "__init_subclass__";
+  static const char __pyx_k_random_string[] = "random_string";
+  static const char __pyx_k_XMLHttpRequest[] = "XMLHttpRequest";
+  static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
+  static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
+  static const char __pyx_k_ConnectionError[] = "ConnectionError";
+  static const char __pyx_k_LIST_USER_AGENT[] = "LIST_USER_AGENT";
+  static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
+  static const char __pyx_k_accept_language[] = "accept-language";
+  static const char __pyx_k_AUTH_CREDENTIALS[] = "AUTH_CREDENTIALS";
+  static const char __pyx_k_Controller_login[] = "Controller.login";
+  static const char __pyx_k_Password_akun_FB[] = "Password akun FB [?]";
+  static const char __pyx_k_application_json[] = "application/json";
+  static const char __pyx_k_credentials_type[] = "credentials_type";
+  static const char __pyx_k_x_requested_with[] = "x-requested-with";
+  static const char __pyx_k_Controller___init[] = "Controller.__init__";
+  static const char __pyx_k_Controller_handle[] = "Controller.handle";
+  static const char __pyx_k_x_response_format[] = "x-response-format";
+  static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
+  static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
+  static const char __pyx_k_submit_Submit_Code[] = "submit[Submit Code]";
+  static const char __pyx_k_client_country_code[] = "client_country_code";
+  static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
+  static const char __pyx_k_Password_wajib_diisi[] = "Password wajib diisi";
+  static const char __pyx_k_return_ssl_resources[] = "return_ssl_resources";
+  static const char __pyx_k_cookie_dict_to_string[] = "cookie_dict_to_string";
+  static const char __pyx_k_Login_Dengan_Kredensial[] = "Login Dengan Kredensial";
+  static const char __pyx_k_bold_green_Mencoba_login[] = "[bold green]Mencoba login...";
+  static const char __pyx_k_generate_session_cookies[] = "generate_session_cookies";
+  static const char __pyx_k_pensive_face_Login_gagal[] = ":pensive_face: Login gagal.";
+  static const char __pyx_k_PWD_BROWSER_0_ts_password[] = "#PWD_BROWSER:0:{ts}:{password}";
+  static const char __pyx_k_controllers_login_credential[] = "controllers.login.credential";
+  static const char __pyx_k_Email_ID_Usermame_wajib_diisi[] = "Email / ID / Usermame wajib diisi";
+  static const char __pyx_k_pensive_face_Login_gagal_Mohon[] = ":pensive_face: Login gagal, Mohon periksa email / id / username yang kamu masukkan";
+  static const char __pyx_k_pensive_face_Login_gagal_Tidak[] = ":pensive_face: Login gagal. Tidak dapat mengambil Token Facebook";
+  static const char __pyx_k_Login_berhasil_Salin_Token_atau[] = "\360\237\244\227 Login berhasil. Salin Token atau Cookie jika diperlukan !!";
+  static const char __pyx_k_bold_green_Mengambil_CSRF_token[] = "[bold green] Mengambil CSRF token...";
+  static const char __pyx_k_bold_green_Sedang_mengambil_Tok[] = "[bold green]Sedang mengambil Token...";
+  static const char __pyx_k_https_b_api_facebook_com_method[] = "https://b-api.facebook.com/method/auth.login";
+  static const char __pyx_k_https_m_facebook_com_login_next[] = "https://m.facebook.com/login/?next&ref=dbl&fl&refid=8";
+  static const char __pyx_k_hwc_true_hwcr_true_has_dnt_true[] = "{\"hwc\":true,\"hwcr\":true,\"has_dnt\":true,\"has_standalone\":false,\"wnd_toStr_toStr\":\"function toString() { [native code] }\",\"hasPerm\":true,\"permission_query_toString\":\"function query() { [native code] }\",\"permission_query_toString_toString\":\"function toString() { [native code] }\",\"has_seWo\":true,\"has_meDe\":true,\"has_creds\":true,\"has_hwi_bt\":false,\"has_agjsi\":false,\"iframeProto\":\"function get contentWindow() { [native code] }\",\"remap\":false,\"iframeData\":{\"hwc\":true,\"hwcr\":false,\"has_dnt\":true,\"has_standalone\":false,\"wnd_toStr_toStr\":\"function toString() { [native code] }\",\"hasPerm\":true,\"permission_query_toString\":\"function query() { [native code] }\",\"permission_query_toString_toString\":\"function toString() { [native code] }\",\"has_seWo\":true,\"has_meDe\":true,\"has_creds\":true,\"has_hwi_bt\":false,\"has_agjsi\":false}}";
+  static const char __pyx_k_locked_Akun_Cekpoint_mohon_veri[] = ":locked: Akun Cekpoint mohon verifikasi terlebih dahulu lalu Login kembali";
+  static const char __pyx_k_locked_with_key_Akun_menggunaka[] = ":locked_with_key: Akun menggunakan Autentikasi dua Faktor (A2F) mohon matikan terlebih dahulu lalu coba Login kembali";
+  static const char __pyx_k_pensive_face_Login_gagal_Akun_C[] = ":pensive_face: Login gagal. Akun Cekpoint";
+  static const char __pyx_k_pensive_face_Tidak_dapat_mengam[] = ":pensive_face: Tidak dapat mengambil CSRF. Coba lagi";
+  static const char __pyx_k_350685531728_7C62f8ce9f74b12f84c[] = "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32";
+  static const char __pyx_k_882a8490361da98702bf97a021ddc14d[] = "882a8490361da98702bf97a021ddc14d";
+  static const char __pyx_k_Jika_kamu_menggunakan_Autentikas[] = "Jika kamu menggunakan Autentikasi dua Faktor (A2F) matikan terlebih dahulu sebelum Login";
+  static const char __pyx_k_Masukkan_Email_atau_ID_atau_User[] = "Masukkan Email atau ID atau Username akun FB [?]";
+  static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
+  static const char __pyx_k_https_m_facebook_com_login_devic[] = "https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100";
+  static const char __pyx_k_https_mbasic_facebook_com_checkp[] = "https://mbasic.facebook.com/checkpoint/?__req=e";
+  static const char __pyx_k_login_facebook_dengan_kredensial[] = "login facebook dengan kredensial";
+  static const char __pyx_k_mtf_app_controllers_login_creden[] = "mtf/app/controllers/login/credential.py";
  
 static PyObject *__pyx_pf_11controllers_5login_10credential_10Controller___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kwargs);  
 static PyObject *__pyx_pf_11controllers_5login_10credential_10Controller_2handle(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self);  
@@ -7732,11 +7744,11 @@ static CYTHON_INLINE PyObject * __Pyx_GetKwValue_FASTCALL(PyObject *kwnames, PyO
     {
         int eq = __Pyx_PyUnicode_Equals(s, PyTuple_GET_ITEM(kwnames, i), Py_EQ);
         if (unlikely(eq != 0)) {
-            if (unlikely(eq < 0)) return NULL;
+            if (unlikely(eq < 0)) return NULL;   
             return kwvalues[i];
         }
     }
-    return NULL;
+    return NULL;   
 }
 #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030d0000
 CYTHON_UNUSED static PyObject *__Pyx_KwargsAsDict_FASTCALL(PyObject *kwnames, PyObject *const *kwvalues) {
@@ -7823,7 +7835,7 @@ static int __Pyx_ParseOptionalKeywords(
         if (*name) {
             values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-            Py_INCREF(value);
+            Py_INCREF(value);  
             Py_DECREF(key);
 #endif
             key = NULL;
@@ -7842,7 +7854,7 @@ static int __Pyx_ParseOptionalKeywords(
                         && _PyString_Eq(**name, key)) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;   
 #endif
                     break;
                 }
@@ -7874,7 +7886,7 @@ static int __Pyx_ParseOptionalKeywords(
                 if (cmp == 0) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;  
 #endif
                     break;
                 }
@@ -8285,10 +8297,9 @@ static CYTHON_INLINE void __Pyx_RaiseNeedMoreValuesError(Py_ssize_t index) {
 
  
 static CYTHON_INLINE int __Pyx_IterFinish(void) {
-    PyObject* exc_type;
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
-    exc_type = __Pyx_PyErr_CurrentExceptionType();
+    PyObject* exc_type = __Pyx_PyErr_CurrentExceptionType();
     if (unlikely(exc_type)) {
         if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration)))
             return -1;
@@ -10629,7 +10640,7 @@ static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS(PyObject *func, 
     default:
         return NULL;
     }
-    return ((__Pyx_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
+    return ((_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
 }
 static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS_METHOD(PyObject *func, PyObject *const *args, size_t nargsf, PyObject *kwnames)
 {
@@ -11301,7 +11312,7 @@ static PyCodeObject* __Pyx_CreateCodeObjectForTraceback(
     #else
     py_code = PyCode_NewEmpty(filename, funcname, py_line);
     #endif
-    Py_XDECREF(py_funcname);
+    Py_XDECREF(py_funcname);   
     return py_code;
 bad:
     Py_XDECREF(py_funcname);

@@ -24,10 +24,10 @@
 #else
 #define __PYX_EXTRA_ABI_MODULE_NAME ""
 #endif
-#define CYTHON_ABI "3_0_9" __PYX_EXTRA_ABI_MODULE_NAME
+#define CYTHON_ABI "3_0_7" __PYX_EXTRA_ABI_MODULE_NAME
 #define __PYX_ABI_MODULE_NAME "_cython_" CYTHON_ABI
 #define __PYX_TYPE_MODULE_PREFIX __PYX_ABI_MODULE_NAME "."
-#define CYTHON_HEX_VERSION 0x030009F0
+#define CYTHON_HEX_VERSION 0x030007F0
 #define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
@@ -582,14 +582,14 @@ class __Pyx_FakeReference {
         PyObject *exception_table = NULL;
         PyObject *types_module=NULL, *code_type=NULL, *result=NULL;
         #if __PYX_LIMITED_VERSION_HEX < 0x030B0000
-        PyObject *version_info;
+        PyObject *version_info;  
         PyObject *py_minor_version = NULL;
         #endif
         long minor_version = 0;
         PyObject *type, *value, *traceback;
         PyErr_Fetch(&type, &value, &traceback);
         #if __PYX_LIMITED_VERSION_HEX >= 0x030B0000
-        minor_version = 11;
+        minor_version = 11;  
         #else
         if (!(version_info = PySys_GetObject("version_info"))) goto end;
         if (!(py_minor_version = PySequence_GetItem(version_info, 1))) goto end;
@@ -647,7 +647,7 @@ class __Pyx_FakeReference {
                                                     PyObject *fv, PyObject *cell, PyObject* fn,
                                                     PyObject *name, int fline, PyObject *lnos) {
     PyCodeObject *result;
-    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);
+    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);   
     if (!empty_bytes) return NULL;
     result =
       #if PY_VERSION_HEX >= 0x030C0000
@@ -733,13 +733,8 @@ class __Pyx_FakeReference {
   typedef PyObject *(*__Pyx_PyCFunctionFastWithKeywords) (PyObject *self, PyObject *const *args,
                                                           Py_ssize_t nargs, PyObject *kwnames);
 #else
-  #if PY_VERSION_HEX >= 0x030d00A4
-  #  define __Pyx_PyCFunctionFast PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords PyCFunctionFastWithKeywords
-  #else
-  #  define __Pyx_PyCFunctionFast _PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
-  #endif
+  #define __Pyx_PyCFunctionFast _PyCFunctionFast
+  #define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
 #endif
 #if CYTHON_METH_FASTCALL
   #define __Pyx_METH_FASTCALL METH_FASTCALL
@@ -1091,7 +1086,7 @@ static CYTHON_INLINE PyObject * __Pyx_PyDict_GetItemStrWithError(PyObject *dict,
   #define __Pyx_PyBytes_GET_SIZE(o) PyBytes_Size(o)
   #define __Pyx_PyByteArray_GET_SIZE(o) PyByteArray_Size(o)
 #endif
-#if __PYX_LIMITED_VERSION_HEX >= 0x030d00A1
+#if PY_VERSION_HEX >= 0x030d00A1
   #define __Pyx_PyImport_AddModuleRef(name) PyImport_AddModuleRef(name)
 #else
   static CYTHON_INLINE PyObject *__Pyx_PyImport_AddModuleRef(const char *name) {
@@ -1178,7 +1173,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #endif
 
 #define __PYX_MARK_ERR_POS(f_index, lineno) \
-    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__;  (void)__pyx_clineno; }
+    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__; (void)__pyx_clineno; }
 #define __PYX_ERR(f_index, lineno, Ln_error) \
     { __PYX_MARK_ERR_POS(f_index, lineno) goto Ln_error; }
 
@@ -1277,7 +1272,24 @@ static CYTHON_INLINE PyObject* __Pyx_PyUnicode_FromString(const char*);
 #define __Pyx_PyByteArray_FromCString(s)   __Pyx_PyByteArray_FromString((const char*)s)
 #define __Pyx_PyStr_FromCString(s)     __Pyx_PyStr_FromString((const char*)s)
 #define __Pyx_PyUnicode_FromCString(s) __Pyx_PyUnicode_FromString((const char*)s)
+#if CYTHON_COMPILING_IN_LIMITED_API
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const wchar_t *u)
+{
+    const wchar_t *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#else
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const Py_UNICODE *u)
+{
+    const Py_UNICODE *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#endif
 #define __Pyx_PyUnicode_FromOrdinal(o)       PyUnicode_FromOrdinal((int)o)
+#define __Pyx_PyUnicode_FromUnicode(u)       PyUnicode_FromUnicode(u, __Pyx_Py_UNICODE_strlen(u))
+#define __Pyx_PyUnicode_FromUnicodeAndLength PyUnicode_FromUnicode
 #define __Pyx_PyUnicode_AsUnicode            PyUnicode_AsUnicode
 #define __Pyx_NewRef(obj) (Py_INCREF(obj), obj)
 #define __Pyx_Owned_Py_None(b) __Pyx_NewRef(Py_None)
@@ -1327,7 +1339,7 @@ static CYTHON_INLINE Py_hash_t __Pyx_PyIndex_AsHash_t(PyObject*);
   #endif
   typedef Py_ssize_t  __Pyx_compact_pylong;
   typedef size_t  __Pyx_compact_upylong;
-  #else
+  #else   
   #define __Pyx_PyLong_IsNeg(x)  (Py_SIZE(x) < 0)
   #define __Pyx_PyLong_IsNonNeg(x)  (Py_SIZE(x) >= 0)
   #define __Pyx_PyLong_IsZero(x)  (Py_SIZE(x) == 0)
@@ -1574,8 +1586,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
     #define __Pyx_Arg_NewRef_VARARGS(arg) __Pyx_NewRef(arg)
     #define __Pyx_Arg_XDECREF_VARARGS(arg) Py_XDECREF(arg)
 #else
-    #define __Pyx_Arg_NewRef_VARARGS(arg) arg
-    #define __Pyx_Arg_XDECREF_VARARGS(arg)
+    #define __Pyx_Arg_NewRef_VARARGS(arg) arg  
+    #define __Pyx_Arg_XDECREF_VARARGS(arg)  
 #endif
 #define __Pyx_NumKwargs_VARARGS(kwds) PyDict_Size(kwds)
 #define __Pyx_KwValues_VARARGS(args, nargs) NULL
@@ -1591,8 +1603,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
   #else
     #define __Pyx_KwargsAsDict_FASTCALL(kw, kwvalues) _PyStack_AsDict(kwvalues, kw)
   #endif
-    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg   
-    #define __Pyx_Arg_XDECREF_FASTCALL(arg)
+    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg  
+    #define __Pyx_Arg_XDECREF_FASTCALL(arg)   
 #else
     #define __Pyx_Arg_FASTCALL __Pyx_Arg_VARARGS
     #define __Pyx_NumKwargs_FASTCALL __Pyx_NumKwargs_VARARGS
@@ -2037,7 +2049,7 @@ typedef struct {
 #endif
     void *defaults;
     int defaults_pyobjects;
-    size_t defaults_size;
+    size_t defaults_size;   
     int flags;
     PyObject *defaults_tuple;
     PyObject *defaults_kwdict;
@@ -2264,60 +2276,60 @@ static const char __pyx_k_x_asbd_id[] = "x-asbd-id";
 static const char __pyx_k_JSONStream[] = "JSONStream";
 static const char __pyx_k_checkpoint[] = "checkpoint";
 static const char __pyx_k_dtsg_token[] = "\\\"dtsg\\\":{\\\"token\\\":\\\"(.*?)\\\"";
-static const char __pyx_k_login_form[] = "login_form";
-static const char __pyx_k_login_name[] = "login_name";
-static const char __pyx_k_mtf_config[] = "mtf.config";
-static const char __pyx_k_mtf_module[] = "mtf.module";
-static const char __pyx_k_public_key[] = "public_key";
-static const char __pyx_k_try_number[] = "try_number";
-static const char __pyx_k_user_agent[] = "user_agent";
-static const char __pyx_k_fb_noscript[] = "_fb_noscript";
-static const char __pyx_k_html_parser[] = "html.parser";
-static const char __pyx_k_content_type[] = "content-type";
-static const char __pyx_k_initializing[] = "_initializing";
-static const char __pyx_k_is_coroutine[] = "_is_coroutine";
-static const char __pyx_k_m_page_voice[] = "m_page_voice";
-static const char __pyx_k_mobile_async[] = "mobile_async";
-static const char __pyx_k_save_session[] = "save_session";
-static const char __pyx_k_screen_sizes[] = "screen_sizes";
-static const char __pyx_k_urllib_parse[] = "urllib.parse";
-static const char __pyx_k_user_agent_2[] = "user-agent";
-static const char __pyx_k_SESSION_LOGIN[] = "SESSION_LOGIN";
-static const char __pyx_k_class_getitem[] = "__class_getitem__";
-static const char __pyx_k_m_pixel_ratio[] = "m_pixel_ratio";
-static const char __pyx_k_random_string[] = "random_string";
-static const char __pyx_k_XMLHttpRequest[] = "XMLHttpRequest";
-static const char __pyx_k_sec_fetch_user[] = "sec-fetch-user";
-static const char __pyx_k_viewport_width[] = "viewport-width";
-static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
-static const char __pyx_k_ConnectionError[] = "ConnectionError";
-static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
-static const char __pyx_k_RandomUserAgent[] = "RandomUserAgent";
-static const char __pyx_k_accept_language[] = "accept-language";
-static const char __pyx_k_allow_redirects[] = "allow_redirects";
-static const char __pyx_k_MUST_VERIFY_CODE[] = "MUST_VERIFY_CODE";
-static const char __pyx_k_generate_encpass[] = "generate_encpass";
-static const char __pyx_k_x_requested_with[] = "x-requested-with";
-static const char __pyx_k_x_response_format[] = "x-response-format";
-static const char __pyx_k_InvalidChunkLength[] = "InvalidChunkLength";
-static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
-static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_urllib3_exceptions[] = "urllib3.exceptions";
-static const char __pyx_k_mtf_module_http_bs4[] = "mtf.module.http_bs4";
-static const char __pyx_k_publicKey_keyId_0_9[] = "publicKey:\"(.*?)\",keyId:([0-9]+)";
-static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
-static const char __pyx_k_ChunkedEncodingError[] = "ChunkedEncodingError";
-static const char __pyx_k_https_m_facebook_com_0[] = "https://m.facebook.com{0}";
-static const char __pyx_k_INVALID_CREDENTIALS_CODE[] = "INVALID_CREDENTIALS_CODE";
-static const char __pyx_k_upgrade_insecure_requests[] = "upgrade-insecure-requests";
-static const char __pyx_k_ENABLE_ENCRYPTION_PASSWORD[] = "ENABLE_ENCRYPTION_PASSWORD";
-static const char __pyx_k_ajaxResponseToken_encrypted[] = "\\\"ajaxResponseToken\\\":{.*\\\"encrypted\\\":\\\"(.*?)\\\"";
-static const char __pyx_k_sec_ch_prefers_color_scheme[] = "sec-ch-prefers-color-scheme";
-static const char __pyx_k_login_device_based_login_async[] = "/login/device-based/login/async?refsrc=deprecated&lwv=100";
-static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
-static const char __pyx_k_controllers_bruteforce_login_mob[] = "controllers.bruteforce.login.mobile_async";
-static const char __pyx_k_get_platform_header_from_userage[] = "get_platform_header_from_useragent";
-static const char __pyx_k_mtf_app_controllers_bruteforce_l[] = "mtf/app/controllers/bruteforce/login/mobile_async.py";
+  static const char __pyx_k_login_form[] = "login_form";
+  static const char __pyx_k_login_name[] = "login_name";
+  static const char __pyx_k_mtf_config[] = "mtf.config";
+  static const char __pyx_k_mtf_module[] = "mtf.module";
+  static const char __pyx_k_public_key[] = "public_key";
+  static const char __pyx_k_try_number[] = "try_number";
+  static const char __pyx_k_user_agent[] = "user_agent";
+  static const char __pyx_k_fb_noscript[] = "_fb_noscript";
+  static const char __pyx_k_html_parser[] = "html.parser";
+  static const char __pyx_k_content_type[] = "content-type";
+  static const char __pyx_k_initializing[] = "_initializing";
+  static const char __pyx_k_is_coroutine[] = "_is_coroutine";
+  static const char __pyx_k_m_page_voice[] = "m_page_voice";
+  static const char __pyx_k_mobile_async[] = "mobile_async";
+  static const char __pyx_k_save_session[] = "save_session";
+  static const char __pyx_k_screen_sizes[] = "screen_sizes";
+  static const char __pyx_k_urllib_parse[] = "urllib.parse";
+  static const char __pyx_k_user_agent_2[] = "user-agent";
+  static const char __pyx_k_SESSION_LOGIN[] = "SESSION_LOGIN";
+  static const char __pyx_k_class_getitem[] = "__class_getitem__";
+  static const char __pyx_k_m_pixel_ratio[] = "m_pixel_ratio";
+  static const char __pyx_k_random_string[] = "random_string";
+  static const char __pyx_k_XMLHttpRequest[] = "XMLHttpRequest";
+  static const char __pyx_k_sec_fetch_user[] = "sec-fetch-user";
+  static const char __pyx_k_viewport_width[] = "viewport-width";
+  static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
+  static const char __pyx_k_ConnectionError[] = "ConnectionError";
+  static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
+  static const char __pyx_k_RandomUserAgent[] = "RandomUserAgent";
+  static const char __pyx_k_accept_language[] = "accept-language";
+  static const char __pyx_k_allow_redirects[] = "allow_redirects";
+  static const char __pyx_k_MUST_VERIFY_CODE[] = "MUST_VERIFY_CODE";
+  static const char __pyx_k_generate_encpass[] = "generate_encpass";
+  static const char __pyx_k_x_requested_with[] = "x-requested-with";
+  static const char __pyx_k_x_response_format[] = "x-response-format";
+  static const char __pyx_k_InvalidChunkLength[] = "InvalidChunkLength";
+  static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
+  static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
+  static const char __pyx_k_urllib3_exceptions[] = "urllib3.exceptions";
+  static const char __pyx_k_mtf_module_http_bs4[] = "mtf.module.http_bs4";
+  static const char __pyx_k_publicKey_keyId_0_9[] = "publicKey:\"(.*?)\",keyId:([0-9]+)";
+  static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
+  static const char __pyx_k_ChunkedEncodingError[] = "ChunkedEncodingError";
+  static const char __pyx_k_https_m_facebook_com_0[] = "https://m.facebook.com{0}";
+  static const char __pyx_k_INVALID_CREDENTIALS_CODE[] = "INVALID_CREDENTIALS_CODE";
+  static const char __pyx_k_upgrade_insecure_requests[] = "upgrade-insecure-requests";
+  static const char __pyx_k_ENABLE_ENCRYPTION_PASSWORD[] = "ENABLE_ENCRYPTION_PASSWORD";
+  static const char __pyx_k_ajaxResponseToken_encrypted[] = "\\\"ajaxResponseToken\\\":{.*\\\"encrypted\\\":\\\"(.*?)\\\"";
+    static const char __pyx_k_sec_ch_prefers_color_scheme[] = "sec-ch-prefers-color-scheme";
+    static const char __pyx_k_login_device_based_login_async[] = "/login/device-based/login/async?refsrc=deprecated&lwv=100";
+    static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
+    static const char __pyx_k_controllers_bruteforce_login_mob[] = "controllers.bruteforce.login.mobile_async";
+    static const char __pyx_k_get_platform_header_from_userage[] = "get_platform_header_from_useragent";
+    static const char __pyx_k_mtf_app_controllers_bruteforce_l[] = "mtf/app/controllers/bruteforce/login/mobile_async.py";
  
 static PyObject *__pyx_pf_11controllers_10bruteforce_5login_12mobile_async_2__defaults__(CYTHON_UNUSED PyObject *__pyx_self);  
 static PyObject *__pyx_pf_11controllers_10bruteforce_5login_12mobile_async_attempt(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_userid, PyObject *__pyx_v_password, PyObject *__pyx_v_retries, PyObject *__pyx_v_user_agent, PyObject *__pyx_v_save_session);  
@@ -6616,11 +6628,11 @@ static CYTHON_INLINE PyObject * __Pyx_GetKwValue_FASTCALL(PyObject *kwnames, PyO
     {
         int eq = __Pyx_PyUnicode_Equals(s, PyTuple_GET_ITEM(kwnames, i), Py_EQ);
         if (unlikely(eq != 0)) {
-            if (unlikely(eq < 0)) return NULL;
+            if (unlikely(eq < 0)) return NULL;   
             return kwvalues[i];
         }
     }
-    return NULL;
+    return NULL;   
 }
 #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030d0000
 CYTHON_UNUSED static PyObject *__Pyx_KwargsAsDict_FASTCALL(PyObject *kwnames, PyObject *const *kwvalues) {
@@ -6733,7 +6745,7 @@ static int __Pyx_ParseOptionalKeywords(
         if (*name) {
             values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-            Py_INCREF(value);
+            Py_INCREF(value);  
             Py_DECREF(key);
 #endif
             key = NULL;
@@ -6752,7 +6764,7 @@ static int __Pyx_ParseOptionalKeywords(
                         && _PyString_Eq(**name, key)) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;   
 #endif
                     break;
                 }
@@ -6784,7 +6796,7 @@ static int __Pyx_ParseOptionalKeywords(
                 if (cmp == 0) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;  
 #endif
                     break;
                 }
@@ -7469,10 +7481,9 @@ static void __Pyx_RaiseMappingExpectedError(PyObject* arg) {
 
  
 static PyObject *__Pyx_SelflessCall(PyObject *method, PyObject *args, PyObject *kwargs) {
-    PyObject *result;
     PyObject *selfless_args = PyTuple_GetSlice(args, 1, PyTuple_Size(args));
     if (unlikely(!selfless_args)) return NULL;
-    result = PyObject_Call(method, selfless_args, kwargs);
+    PyObject *result = PyObject_Call(method, selfless_args, kwargs);
     Py_DECREF(selfless_args);
     return result;
 }
@@ -9624,7 +9635,7 @@ static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS(PyObject *func, 
     default:
         return NULL;
     }
-    return ((__Pyx_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
+    return ((_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
 }
 static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS_METHOD(PyObject *func, PyObject *const *args, size_t nargsf, PyObject *kwnames)
 {
@@ -10083,7 +10094,7 @@ static PyCodeObject* __Pyx_CreateCodeObjectForTraceback(
     #else
     py_code = PyCode_NewEmpty(filename, funcname, py_line);
     #endif
-    Py_XDECREF(py_funcname);
+    Py_XDECREF(py_funcname);   
     return py_code;
 bad:
     Py_XDECREF(py_funcname);

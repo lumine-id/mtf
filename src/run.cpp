@@ -24,10 +24,10 @@
 #else
 #define __PYX_EXTRA_ABI_MODULE_NAME ""
 #endif
-#define CYTHON_ABI "3_0_9" __PYX_EXTRA_ABI_MODULE_NAME
+#define CYTHON_ABI "3_0_7" __PYX_EXTRA_ABI_MODULE_NAME
 #define __PYX_ABI_MODULE_NAME "_cython_" CYTHON_ABI
 #define __PYX_TYPE_MODULE_PREFIX __PYX_ABI_MODULE_NAME "."
-#define CYTHON_HEX_VERSION 0x030009F0
+#define CYTHON_HEX_VERSION 0x030007F0
 #define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
@@ -582,14 +582,14 @@ class __Pyx_FakeReference {
         PyObject *exception_table = NULL;
         PyObject *types_module=NULL, *code_type=NULL, *result=NULL;
         #if __PYX_LIMITED_VERSION_HEX < 0x030B0000
-        PyObject *version_info;
+        PyObject *version_info;  
         PyObject *py_minor_version = NULL;
         #endif
         long minor_version = 0;
         PyObject *type, *value, *traceback;
         PyErr_Fetch(&type, &value, &traceback);
         #if __PYX_LIMITED_VERSION_HEX >= 0x030B0000
-        minor_version = 11;
+        minor_version = 11;  
         #else
         if (!(version_info = PySys_GetObject("version_info"))) goto end;
         if (!(py_minor_version = PySequence_GetItem(version_info, 1))) goto end;
@@ -647,7 +647,7 @@ class __Pyx_FakeReference {
                                                     PyObject *fv, PyObject *cell, PyObject* fn,
                                                     PyObject *name, int fline, PyObject *lnos) {
     PyCodeObject *result;
-    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);
+    PyObject *empty_bytes = PyBytes_FromStringAndSize("", 0);   
     if (!empty_bytes) return NULL;
     result =
       #if PY_VERSION_HEX >= 0x030C0000
@@ -733,13 +733,8 @@ class __Pyx_FakeReference {
   typedef PyObject *(*__Pyx_PyCFunctionFastWithKeywords) (PyObject *self, PyObject *const *args,
                                                           Py_ssize_t nargs, PyObject *kwnames);
 #else
-  #if PY_VERSION_HEX >= 0x030d00A4
-  #  define __Pyx_PyCFunctionFast PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords PyCFunctionFastWithKeywords
-  #else
-  #  define __Pyx_PyCFunctionFast _PyCFunctionFast
-  #  define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
-  #endif
+  #define __Pyx_PyCFunctionFast _PyCFunctionFast
+  #define __Pyx_PyCFunctionFastWithKeywords _PyCFunctionFastWithKeywords
 #endif
 #if CYTHON_METH_FASTCALL
   #define __Pyx_METH_FASTCALL METH_FASTCALL
@@ -1091,7 +1086,7 @@ static CYTHON_INLINE PyObject * __Pyx_PyDict_GetItemStrWithError(PyObject *dict,
   #define __Pyx_PyBytes_GET_SIZE(o) PyBytes_Size(o)
   #define __Pyx_PyByteArray_GET_SIZE(o) PyByteArray_Size(o)
 #endif
-#if __PYX_LIMITED_VERSION_HEX >= 0x030d00A1
+#if PY_VERSION_HEX >= 0x030d00A1
   #define __Pyx_PyImport_AddModuleRef(name) PyImport_AddModuleRef(name)
 #else
   static CYTHON_INLINE PyObject *__Pyx_PyImport_AddModuleRef(const char *name) {
@@ -1178,7 +1173,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #endif
 
 #define __PYX_MARK_ERR_POS(f_index, lineno) \
-    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__;  (void)__pyx_clineno; }
+    { __pyx_filename = __pyx_f[f_index]; (void)__pyx_filename; __pyx_lineno = lineno; (void)__pyx_lineno; __pyx_clineno = __LINE__; (void)__pyx_clineno; }
 #define __PYX_ERR(f_index, lineno, Ln_error) \
     { __PYX_MARK_ERR_POS(f_index, lineno) goto Ln_error; }
 
@@ -1277,7 +1272,24 @@ static CYTHON_INLINE PyObject* __Pyx_PyUnicode_FromString(const char*);
 #define __Pyx_PyByteArray_FromCString(s)   __Pyx_PyByteArray_FromString((const char*)s)
 #define __Pyx_PyStr_FromCString(s)     __Pyx_PyStr_FromString((const char*)s)
 #define __Pyx_PyUnicode_FromCString(s) __Pyx_PyUnicode_FromString((const char*)s)
+#if CYTHON_COMPILING_IN_LIMITED_API
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const wchar_t *u)
+{
+    const wchar_t *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#else
+static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const Py_UNICODE *u)
+{
+    const Py_UNICODE *u_end = u;
+    while (*u_end++) ;
+    return (size_t)(u_end - u - 1);
+}
+#endif
 #define __Pyx_PyUnicode_FromOrdinal(o)       PyUnicode_FromOrdinal((int)o)
+#define __Pyx_PyUnicode_FromUnicode(u)       PyUnicode_FromUnicode(u, __Pyx_Py_UNICODE_strlen(u))
+#define __Pyx_PyUnicode_FromUnicodeAndLength PyUnicode_FromUnicode
 #define __Pyx_PyUnicode_AsUnicode            PyUnicode_AsUnicode
 #define __Pyx_NewRef(obj) (Py_INCREF(obj), obj)
 #define __Pyx_Owned_Py_None(b) __Pyx_NewRef(Py_None)
@@ -1327,7 +1339,7 @@ static CYTHON_INLINE Py_hash_t __Pyx_PyIndex_AsHash_t(PyObject*);
   #endif
   typedef Py_ssize_t  __Pyx_compact_pylong;
   typedef size_t  __Pyx_compact_upylong;
-  #else
+  #else   
   #define __Pyx_PyLong_IsNeg(x)  (Py_SIZE(x) < 0)
   #define __Pyx_PyLong_IsNonNeg(x)  (Py_SIZE(x) >= 0)
   #define __Pyx_PyLong_IsZero(x)  (Py_SIZE(x) == 0)
@@ -1689,8 +1701,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
     #define __Pyx_Arg_NewRef_VARARGS(arg) __Pyx_NewRef(arg)
     #define __Pyx_Arg_XDECREF_VARARGS(arg) Py_XDECREF(arg)
 #else
-    #define __Pyx_Arg_NewRef_VARARGS(arg) arg
-    #define __Pyx_Arg_XDECREF_VARARGS(arg)
+    #define __Pyx_Arg_NewRef_VARARGS(arg) arg  
+    #define __Pyx_Arg_XDECREF_VARARGS(arg)  
 #endif
 #define __Pyx_NumKwargs_VARARGS(kwds) PyDict_Size(kwds)
 #define __Pyx_KwValues_VARARGS(args, nargs) NULL
@@ -1706,8 +1718,8 @@ static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int 
   #else
     #define __Pyx_KwargsAsDict_FASTCALL(kw, kwvalues) _PyStack_AsDict(kwvalues, kw)
   #endif
-    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg   
-    #define __Pyx_Arg_XDECREF_FASTCALL(arg)
+    #define __Pyx_Arg_NewRef_FASTCALL(arg) arg  
+    #define __Pyx_Arg_XDECREF_FASTCALL(arg)   
 #else
     #define __Pyx_Arg_FASTCALL __Pyx_Arg_VARARGS
     #define __Pyx_NumKwargs_FASTCALL __Pyx_NumKwargs_VARARGS
@@ -2133,7 +2145,7 @@ typedef struct {
 #endif
     void *defaults;
     int defaults_pyobjects;
-    size_t defaults_size;
+    size_t defaults_size;   
     int flags;
     PyObject *defaults_tuple;
     PyObject *defaults_kwdict;
@@ -2864,356 +2876,356 @@ static const char __pyx_k_controller[] = "controller";
 static const char __pyx_k_created_at[] = "created_at";
 static const char __pyx_k_depercated[] = "depercated";
 static const char __pyx_k_dtsg_token[] = "{\"dtsg\":{\"token\":\"(.*?)\"";
-static const char __pyx_k_excepthook[] = "excepthook";
-static const char __pyx_k_ip_address[] = "ip_address";
-static const char __pyx_k_is_deleted[] = "is_deleted";
-static const char __pyx_k_is_premium[] = "is_premium";
-static const char __pyx_k_login_form[] = "login_form";
-static const char __pyx_k_max_device[] = "max_device";
-static const char __pyx_k_mtf_config[] = "mtf.config";
-static const char __pyx_k_mtf_module[] = "mtf.module";
-static const char __pyx_k_password_2[] = "password/?";
-static const char __pyx_k_rich_align[] = "rich.align";
-static const char __pyx_k_rich_panel[] = "rich.panel";
-static const char __pyx_k_rich_table[] = "rich.table";
-static const char __pyx_k_submit_Yes[] = "submit[Yes]";
-static const char __pyx_k_subprocess[] = "subprocess";
-static const char __pyx_k_two_factor[] = "two_factor";
-static const char __pyx_k_user_agent[] = "user_agent";
-static const char __pyx_k_HORIZONTALS[] = "HORIZONTALS";
-static const char __pyx_k_Maintenance[] = "Maintenance";
-static const char __pyx_k_Memperbarui[] = "Memperbarui...";
-static const char __pyx_k_RelayModern[] = "RelayModern";
-static const char __pyx_k_THEME_COLOR[] = "THEME_COLOR";
-static const char __pyx_k_Terimakasih[] = "\360\237\244\227 Terimakasih \360\237\244\227";
-static const char __pyx_k_auth_cookie[] = "auth.cookie";
-static const char __pyx_k_auth_type_2[] = "auth.type";
-static const char __pyx_k_bold_yellow[] = "bold yellow";
-static const char __pyx_k_cancel_link[] = "cancel_link";
-static const char __pyx_k_check_agree[] = "check_agree";
-static const char __pyx_k_co_filename[] = "co_filename";
-static const char __pyx_k_communicate[] = "communicate";
-static const char __pyx_k_cookie_dict[] = "cookie_dict";
-static const char __pyx_k_credentials[] = "credentials";
-static const char __pyx_k_description[] = "description";
-static const char __pyx_k_fb_noscript[] = "_fb_noscript";
-static const char __pyx_k_href_mailto[] = "href=\\\"mailto:(.*?)\\\"";
-static const char __pyx_k_html_parser[] = "html.parser";
-static const char __pyx_k_mro_entries[] = "__mro_entries__";
-static const char __pyx_k_rich_markup[] = "rich.markup";
-static const char __pyx_k_rich_prompt[] = "rich.prompt";
-static const char __pyx_k_submit_Next[] = "submit[Next]";
-static const char __pyx_k_task_object[] = "task_object";
-static const char __pyx_k_total_usage[] = "total_usage";
-static const char __pyx_k_AUTH_COOKIES[] = "AUTH_COOKIES";
-static const char __pyx_k_AUTH_SESSION[] = "AUTH_SESSION";
-static const char __pyx_k_Akses_itolak[] = "Akses itolak :(";
-static const char __pyx_k_CONFIG_FILES[] = "CONFIG_FILES";
-static const char __pyx_k_Endpoint_get[] = "Endpoint.get";
-static const char __pyx_k_File_theme_s[] = "File [theme]%s[/]";
-static const char __pyx_k_SessionFiles[] = "SessionFiles";
-static const char __pyx_k_Tipe_theme_s[] = "Tipe [theme]%s[/]";
-static const char __pyx_k_access_token[] = "access_token";
-static const char __pyx_k_announcement[] = "announcement";
-static const char __pyx_k_bold_green_2[] = "bold green";
-static const char __pyx_k_check_result[] = "check_result";
-static const char __pyx_k_check_update[] = "check_update";
-static const char __pyx_k_clear_screen[] = "clear_screen";
-static const char __pyx_k_content_type[] = "content-type";
-static const char __pyx_k_country_code[] = "country_code";
-static const char __pyx_k_dtsg_token_2[] = "dtsg_token";
-static const char __pyx_k_dump_friends[] = "dump_friends";
-static const char __pyx_k_generate_sig[] = "generate_sig";
-static const char __pyx_k_get_duration[] = "get_duration";
-static const char __pyx_k_hide_animate[] = "--hide-animate";
-static const char __pyx_k_initializing[] = "_initializing";
-static const char __pyx_k_is_coroutine[] = "_is_coroutine";
-static const char __pyx_k_login_no_pin[] = "login_no_pin";
-static const char __pyx_k_password_new[] = "password_new";
-static const char __pyx_k_pensive_face[] = ":pensive_face: ";
-static const char __pyx_k_pycryptodome[] = "pycryptodome";
-static const char __pyx_k_rich_console[] = "rich.console";
-static const char __pyx_k_show_choices[] = "show_choices";
-static const char __pyx_k_urllib_parse[] = "urllib.parse";
-static const char __pyx_k_user_agent_2[] = "user-agent";
-static const char __pyx_k_Auth_FB_token[] = "Auth_FB.token";
-static const char __pyx_k_Baris_theme_s[] = "Baris [theme]%s[/]";
-static const char __pyx_k_Buka_Link_Ini[] = "Buka Link Ini";
-static const char __pyx_k_Endpoint_post[] = "Endpoint.post";
-static const char __pyx_k_FB_USER_AGENT[] = "FB_USER_AGENT";
-static const char __pyx_k_Hubungi_admin[] = "Hubungi admin?";
-static const char __pyx_k_Kamu_mengerti[] = "Kamu mengerti?";
-static const char __pyx_k_Lumine___init[] = "Lumine.__init__";
-static const char __pyx_k_Lumine_banner[] = "Lumine.banner";
-static const char __pyx_k_Pesan_theme_s[] = "Pesan [theme]%s[/]";
-static const char __pyx_k_Ups_Kesalahan[] = "Ups! Kesalahan";
-static const char __pyx_k_active_device[] = "active_device";
-static const char __pyx_k_auth_attempts[] = "auth_attempts";
-static const char __pyx_k_birth_splited[] = "birth_splited";
-static const char __pyx_k_bold_white_on[] = "[bold white on ";
-static const char __pyx_k_class_getitem[] = "__class_getitem__";
-static const char __pyx_k_cookie_string[] = "cookie_string";
-static const char __pyx_k_edit_birthday[] = "edit=birthday";
-static const char __pyx_k_fb_user_agent[] = "fb_user_agent";
-static const char __pyx_k_force_compile[] = "force_compile";
-static const char __pyx_k_friends_count[] = "friends_count";
-static const char __pyx_k_fromtimestamp[] = "fromtimestamp";
-static const char __pyx_k_get_signature[] = "get_signature";
-static const char __pyx_k_get_user_data[] = "get_user_data";
-static const char __pyx_k_handler_class[] = "handler_class";
-static const char __pyx_k_init_subclass[] = "__init_subclass__";
-static const char __pyx_k_input_license[] = "input_license";
-static const char __pyx_k_max_redirects[] = "max_redirects";
-static const char __pyx_k_pkg_install_s[] = "pkg install %s";
-static const char __pyx_k_pkg_resources[] = "pkg_resources";
-static const char __pyx_k_random_string[] = "random_string";
-static const char __pyx_k_register_menu[] = "register_menu";
-static const char __pyx_k_retries_login[] = "retries_login";
-static const char __pyx_k_sensor_string[] = "sensor_string";
-static const char __pyx_k_set_useragent[] = "set_useragent";
-static const char __pyx_k_Lumine_is_auth[] = "Lumine.is_auth";
-static const char __pyx_k_USER_ENCRYPTED[] = "USER_ENCRYPTED";
-static const char __pyx_k_change_license[] = "change_license";
-static const char __pyx_k_check_fb_login[] = "check_fb_login";
-static const char __pyx_k_mtf_module_jwt[] = "mtf.module.jwt";
-static const char __pyx_k_trigger_by_key[] = "trigger_by_key";
-static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
-static const char __pyx_k_Auth_FB_cookies[] = "Auth_FB.cookies";
-static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
-static const char __pyx_k_ConnectionError[] = "ConnectionError";
-static const char __pyx_k_Lisensi_Dikunci[] = "Lisensi Dikunci";
-static const char __pyx_k_Lumine_checksum[] = "Lumine.checksum";
-static const char __pyx_k_Lumine_is_guest[] = "Lumine.is_guest";
-static const char __pyx_k_Perangkat_Aktif[] = "Perangkat Aktif ";
-static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
-static const char __pyx_k_RandomUserAgent[] = "RandomUserAgent";
-static const char __pyx_k_accept_language[] = "accept-language";
-static const char __pyx_k_allow_redirects[] = "allow_redirects";
-static const char __pyx_k_change_language[] = "change_language";
-static const char __pyx_k_check_maintance[] = "check_maintance";
-static const char __pyx_k_module_required[] = "module_required";
-static const char __pyx_k_submit_Continue[] = "submit[Continue]";
-static const char __pyx_k_upgrade_premium[] = "upgrade_premium";
-static const char __pyx_k_4080140792107320[] = "4080140792107320";
-static const char __pyx_k_AUTH_CREDENTIALS[] = "AUTH_CREDENTIALS";
-static const char __pyx_k_Endpoint_request[] = "Endpoint.request";
-static const char __pyx_k_Masukkan_lisensi[] = "Masukkan lisensi [?]";
-static const char __pyx_k_TooManyRedirects[] = "TooManyRedirects";
-static const char __pyx_k_Total_Penggunaan[] = "Total Penggunaan ";
-static const char __pyx_k_bruteforce_files[] = "bruteforce.files";
-static const char __pyx_k_connection_error[] = "connection_error";
-static const char __pyx_k_get_access_token[] = "get_access_token";
-static const char __pyx_k_get_distribution[] = "get_distribution";
-static const char __pyx_k_get_info_account[] = "get_info_account";
-static const char __pyx_k_login_checkpoint[] = "login/checkpoint";
-static const char __pyx_k_package_required[] = "package_required";
-static const char __pyx_k_password_changed[] = "password_changed";
-static const char __pyx_k_zero_optin_write[] = "zero_optin_write";
-static const char __pyx_k_KeyboardInterrupt[] = "KeyboardInterrupt";
-static const char __pyx_k_Lumine_is_premium[] = "Lumine.is_premium";
-static const char __pyx_k_bruteforce_groups[] = "bruteforce.groups";
-static const char __pyx_k_bruteforce_public[] = "bruteforce.public";
-static const char __pyx_k_exception_handler[] = "exception_handler";
-static const char __pyx_k_expire_in_minutes[] = "expire_in_minutes";
-static const char __pyx_k_get_connected_app[] = "get_connected_app";
-static const char __pyx_k_get_table_handler[] = "get_table_handler";
-static const char __pyx_k_is_logged_in_list[] = "is_logged_in_list";
-static const char __pyx_k_maintance_message[] = "maintance_message";
-static const char __pyx_k_server_timestamps[] = "server_timestamps";
-static const char __pyx_k_theme_Tekan_Enter[] = "[ [theme]Tekan Enter[/] ]";
-static const char __pyx_k_wrong_credentials[] = "wrong_credentials";
-static const char __pyx_k_InvalidChunkLength[] = "InvalidChunkLength";
-static const char __pyx_k_Lumine_check_agree[] = "Lumine.check_agree";
-static const char __pyx_k_Maksimal_Perangkat[] = "Maksimal Perangkat ";
-static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
-static const char __pyx_k_bold_green_Loading[] = "[bold green]Loading...";
-static const char __pyx_k_bold_green_Premium[] = "[bold green]Premium[/]";
-static const char __pyx_k_change_theme_color[] = "change_theme_color";
-static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_handler_Controller[] = "handler.Controller";
-static const char __pyx_k_login_device_based[] = "/login/device-based";
-static const char __pyx_k_module_is_instaled[] = "module_is_instaled";
-static const char __pyx_k_mtf_module_session[] = "mtf.module.session";
-static const char __pyx_k_submit_Submit_Code[] = "submit[Submit Code]";
-static const char __pyx_k_urllib3_exceptions[] = "urllib3.exceptions";
-static const char __pyx_k_x_fb_friendly_name[] = "x-fb-friendly-name";
-static const char __pyx_k_Auth_FB_credentials[] = "Auth_FB.credentials";
-static const char __pyx_k_Bila_ada_pertanyaan[] = "Bila ada pertanyaan";
-static const char __pyx_k_Lisensi_Kamu_adalah[] = "Lisensi Kamu adalah";
-static const char __pyx_k_Lumine_check_update[] = "Lumine.check_update";
-static const char __pyx_k_bruteforce_comments[] = "bruteforce.comments";
-static const char __pyx_k_exceed_device_limit[] = "exceed_device_limit";
-static const char __pyx_k_fb_api_caller_class[] = "fb_api_caller_class";
-static const char __pyx_k_has_birthday_option[] = "has_birthday_option";
-static const char __pyx_k_mtf_module_http_bs4[] = "mtf.module.http_bs4";
-static const char __pyx_k_not_instaled_module[] = "not_instaled_module";
-static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
-static const char __pyx_k_verification_method[] = "verification_method";
-static const char __pyx_k_ChunkedEncodingError[] = "ChunkedEncodingError";
-static const char __pyx_k_DistributionNotFound[] = "DistributionNotFound";
-static const char __pyx_k_Lumine_register_menu[] = "Lumine.register_menu";
-static const char __pyx_k_Menginstall_module_s[] = "Menginstall module '%s'";
-static const char __pyx_k_birthday_captcha_day[] = "birthday_captcha_day";
-static const char __pyx_k_bruteforce_followers[] = "bruteforce.followers";
-static const char __pyx_k_bruteforce_reactions[] = "bruteforce.reactions";
-static const char __pyx_k_checkpoint_detectors[] = "checkpoint_detectors";
-static const char __pyx_k_error_load_configure[] = "error_load_configure";
-static const char __pyx_k_intl_save_locale_loc[] = "intl/save_locale/?loc=";
-static const char __pyx_k_mbasic_logout_button[] = "mbasic_logout_button";
-static const char __pyx_k_password_for_tap_yes[] = "password_for_tap_yes";
-static const char __pyx_k_show_dialog_fb_cache[] = "show_dialog_fb_cache";
-static const char __pyx_k_Akses_tools_Instagram[] = "Akses tools Instagram ";
-static const char __pyx_k_Auth_FB_get_user_data[] = "Auth_FB.get_user_data";
-static const char __pyx_k_InvalidTokenException[] = "InvalidTokenException";
-static const char __pyx_k_Lisensi_saya_sekarang[] = "Lisensi saya sekarang: *";
-static const char __pyx_k_Lumine_check_fb_login[] = "Lumine.check_fb_login";
-static const char __pyx_k_birthday_captcha_year[] = "birthday_captcha_year";
-static const char __pyx_k_check_license_session[] = "check_license_session";
-static const char __pyx_k_cookie_string_to_dict[] = "cookie_string_to_dict";
-static const char __pyx_k_devicebased_url_login[] = "devicebased_url_login";
-static const char __pyx_k_is_logged_using_token[] = "is_logged_using_token";
-static const char __pyx_k_l_php_u_mailto_3A_amp[] = "l.php\\?u=mailto%3A(.*?)&amp";
-static const char __pyx_k_InvalidCookieException[] = "InvalidCookieException";
-static const char __pyx_k_Lumine_change_language[] = "Lumine.change_language";
-static const char __pyx_k_Lumine_check_maintance[] = "Lumine.check_maintance";
-static const char __pyx_k_Sesi_login_kadaluwarsa[] = "Sesi login kadaluwarsa";
-static const char __pyx_k_birthday_captcha_month[] = "birthday_captcha_month";
-static const char __pyx_k_bruteforce_search_name[] = "bruteforce.search_name";
-static const char __pyx_k_https_ipwhois_app_json[] = "https://ipwhois.app/json/";
-static const char __pyx_k_https_www_facebook_com[] = "https://www.facebook.com";
-static const char __pyx_k_load_configuration_app[] = "load_configuration_app";
-static const char __pyx_k_name_jazoest_value_0_9[] = "name=\"jazoest\" value=\"([0-9]+)\"";
-static const char __pyx_k_pensive_face_Kesalahan[] = ":pensive_face: Kesalahan";
-static const char __pyx_k_python_m_pip_install_s[] = "python -m pip install %s";
-static const char __pyx_k_show_dialog_every_days[] = "show_dialog_every_days";
-static const char __pyx_k_DESKTOP_REQUEST_HEADERS[] = "DESKTOP_REQUEST_HEADERS";
-static const char __pyx_k_Kamu_login_dengan_Token[] = "Kamu login dengan Token";
-static const char __pyx_k_Lisensimu_telah_dikunci[] = "Lisensimu telah dikunci";
-static const char __pyx_k_Lumine_get_access_token[] = "Lumine.get_access_token";
-static const char __pyx_k_Lumine_get_info_account[] = "Lumine.get_info_account";
-static const char __pyx_k_Lumine_zero_optin_write[] = "Lumine.zero_optin_write";
-static const char __pyx_k_is_logged_using_cookies[] = "is_logged_using_cookies";
-static const char __pyx_k_Kamu_login_dengan_Cookie[] = "Kamu login dengan Cookie";
-static const char __pyx_k_Lumine_get_connected_app[] = "Lumine.get_connected_app";
-static const char __pyx_k_Lumine_get_table_handler[] = "Lumine.get_table_handler";
-static const char __pyx_k_Lumine_is_logged_in_list[] = "Lumine.is_logged_in_list";
-static const char __pyx_k_Module_s_belum_diinstall[] = "Module '%s' belum diinstall";
-static const char __pyx_k_Type_login_tidak_dikenal[] = "Type login tidak dikenal";
-static const char __pyx_k_bold_red_Error_Kesalahan[] = "[bold red]Error Kesalahan";
-static const char __pyx_k_fb_api_req_friendly_name[] = "fb_api_req_friendly_name";
-static const char __pyx_k_https_www_facebook_com_2[] = "https://www.facebook.com/";
-static const char __pyx_k_thread_exception_handler[] = "thread_exception_handler";
-static const char __pyx_k_Telah_berhasil_diperbarui[] = "Telah berhasil diperbarui";
-static const char __pyx_k_h3_s_class_teman_s_0_9_h3[] = "<h3[\\s]*class=\\\".*?\\\">teman[\\s]*\\(([0-9-.]+)\\)</h3>";
-static const char __pyx_k_https_mbasic_facebook_com[] = "https://mbasic.facebook.com";
-static const char __pyx_k_InvalidCredentialException[] = "InvalidCredentialException";
-static const char __pyx_k_bruteforce_multiple_public[] = "bruteforce.multiple_public";
-static const char __pyx_k_Lumine_checkpoint_detectors[] = "Lumine.checkpoint_detectors";
-static const char __pyx_k_https_graph_facebook_com_me[] = "https://graph.facebook.com/me";
-static const char __pyx_k_https_mbasic_facebook_com_0[] = "https://mbasic.facebook.com{0}";
-static const char __pyx_k_https_mbasic_facebook_com_2[] = "https://mbasic.facebook.com/";
-static const char __pyx_k_is_logged_using_credentials[] = "is_logged_using_credentials";
-static const char __pyx_k_Kamu_login_dengan_Kredensial[] = "Kamu login dengan Kredensial";
-static const char __pyx_k_KeyboardInterrupt_Terdeteksi[] = "KeyboardInterrupt Terdeteksi";
-static const char __pyx_k_Lumine_check_license_session[] = "Lumine.check_license_session";
-static const char __pyx_k_Lumine_is_logged_using_token[] = "Lumine.is_logged_using_token";
-static const char __pyx_k_Pilihan_theme_0_sampai_theme[] = "Pilihan [theme]0[/] sampai [theme]";
-static const char __pyx_k_Sesi_login_telah_dikeluarkan[] = "Sesi login telah dikeluarkan";
-static const char __pyx_k_Total_perangkat_sedang_Login[] = " (Total perangkat sedang Login)";
-static const char __pyx_k_diikuti_s_oleh_s_0_9_s_orang[] = "diikuti[\\s]*oleh[\\s]*([0-9-.]+)[\\s]*orang";
-static const char __pyx_k_Lumine_load_configuration_app[] = "Lumine.load_configuration_app";
-static const char __pyx_k_Tidak_dapat_memperbarui_tools[] = "Tidak dapat memperbarui tools";
-static const char __pyx_k_bold_red_Ilegal_Program_Alert[] = "[bold red]Ilegal Program Alert";
-static const char __pyx_k_generate_license_for_new_user[] = "generate_license_for_new_user";
-static const char __pyx_k_generate_license_if_nonexists[] = "generate_license_if_nonexists";
-static const char __pyx_k_login_next_ref_dbl_fl_refid_8[] = "/login/?next&ref=dbl&fl&refid=8";
-static const char __pyx_k_pensive_face_Yah_pensive_face[] = ":pensive_face: Yah :pensive_face:";
-static const char __pyx_k_Hore_akun_Tap_Yes_tinggal_satu[] = "\360\237\244\227 Hore akun Tap Yes, tinggal satu langkah lagi untuk membuka akun ini. Coba login dibrowser!";
-static const char __pyx_k_Lumine_is_logged_using_cookies[] = "Lumine.is_logged_using_cookies";
-static const char __pyx_k_Total_Penggunaan_sesi_saat_ini[] = "Total Penggunaan sesi saat ini ";
-static const char __pyx_k_beaming_face_with_smiling_eyes[] = ":beaming_face_with_smiling_eyes: Yeahh! lisensi berhasil diverifikasi";
-static const char __pyx_k_bold_green_Mengambil_Informasi[] = "[bold green]Mengambil Informasi";
-static const char __pyx_k_menit_sekali_jadi_selama_batas[] = "[/] menit sekali, jadi selama batas cache belum berakhir sesi login dan nama akun fb yang sedang dilogin akan tidak sinkron\nKami menggunakan ini supaya akun fb lebih awet dan supaya lebih optimal dengan kata lain tidak memberatkan koneksi internet disisi pengguna, saat menjalankan ulang tools nya kembali!";
-static const char __pyx_k_pensive_face_Kesalahan_Koneksi[] = ":pensive_face: Kesalahan Koneksi internet. Periksa jaringan anda";
-static const char __pyx_k_pensive_face_Lisensi_yang_kamu[] = ":pensive_face: Lisensi yang kamu masukkan salah atau tidak valid!";
-static const char __pyx_k_pensive_face_Token_tidak_valid[] = ":pensive_face: Token tidak valid. Silahkan login ulang";
-static const char __pyx_k_zero_optin_write_action_cancel[] = "/zero/optin/write/?action=cancel";
-static const char __pyx_k_Akun_sekarang_sedang_tidak_Cekp[] = "\360\237\244\227 Akun sekarang sedang tidak Cekpoint";
-static const char __pyx_k_Apapun_yang_anda_lakukan_adalah[] = "* Apapun yang anda lakukan adalah tanggung jawab masing-masing";
-static const char __pyx_k_Hore_akun_Tap_Yes_dari_ubah_san[] = "\360\237\244\227 Hore akun Tap Yes dari ubah sandi Tanggal Lahir, tinggal satu langkah lagi untuk membuka akun ini. Coba login dibrowser!";
-static const char __pyx_k_Invalid_Signature_Pastikan_kamu[] = "Invalid Signature. Pastikan kamu menginstall paket dari sumber remsi (Tidak dimanipulasi) atau coba jalankan [bold green]python setup.py --force[/] untuk mengintall ulang paket!";
-static const char __pyx_k_Jika_kamu_tidak_mempunyai_akses[] = "Jika kamu tidak mempunyai akses ke perangkat sebelumnya, minta bantuan kepada admin untuk me-reset perangkat sebelumnya.";
-static const char __pyx_k_Jika_tidak_dialihkan_ke_browser[] = "Jika tidak dialihkan ke browser";
-static const char __pyx_k_Lumine_checksum_locals_generate[] = "Lumine.checksum.<locals>.generate_sig.<locals>.get_signature";
-static const char __pyx_k_Lumine_get_connected_app_locals[] = "Lumine.get_connected_app.<locals>.<lambda>";
-static const char __pyx_k_Menggunakan_theme_Multiple_Tool[] = "* Menggunakan [theme]Multiple Tools For Facebook (MTF)[/] untuk BruteForce tanpa persetujuan bersama sebelumnya adalah Ilegal";
-static const char __pyx_k_Pengembang_tidak_bertanggung_ja[] = "* Pengembang tidak bertanggung jawab atas penyalahgunakan atau keruskan yang disebabkan oleh program ini";
-static const char __pyx_k_Pengguna_harus_bertanggung_jawa[] = "* Pengguna harus bertanggung jawab untuk mematuhi hukum lokal";
-static const char __pyx_k_Qfws3LpBXYvQWaukXbuYXZk1SZpJ2dl[] = "==Qfws3LpBXYvQWaukXbuYXZk1SZpJ2dl5mLyVmdyV2ctYGdt9yL6MHc0RHa";
-static const char __pyx_k_Selamat_menggunakan_Program_ini[] = "Selamat menggunakan Program ini :thumbs_up:";
-static const char __pyx_k_bold_green_Menghapus_sesi_Login[] = "[bold green]Menghapus sesi Login";
-static const char __pyx_k_bold_green_Sedang_membuat_lisen[] = "[bold green]Sedang membuat lisensi untuk anda. Tunggu sebentar";
-static const char __pyx_k_bold_green_Sedang_mengecek_Lise[] = "[bold green]Sedang mengecek Lisensi";
-static const char __pyx_k_bold_green_Sedang_mengecek_sesi[] = "[bold green]Sedang mengecek sesi Login Facebook";
-static const char __pyx_k_bold_red_Laporkan_ke_admin_agar[] = "[bold red]Laporkan ke admin agar diperbaiki";
-static const char __pyx_k_has_no_attribute_USER_has_no_at[] = "(has no attribute 'USER'|has no attribute 'APP')";
-static const char __pyx_k_locked_Tidak_dapat_mengecek_ops[] = ":locked: Tidak dapat mengecek opsi Cekpoint. Akun menggunakan Autentikasi dua Faktor.";
-static const char __pyx_k_logging_id_PERSONAL_INFO_GROUPI[] = "{\"logging_id\": \"PERSONAL_INFO_GROUPING\"}";
-static const char __pyx_k_pensive_face_Gagal_membuat_lise[] = ":pensive_face: Gagal membuat lisensi. Coba lagi nanti";
-static const char __pyx_k_pensive_face_Gagal_mengeluarkan[] = ":pensive_face: Gagal mengeluarkan Sesi Lisensi";
-static const char __pyx_k_pensive_face_Kesalahan_tidak_da[] = ":pensive_face: Kesalahan tidak dapat memverifikasi Kredensial";
-static const char __pyx_k_pensive_face_Kesalahkan_koneksi[] = ":pensive_face: Kesalahkan koneksi. Periksa koneksi internet anda";
-static const char __pyx_k_pensive_face_Kredensial_tidak_v[] = ":pensive_face: Kredensial tidak valid. Silahkan login ulang";
-static const char __pyx_k_pensive_face_Tidak_dapat_mem_va[] = ":pensive_face: Tidak dapat mem-validasi Token, Kesalahan tidak diketahui";
-static const char __pyx_k_pensive_face_Tidak_dapat_mengec[] = ":pensive_face: Tidak dapat mengecek Cookie, Kesalahan tidak diketahui";
-static const char __pyx_k_pensive_face_Token_Facebook_tid[] = ":pensive_face: Token Facebook tidak valid. Harap Login ulang";
-static const char __pyx_k_pensive_face_Token_lisensi_tida[] = ":pensive_face: Token lisensi tidak valid";
-static const char __pyx_k_settings_applications_details_a[] = "/settings/applications/details/?app_id=";
-static const char __pyx_k_theme_Tekan_enter_untuk_menghap[] = "[ [theme]Tekan enter untuk menghapus sesi Login[/] ]";
-static const char __pyx_k_zero_optin_write_action_confirm[] = "zero/optin/write/?action=confirm";
-static const char __pyx_k_Cache_login_Facebook_digunakan_c[] = "Cache login Facebook digunakan, cache akan direset setiap [theme]";
-static const char __pyx_k_Gunakan_lisensi_diatas_untuk_Mas[] = "Gunakan lisensi diatas untuk Masuk atau lisensi lainnya";
-static const char __pyx_k_Ketik_Y_a_untuk_menggunakan_prog[] = "Ketik Y\\[a] untuk menggunakan program ini";
-static const char __pyx_k_Login_ke_Facebook_untuk_dapat_me[] = "Login ke Facebook untuk dapat menggunakan Fitur yang lebih lengkap";
-static const char __pyx_k_Lumine_change_language_locals_la[] = "Lumine.change_language.<locals>.<lambda>";
-static const char __pyx_k_Lumine_check_license_session_loc[] = "Lumine.check_license_session.<locals>.guest";
-static const char __pyx_k_Lumine_checkpoint_detectors_loca[] = "Lumine.checkpoint_detectors.<locals>.<lambda>";
-static const char __pyx_k_Lumine_generate_license_if_nonex[] = "Lumine.generate_license_if_nonexists";
-static const char __pyx_k_Lumine_get_info_account_locals_l[] = "Lumine.get_info_account.<locals>.<lambda>";
-static const char __pyx_k_Lumine_is_logged_using_credentia[] = "Lumine.is_logged_using_credentials";
-static const char __pyx_k_Lumine_load_configuration_app_lo[] = "Lumine.load_configuration_app.<locals>.loadapp";
-static const char __pyx_k_Lumine_zero_optin_write_locals_l[] = "Lumine.zero_optin_write.<locals>.<lambda>";
-static const char __pyx_k_MUserDataAccessHubListContainerQ[] = "MUserDataAccessHubListContainerQuery";
-static const char __pyx_k_Pastikan_semua_file_telah_terupd[] = "Pastikan semua file telah terupdate sempurna, Tidak ada yang gagal atau error saat pembaruan jika tidak mungkin script tidak akan berjalan dengan semestinya";
-static const char __pyx_k_SODIUM_INSTALL_system_python_m_p[] = "SODIUM_INSTALL=system python -m pip install %s";
-static const char __pyx_k_Saya_tidak_dapat_login_karena_ba[] = "Saya tidak dapat login karena batas perangkat";
-static const char __pyx_k_Sedang_maintance_Coba_kembali_na[] = "Sedang maintance Coba kembali nanti ya...";
-static const char __pyx_k_Selama_Proses_pembaruan_tidak_me[] = "Selama Proses pembaruan tidak mengonsumsi paket data. Mohon jangan ditutup karena dapat membuat file corrupt, sehingga hasil tidak maksimal.";
-static const char __pyx_k_Telah_mencapai_batas_maksimal_pe[] = "Telah mencapai batas maksimal perangkat. Silakan keluar dari perangkat sebelumnya untuk dapat masuk dengan lisensi tersebut.";
-static const char __pyx_k_Update_versi_ditemukan_Tekan_Ent[] = "Update versi ditemukan Tekan Enter untuk memperbarui";
-static const char __pyx_k_aHR0cHM6Ly97c3VifS5mYWNlYm9vay5j[] = "aHR0cHM6Ly97c3VifS5mYWNlYm9vay5jb20vbG9naW4vZGV2aWNlLWJhc2VkL3twYXRofQ==";
-static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
-static const char __pyx_k_https_api_whatsapp_com_send_phon[] = "https://api.whatsapp.com/send?phone=";
-static const char __pyx_k_https_business_facebook_com_busi[] = "https://business.facebook.com/business_locations";
-static const char __pyx_k_https_m_facebook_com_api_graphql[] = "https://m.facebook.com/api/graphql/";
-static const char __pyx_k_https_m_facebook_com_profile_int[] = "https://m.facebook.com/profile/intro/edit/about/";
-static const char __pyx_k_https_m_facebook_com_your_inform[] = "https://m.facebook.com/your_information/list?tile=PERSONAL_INFO_GROUPING";
-static const char __pyx_k_https_mbasic_facebook_com_home_p[] = "https://mbasic.facebook.com/home.php";
-static const char __pyx_k_https_mbasic_facebook_com_langua[] = "https://mbasic.facebook.com/language";
-static const char __pyx_k_https_mbasic_facebook_com_profil[] = "https://mbasic.facebook.com/profile.php?v=info&lst=";
-static const char __pyx_k_https_mbasic_facebook_com_settin[] = "https://mbasic.facebook.com/settings/apps";
-static const char __pyx_k_is_logged_using_credentials_or_c[] = "is_logged_using_credentials_or_cookies";
-static const char __pyx_k_Lumine_checksum_locals_generate_2[] = "Lumine.checksum.<locals>.generate_sig";
-static const char __pyx_k_pensive_face_Kesalahan_tidak_da_2[] = ":pensive_face: Kesalahan tidak dapat terhubung ke Server.";
-static const char __pyx_k_pensive_face_Kesalahkan_koneksi_2[] = ":pensive_face: Kesalahkan koneksi. Periksa koneksi internet anda, Atau biasanya jaringan yang anda pake tidak bisa Konek ke server MTF coba gunakan VPN sementara hanya untuk masuk ke MTF.";
-static const char __pyx_k_pensive_face_Tidak_dapat_mengec_2[] = ":pensive_face: Tidak dapat mengecek opsi Cekpoint";
-static const char __pyx_k_pensive_face_Tidak_dapat_mengec_3[] = ":pensive_face: Tidak dapat mengecek Opsi Cekpoin karena kata sandi akun salah";
-static const char __pyx_k_Lumine_check_license_session_loc_2[] = "Lumine.check_license_session.<locals>.auth";
-static const char __pyx_k_Lumine_is_logged_using_credentia_2[] = "Lumine.is_logged_using_credentials_or_cookies";
-static const char __pyx_k_Lumine_load_configuration_app_lo_2[] = "Lumine.load_configuration_app.<locals>.ipinfo";
-static const char __pyx_k_Lumine_load_configuration_app_lo_3[] = "Lumine.load_configuration_app.<locals>.exception_handler";
-static const char __pyx_k_https_mbasic_facebook_com_profil_2[] = "https://mbasic.facebook.com/profile.php?v=friends";
-static const char __pyx_k_https_mbasic_facebook_com_settin_2[] = "https://mbasic.facebook.com/settings/apps/tabbed";
+    static const char __pyx_k_excepthook[] = "excepthook";
+    static const char __pyx_k_ip_address[] = "ip_address";
+    static const char __pyx_k_is_deleted[] = "is_deleted";
+    static const char __pyx_k_is_premium[] = "is_premium";
+    static const char __pyx_k_login_form[] = "login_form";
+    static const char __pyx_k_max_device[] = "max_device";
+    static const char __pyx_k_mtf_config[] = "mtf.config";
+    static const char __pyx_k_mtf_module[] = "mtf.module";
+    static const char __pyx_k_password_2[] = "password/?";
+    static const char __pyx_k_rich_align[] = "rich.align";
+    static const char __pyx_k_rich_panel[] = "rich.panel";
+    static const char __pyx_k_rich_table[] = "rich.table";
+    static const char __pyx_k_submit_Yes[] = "submit[Yes]";
+    static const char __pyx_k_subprocess[] = "subprocess";
+    static const char __pyx_k_two_factor[] = "two_factor";
+    static const char __pyx_k_user_agent[] = "user_agent";
+    static const char __pyx_k_HORIZONTALS[] = "HORIZONTALS";
+    static const char __pyx_k_Maintenance[] = "Maintenance";
+    static const char __pyx_k_Memperbarui[] = "Memperbarui...";
+    static const char __pyx_k_RelayModern[] = "RelayModern";
+    static const char __pyx_k_THEME_COLOR[] = "THEME_COLOR";
+    static const char __pyx_k_Terimakasih[] = "\360\237\244\227 Terimakasih \360\237\244\227";
+    static const char __pyx_k_auth_cookie[] = "auth.cookie";
+    static const char __pyx_k_auth_type_2[] = "auth.type";
+    static const char __pyx_k_bold_yellow[] = "bold yellow";
+    static const char __pyx_k_cancel_link[] = "cancel_link";
+    static const char __pyx_k_check_agree[] = "check_agree";
+    static const char __pyx_k_co_filename[] = "co_filename";
+    static const char __pyx_k_communicate[] = "communicate";
+    static const char __pyx_k_cookie_dict[] = "cookie_dict";
+    static const char __pyx_k_credentials[] = "credentials";
+    static const char __pyx_k_description[] = "description";
+    static const char __pyx_k_fb_noscript[] = "_fb_noscript";
+    static const char __pyx_k_href_mailto[] = "href=\\\"mailto:(.*?)\\\"";
+    static const char __pyx_k_html_parser[] = "html.parser";
+    static const char __pyx_k_mro_entries[] = "__mro_entries__";
+    static const char __pyx_k_rich_markup[] = "rich.markup";
+    static const char __pyx_k_rich_prompt[] = "rich.prompt";
+    static const char __pyx_k_submit_Next[] = "submit[Next]";
+    static const char __pyx_k_task_object[] = "task_object";
+    static const char __pyx_k_total_usage[] = "total_usage";
+    static const char __pyx_k_AUTH_COOKIES[] = "AUTH_COOKIES";
+    static const char __pyx_k_AUTH_SESSION[] = "AUTH_SESSION";
+    static const char __pyx_k_Akses_itolak[] = "Akses itolak :(";
+    static const char __pyx_k_CONFIG_FILES[] = "CONFIG_FILES";
+    static const char __pyx_k_Endpoint_get[] = "Endpoint.get";
+    static const char __pyx_k_File_theme_s[] = "File [theme]%s[/]";
+    static const char __pyx_k_SessionFiles[] = "SessionFiles";
+    static const char __pyx_k_Tipe_theme_s[] = "Tipe [theme]%s[/]";
+    static const char __pyx_k_access_token[] = "access_token";
+    static const char __pyx_k_announcement[] = "announcement";
+    static const char __pyx_k_bold_green_2[] = "bold green";
+    static const char __pyx_k_check_result[] = "check_result";
+    static const char __pyx_k_check_update[] = "check_update";
+    static const char __pyx_k_clear_screen[] = "clear_screen";
+    static const char __pyx_k_content_type[] = "content-type";
+    static const char __pyx_k_country_code[] = "country_code";
+    static const char __pyx_k_dtsg_token_2[] = "dtsg_token";
+    static const char __pyx_k_dump_friends[] = "dump_friends";
+    static const char __pyx_k_generate_sig[] = "generate_sig";
+    static const char __pyx_k_get_duration[] = "get_duration";
+    static const char __pyx_k_hide_animate[] = "--hide-animate";
+    static const char __pyx_k_initializing[] = "_initializing";
+    static const char __pyx_k_is_coroutine[] = "_is_coroutine";
+    static const char __pyx_k_login_no_pin[] = "login_no_pin";
+    static const char __pyx_k_password_new[] = "password_new";
+    static const char __pyx_k_pensive_face[] = ":pensive_face: ";
+    static const char __pyx_k_pycryptodome[] = "pycryptodome";
+    static const char __pyx_k_rich_console[] = "rich.console";
+    static const char __pyx_k_show_choices[] = "show_choices";
+    static const char __pyx_k_urllib_parse[] = "urllib.parse";
+    static const char __pyx_k_user_agent_2[] = "user-agent";
+    static const char __pyx_k_Auth_FB_token[] = "Auth_FB.token";
+    static const char __pyx_k_Baris_theme_s[] = "Baris [theme]%s[/]";
+    static const char __pyx_k_Buka_Link_Ini[] = "Buka Link Ini";
+    static const char __pyx_k_Endpoint_post[] = "Endpoint.post";
+    static const char __pyx_k_FB_USER_AGENT[] = "FB_USER_AGENT";
+    static const char __pyx_k_Hubungi_admin[] = "Hubungi admin?";
+    static const char __pyx_k_Kamu_mengerti[] = "Kamu mengerti?";
+    static const char __pyx_k_Lumine___init[] = "Lumine.__init__";
+    static const char __pyx_k_Lumine_banner[] = "Lumine.banner";
+    static const char __pyx_k_Pesan_theme_s[] = "Pesan [theme]%s[/]";
+    static const char __pyx_k_Ups_Kesalahan[] = "Ups! Kesalahan";
+    static const char __pyx_k_active_device[] = "active_device";
+    static const char __pyx_k_auth_attempts[] = "auth_attempts";
+    static const char __pyx_k_birth_splited[] = "birth_splited";
+    static const char __pyx_k_bold_white_on[] = "[bold white on ";
+    static const char __pyx_k_class_getitem[] = "__class_getitem__";
+    static const char __pyx_k_cookie_string[] = "cookie_string";
+    static const char __pyx_k_edit_birthday[] = "edit=birthday";
+    static const char __pyx_k_fb_user_agent[] = "fb_user_agent";
+    static const char __pyx_k_force_compile[] = "force_compile";
+    static const char __pyx_k_friends_count[] = "friends_count";
+    static const char __pyx_k_fromtimestamp[] = "fromtimestamp";
+    static const char __pyx_k_get_signature[] = "get_signature";
+    static const char __pyx_k_get_user_data[] = "get_user_data";
+    static const char __pyx_k_handler_class[] = "handler_class";
+    static const char __pyx_k_init_subclass[] = "__init_subclass__";
+    static const char __pyx_k_input_license[] = "input_license";
+    static const char __pyx_k_max_redirects[] = "max_redirects";
+    static const char __pyx_k_pkg_install_s[] = "pkg install %s";
+    static const char __pyx_k_pkg_resources[] = "pkg_resources";
+    static const char __pyx_k_random_string[] = "random_string";
+    static const char __pyx_k_register_menu[] = "register_menu";
+    static const char __pyx_k_retries_login[] = "retries_login";
+    static const char __pyx_k_sensor_string[] = "sensor_string";
+    static const char __pyx_k_set_useragent[] = "set_useragent";
+    static const char __pyx_k_Lumine_is_auth[] = "Lumine.is_auth";
+    static const char __pyx_k_USER_ENCRYPTED[] = "USER_ENCRYPTED";
+    static const char __pyx_k_change_license[] = "change_license";
+    static const char __pyx_k_check_fb_login[] = "check_fb_login";
+    static const char __pyx_k_mtf_module_jwt[] = "mtf.module.jwt";
+    static const char __pyx_k_trigger_by_key[] = "trigger_by_key";
+    static const char __pyx_k_ACCEPT_LANGUAGE[] = "ACCEPT_LANGUAGE";
+    static const char __pyx_k_Auth_FB_cookies[] = "Auth_FB.cookies";
+    static const char __pyx_k_CONSOLE_SPINNER[] = "CONSOLE_SPINNER";
+    static const char __pyx_k_ConnectionError[] = "ConnectionError";
+    static const char __pyx_k_Lisensi_Dikunci[] = "Lisensi Dikunci";
+    static const char __pyx_k_Lumine_checksum[] = "Lumine.checksum";
+    static const char __pyx_k_Lumine_is_guest[] = "Lumine.is_guest";
+    static const char __pyx_k_Perangkat_Aktif[] = "Perangkat Aktif ";
+    static const char __pyx_k_REQUEST_HEADERS[] = "REQUEST_HEADERS";
+    static const char __pyx_k_RandomUserAgent[] = "RandomUserAgent";
+    static const char __pyx_k_accept_language[] = "accept-language";
+    static const char __pyx_k_allow_redirects[] = "allow_redirects";
+    static const char __pyx_k_change_language[] = "change_language";
+    static const char __pyx_k_check_maintance[] = "check_maintance";
+    static const char __pyx_k_module_required[] = "module_required";
+    static const char __pyx_k_submit_Continue[] = "submit[Continue]";
+    static const char __pyx_k_upgrade_premium[] = "upgrade_premium";
+    static const char __pyx_k_4080140792107320[] = "4080140792107320";
+    static const char __pyx_k_AUTH_CREDENTIALS[] = "AUTH_CREDENTIALS";
+    static const char __pyx_k_Endpoint_request[] = "Endpoint.request";
+    static const char __pyx_k_Masukkan_lisensi[] = "Masukkan lisensi [?]";
+    static const char __pyx_k_TooManyRedirects[] = "TooManyRedirects";
+    static const char __pyx_k_Total_Penggunaan[] = "Total Penggunaan ";
+    static const char __pyx_k_bruteforce_files[] = "bruteforce.files";
+    static const char __pyx_k_connection_error[] = "connection_error";
+    static const char __pyx_k_get_access_token[] = "get_access_token";
+    static const char __pyx_k_get_distribution[] = "get_distribution";
+    static const char __pyx_k_get_info_account[] = "get_info_account";
+    static const char __pyx_k_login_checkpoint[] = "login/checkpoint";
+    static const char __pyx_k_package_required[] = "package_required";
+    static const char __pyx_k_password_changed[] = "password_changed";
+    static const char __pyx_k_zero_optin_write[] = "zero_optin_write";
+    static const char __pyx_k_KeyboardInterrupt[] = "KeyboardInterrupt";
+    static const char __pyx_k_Lumine_is_premium[] = "Lumine.is_premium";
+    static const char __pyx_k_bruteforce_groups[] = "bruteforce.groups";
+    static const char __pyx_k_bruteforce_public[] = "bruteforce.public";
+    static const char __pyx_k_exception_handler[] = "exception_handler";
+    static const char __pyx_k_expire_in_minutes[] = "expire_in_minutes";
+    static const char __pyx_k_get_connected_app[] = "get_connected_app";
+    static const char __pyx_k_get_table_handler[] = "get_table_handler";
+    static const char __pyx_k_is_logged_in_list[] = "is_logged_in_list";
+    static const char __pyx_k_maintance_message[] = "maintance_message";
+    static const char __pyx_k_server_timestamps[] = "server_timestamps";
+    static const char __pyx_k_theme_Tekan_Enter[] = "[ [theme]Tekan Enter[/] ]";
+    static const char __pyx_k_wrong_credentials[] = "wrong_credentials";
+    static const char __pyx_k_InvalidChunkLength[] = "InvalidChunkLength";
+    static const char __pyx_k_Lumine_check_agree[] = "Lumine.check_agree";
+    static const char __pyx_k_Maksimal_Perangkat[] = "Maksimal Perangkat ";
+    static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
+    static const char __pyx_k_bold_green_Loading[] = "[bold green]Loading...";
+    static const char __pyx_k_bold_green_Premium[] = "[bold green]Premium[/]";
+    static const char __pyx_k_change_theme_color[] = "change_theme_color";
+    static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
+    static const char __pyx_k_handler_Controller[] = "handler.Controller";
+    static const char __pyx_k_login_device_based[] = "/login/device-based";
+    static const char __pyx_k_module_is_instaled[] = "module_is_instaled";
+    static const char __pyx_k_mtf_module_session[] = "mtf.module.session";
+    static const char __pyx_k_submit_Submit_Code[] = "submit[Submit Code]";
+    static const char __pyx_k_urllib3_exceptions[] = "urllib3.exceptions";
+    static const char __pyx_k_x_fb_friendly_name[] = "x-fb-friendly-name";
+    static const char __pyx_k_Auth_FB_credentials[] = "Auth_FB.credentials";
+    static const char __pyx_k_Bila_ada_pertanyaan[] = "Bila ada pertanyaan";
+    static const char __pyx_k_Lisensi_Kamu_adalah[] = "Lisensi Kamu adalah";
+    static const char __pyx_k_Lumine_check_update[] = "Lumine.check_update";
+    static const char __pyx_k_bruteforce_comments[] = "bruteforce.comments";
+    static const char __pyx_k_exceed_device_limit[] = "exceed_device_limit";
+    static const char __pyx_k_fb_api_caller_class[] = "fb_api_caller_class";
+    static const char __pyx_k_has_birthday_option[] = "has_birthday_option";
+    static const char __pyx_k_mtf_module_http_bs4[] = "mtf.module.http_bs4";
+    static const char __pyx_k_not_instaled_module[] = "not_instaled_module";
+    static const char __pyx_k_requests_exceptions[] = "requests.exceptions";
+    static const char __pyx_k_verification_method[] = "verification_method";
+    static const char __pyx_k_ChunkedEncodingError[] = "ChunkedEncodingError";
+    static const char __pyx_k_DistributionNotFound[] = "DistributionNotFound";
+    static const char __pyx_k_Lumine_register_menu[] = "Lumine.register_menu";
+    static const char __pyx_k_Menginstall_module_s[] = "Menginstall module '%s'";
+    static const char __pyx_k_birthday_captcha_day[] = "birthday_captcha_day";
+    static const char __pyx_k_bruteforce_followers[] = "bruteforce.followers";
+    static const char __pyx_k_bruteforce_reactions[] = "bruteforce.reactions";
+    static const char __pyx_k_checkpoint_detectors[] = "checkpoint_detectors";
+    static const char __pyx_k_error_load_configure[] = "error_load_configure";
+    static const char __pyx_k_intl_save_locale_loc[] = "intl/save_locale/?loc=";
+    static const char __pyx_k_mbasic_logout_button[] = "mbasic_logout_button";
+    static const char __pyx_k_password_for_tap_yes[] = "password_for_tap_yes";
+    static const char __pyx_k_show_dialog_fb_cache[] = "show_dialog_fb_cache";
+    static const char __pyx_k_Akses_tools_Instagram[] = "Akses tools Instagram ";
+    static const char __pyx_k_Auth_FB_get_user_data[] = "Auth_FB.get_user_data";
+    static const char __pyx_k_InvalidTokenException[] = "InvalidTokenException";
+    static const char __pyx_k_Lisensi_saya_sekarang[] = "Lisensi saya sekarang: *";
+    static const char __pyx_k_Lumine_check_fb_login[] = "Lumine.check_fb_login";
+    static const char __pyx_k_birthday_captcha_year[] = "birthday_captcha_year";
+    static const char __pyx_k_check_license_session[] = "check_license_session";
+    static const char __pyx_k_cookie_string_to_dict[] = "cookie_string_to_dict";
+    static const char __pyx_k_devicebased_url_login[] = "devicebased_url_login";
+    static const char __pyx_k_is_logged_using_token[] = "is_logged_using_token";
+    static const char __pyx_k_l_php_u_mailto_3A_amp[] = "l.php\\?u=mailto%3A(.*?)&amp";
+    static const char __pyx_k_InvalidCookieException[] = "InvalidCookieException";
+    static const char __pyx_k_Lumine_change_language[] = "Lumine.change_language";
+    static const char __pyx_k_Lumine_check_maintance[] = "Lumine.check_maintance";
+    static const char __pyx_k_Sesi_login_kadaluwarsa[] = "Sesi login kadaluwarsa";
+    static const char __pyx_k_birthday_captcha_month[] = "birthday_captcha_month";
+    static const char __pyx_k_bruteforce_search_name[] = "bruteforce.search_name";
+    static const char __pyx_k_https_ipwhois_app_json[] = "https://ipwhois.app/json/";
+    static const char __pyx_k_https_www_facebook_com[] = "https://www.facebook.com";
+    static const char __pyx_k_load_configuration_app[] = "load_configuration_app";
+    static const char __pyx_k_name_jazoest_value_0_9[] = "name=\"jazoest\" value=\"([0-9]+)\"";
+    static const char __pyx_k_pensive_face_Kesalahan[] = ":pensive_face: Kesalahan";
+    static const char __pyx_k_python_m_pip_install_s[] = "python -m pip install %s";
+    static const char __pyx_k_show_dialog_every_days[] = "show_dialog_every_days";
+    static const char __pyx_k_DESKTOP_REQUEST_HEADERS[] = "DESKTOP_REQUEST_HEADERS";
+    static const char __pyx_k_Kamu_login_dengan_Token[] = "Kamu login dengan Token";
+    static const char __pyx_k_Lisensimu_telah_dikunci[] = "Lisensimu telah dikunci";
+    static const char __pyx_k_Lumine_get_access_token[] = "Lumine.get_access_token";
+    static const char __pyx_k_Lumine_get_info_account[] = "Lumine.get_info_account";
+    static const char __pyx_k_Lumine_zero_optin_write[] = "Lumine.zero_optin_write";
+    static const char __pyx_k_is_logged_using_cookies[] = "is_logged_using_cookies";
+    static const char __pyx_k_Kamu_login_dengan_Cookie[] = "Kamu login dengan Cookie";
+    static const char __pyx_k_Lumine_get_connected_app[] = "Lumine.get_connected_app";
+    static const char __pyx_k_Lumine_get_table_handler[] = "Lumine.get_table_handler";
+    static const char __pyx_k_Lumine_is_logged_in_list[] = "Lumine.is_logged_in_list";
+    static const char __pyx_k_Module_s_belum_diinstall[] = "Module '%s' belum diinstall";
+    static const char __pyx_k_Type_login_tidak_dikenal[] = "Type login tidak dikenal";
+    static const char __pyx_k_bold_red_Error_Kesalahan[] = "[bold red]Error Kesalahan";
+    static const char __pyx_k_fb_api_req_friendly_name[] = "fb_api_req_friendly_name";
+    static const char __pyx_k_https_www_facebook_com_2[] = "https://www.facebook.com/";
+    static const char __pyx_k_thread_exception_handler[] = "thread_exception_handler";
+    static const char __pyx_k_Telah_berhasil_diperbarui[] = "Telah berhasil diperbarui";
+    static const char __pyx_k_h3_s_class_teman_s_0_9_h3[] = "<h3[\\s]*class=\\\".*?\\\">teman[\\s]*\\(([0-9-.]+)\\)</h3>";
+    static const char __pyx_k_https_mbasic_facebook_com[] = "https://mbasic.facebook.com";
+    static const char __pyx_k_InvalidCredentialException[] = "InvalidCredentialException";
+    static const char __pyx_k_bruteforce_multiple_public[] = "bruteforce.multiple_public";
+    static const char __pyx_k_Lumine_checkpoint_detectors[] = "Lumine.checkpoint_detectors";
+    static const char __pyx_k_https_graph_facebook_com_me[] = "https://graph.facebook.com/me";
+    static const char __pyx_k_https_mbasic_facebook_com_0[] = "https://mbasic.facebook.com{0}";
+    static const char __pyx_k_https_mbasic_facebook_com_2[] = "https://mbasic.facebook.com/";
+    static const char __pyx_k_is_logged_using_credentials[] = "is_logged_using_credentials";
+    static const char __pyx_k_Kamu_login_dengan_Kredensial[] = "Kamu login dengan Kredensial";
+    static const char __pyx_k_KeyboardInterrupt_Terdeteksi[] = "KeyboardInterrupt Terdeteksi";
+    static const char __pyx_k_Lumine_check_license_session[] = "Lumine.check_license_session";
+    static const char __pyx_k_Lumine_is_logged_using_token[] = "Lumine.is_logged_using_token";
+    static const char __pyx_k_Pilihan_theme_0_sampai_theme[] = "Pilihan [theme]0[/] sampai [theme]";
+    static const char __pyx_k_Sesi_login_telah_dikeluarkan[] = "Sesi login telah dikeluarkan";
+    static const char __pyx_k_Total_perangkat_sedang_Login[] = " (Total perangkat sedang Login)";
+    static const char __pyx_k_diikuti_s_oleh_s_0_9_s_orang[] = "diikuti[\\s]*oleh[\\s]*([0-9-.]+)[\\s]*orang";
+    static const char __pyx_k_Lumine_load_configuration_app[] = "Lumine.load_configuration_app";
+    static const char __pyx_k_Tidak_dapat_memperbarui_tools[] = "Tidak dapat memperbarui tools";
+    static const char __pyx_k_bold_red_Ilegal_Program_Alert[] = "[bold red]Ilegal Program Alert";
+    static const char __pyx_k_generate_license_for_new_user[] = "generate_license_for_new_user";
+    static const char __pyx_k_generate_license_if_nonexists[] = "generate_license_if_nonexists";
+    static const char __pyx_k_login_next_ref_dbl_fl_refid_8[] = "/login/?next&ref=dbl&fl&refid=8";
+    static const char __pyx_k_pensive_face_Yah_pensive_face[] = ":pensive_face: Yah :pensive_face:";
+    static const char __pyx_k_Hore_akun_Tap_Yes_tinggal_satu[] = "\360\237\244\227 Hore akun Tap Yes, tinggal satu langkah lagi untuk membuka akun ini. Coba login dibrowser!";
+    static const char __pyx_k_Lumine_is_logged_using_cookies[] = "Lumine.is_logged_using_cookies";
+    static const char __pyx_k_Total_Penggunaan_sesi_saat_ini[] = "Total Penggunaan sesi saat ini ";
+    static const char __pyx_k_beaming_face_with_smiling_eyes[] = ":beaming_face_with_smiling_eyes: Yeahh! lisensi berhasil diverifikasi";
+    static const char __pyx_k_bold_green_Mengambil_Informasi[] = "[bold green]Mengambil Informasi";
+    static const char __pyx_k_menit_sekali_jadi_selama_batas[] = "[/] menit sekali, jadi selama batas cache belum berakhir sesi login dan nama akun fb yang sedang dilogin akan tidak sinkron\nKami menggunakan ini supaya akun fb lebih awet dan supaya lebih optimal dengan kata lain tidak memberatkan koneksi internet disisi pengguna, saat menjalankan ulang tools nya kembali!";
+    static const char __pyx_k_pensive_face_Kesalahan_Koneksi[] = ":pensive_face: Kesalahan Koneksi internet. Periksa jaringan anda";
+    static const char __pyx_k_pensive_face_Lisensi_yang_kamu[] = ":pensive_face: Lisensi yang kamu masukkan salah atau tidak valid!";
+    static const char __pyx_k_pensive_face_Token_tidak_valid[] = ":pensive_face: Token tidak valid. Silahkan login ulang";
+    static const char __pyx_k_zero_optin_write_action_cancel[] = "/zero/optin/write/?action=cancel";
+    static const char __pyx_k_Akun_sekarang_sedang_tidak_Cekp[] = "\360\237\244\227 Akun sekarang sedang tidak Cekpoint";
+    static const char __pyx_k_Apapun_yang_anda_lakukan_adalah[] = "* Apapun yang anda lakukan adalah tanggung jawab masing-masing";
+    static const char __pyx_k_Hore_akun_Tap_Yes_dari_ubah_san[] = "\360\237\244\227 Hore akun Tap Yes dari ubah sandi Tanggal Lahir, tinggal satu langkah lagi untuk membuka akun ini. Coba login dibrowser!";
+    static const char __pyx_k_Invalid_Signature_Pastikan_kamu[] = "Invalid Signature. Pastikan kamu menginstall paket dari sumber remsi (Tidak dimanipulasi) atau coba jalankan [bold green]python setup.py --force[/] untuk mengintall ulang paket!";
+    static const char __pyx_k_Jika_kamu_tidak_mempunyai_akses[] = "Jika kamu tidak mempunyai akses ke perangkat sebelumnya, minta bantuan kepada admin untuk me-reset perangkat sebelumnya.";
+    static const char __pyx_k_Jika_tidak_dialihkan_ke_browser[] = "Jika tidak dialihkan ke browser";
+    static const char __pyx_k_Lumine_checksum_locals_generate[] = "Lumine.checksum.<locals>.generate_sig.<locals>.get_signature";
+    static const char __pyx_k_Lumine_get_connected_app_locals[] = "Lumine.get_connected_app.<locals>.<lambda>";
+    static const char __pyx_k_Menggunakan_theme_Multiple_Tool[] = "* Menggunakan [theme]Multiple Tools For Facebook (MTF)[/] untuk BruteForce tanpa persetujuan bersama sebelumnya adalah Ilegal";
+    static const char __pyx_k_Pengembang_tidak_bertanggung_ja[] = "* Pengembang tidak bertanggung jawab atas penyalahgunakan atau keruskan yang disebabkan oleh program ini";
+    static const char __pyx_k_Pengguna_harus_bertanggung_jawa[] = "* Pengguna harus bertanggung jawab untuk mematuhi hukum lokal";
+    static const char __pyx_k_Qfws3LpBXYvQWaukXbuYXZk1SZpJ2dl[] = "==Qfws3LpBXYvQWaukXbuYXZk1SZpJ2dl5mLyVmdyV2ctYGdt9yL6MHc0RHa";
+    static const char __pyx_k_Selamat_menggunakan_Program_ini[] = "Selamat menggunakan Program ini :thumbs_up:";
+    static const char __pyx_k_bold_green_Menghapus_sesi_Login[] = "[bold green]Menghapus sesi Login";
+    static const char __pyx_k_bold_green_Sedang_membuat_lisen[] = "[bold green]Sedang membuat lisensi untuk anda. Tunggu sebentar";
+    static const char __pyx_k_bold_green_Sedang_mengecek_Lise[] = "[bold green]Sedang mengecek Lisensi";
+    static const char __pyx_k_bold_green_Sedang_mengecek_sesi[] = "[bold green]Sedang mengecek sesi Login Facebook";
+    static const char __pyx_k_bold_red_Laporkan_ke_admin_agar[] = "[bold red]Laporkan ke admin agar diperbaiki";
+    static const char __pyx_k_has_no_attribute_USER_has_no_at[] = "(has no attribute 'USER'|has no attribute 'APP')";
+    static const char __pyx_k_locked_Tidak_dapat_mengecek_ops[] = ":locked: Tidak dapat mengecek opsi Cekpoint. Akun menggunakan Autentikasi dua Faktor.";
+    static const char __pyx_k_logging_id_PERSONAL_INFO_GROUPI[] = "{\"logging_id\": \"PERSONAL_INFO_GROUPING\"}";
+    static const char __pyx_k_pensive_face_Gagal_membuat_lise[] = ":pensive_face: Gagal membuat lisensi. Coba lagi nanti";
+    static const char __pyx_k_pensive_face_Gagal_mengeluarkan[] = ":pensive_face: Gagal mengeluarkan Sesi Lisensi";
+    static const char __pyx_k_pensive_face_Kesalahan_tidak_da[] = ":pensive_face: Kesalahan tidak dapat memverifikasi Kredensial";
+    static const char __pyx_k_pensive_face_Kesalahkan_koneksi[] = ":pensive_face: Kesalahkan koneksi. Periksa koneksi internet anda";
+    static const char __pyx_k_pensive_face_Kredensial_tidak_v[] = ":pensive_face: Kredensial tidak valid. Silahkan login ulang";
+    static const char __pyx_k_pensive_face_Tidak_dapat_mem_va[] = ":pensive_face: Tidak dapat mem-validasi Token, Kesalahan tidak diketahui";
+    static const char __pyx_k_pensive_face_Tidak_dapat_mengec[] = ":pensive_face: Tidak dapat mengecek Cookie, Kesalahan tidak diketahui";
+    static const char __pyx_k_pensive_face_Token_Facebook_tid[] = ":pensive_face: Token Facebook tidak valid. Harap Login ulang";
+    static const char __pyx_k_pensive_face_Token_lisensi_tida[] = ":pensive_face: Token lisensi tidak valid";
+    static const char __pyx_k_settings_applications_details_a[] = "/settings/applications/details/?app_id=";
+    static const char __pyx_k_theme_Tekan_enter_untuk_menghap[] = "[ [theme]Tekan enter untuk menghapus sesi Login[/] ]";
+    static const char __pyx_k_zero_optin_write_action_confirm[] = "zero/optin/write/?action=confirm";
+    static const char __pyx_k_Cache_login_Facebook_digunakan_c[] = "Cache login Facebook digunakan, cache akan direset setiap [theme]";
+    static const char __pyx_k_Gunakan_lisensi_diatas_untuk_Mas[] = "Gunakan lisensi diatas untuk Masuk atau lisensi lainnya";
+    static const char __pyx_k_Ketik_Y_a_untuk_menggunakan_prog[] = "Ketik Y\\[a] untuk menggunakan program ini";
+    static const char __pyx_k_Login_ke_Facebook_untuk_dapat_me[] = "Login ke Facebook untuk dapat menggunakan Fitur yang lebih lengkap";
+    static const char __pyx_k_Lumine_change_language_locals_la[] = "Lumine.change_language.<locals>.<lambda>";
+    static const char __pyx_k_Lumine_check_license_session_loc[] = "Lumine.check_license_session.<locals>.guest";
+    static const char __pyx_k_Lumine_checkpoint_detectors_loca[] = "Lumine.checkpoint_detectors.<locals>.<lambda>";
+    static const char __pyx_k_Lumine_generate_license_if_nonex[] = "Lumine.generate_license_if_nonexists";
+    static const char __pyx_k_Lumine_get_info_account_locals_l[] = "Lumine.get_info_account.<locals>.<lambda>";
+    static const char __pyx_k_Lumine_is_logged_using_credentia[] = "Lumine.is_logged_using_credentials";
+    static const char __pyx_k_Lumine_load_configuration_app_lo[] = "Lumine.load_configuration_app.<locals>.loadapp";
+    static const char __pyx_k_Lumine_zero_optin_write_locals_l[] = "Lumine.zero_optin_write.<locals>.<lambda>";
+    static const char __pyx_k_MUserDataAccessHubListContainerQ[] = "MUserDataAccessHubListContainerQuery";
+    static const char __pyx_k_Pastikan_semua_file_telah_terupd[] = "Pastikan semua file telah terupdate sempurna, Tidak ada yang gagal atau error saat pembaruan jika tidak mungkin script tidak akan berjalan dengan semestinya";
+    static const char __pyx_k_SODIUM_INSTALL_system_python_m_p[] = "SODIUM_INSTALL=system python -m pip install %s";
+    static const char __pyx_k_Saya_tidak_dapat_login_karena_ba[] = "Saya tidak dapat login karena batas perangkat";
+    static const char __pyx_k_Sedang_maintance_Coba_kembali_na[] = "Sedang maintance Coba kembali nanti ya...";
+    static const char __pyx_k_Selama_Proses_pembaruan_tidak_me[] = "Selama Proses pembaruan tidak mengonsumsi paket data. Mohon jangan ditutup karena dapat membuat file corrupt, sehingga hasil tidak maksimal.";
+    static const char __pyx_k_Telah_mencapai_batas_maksimal_pe[] = "Telah mencapai batas maksimal perangkat. Silakan keluar dari perangkat sebelumnya untuk dapat masuk dengan lisensi tersebut.";
+    static const char __pyx_k_Update_versi_ditemukan_Tekan_Ent[] = "Update versi ditemukan Tekan Enter untuk memperbarui";
+    static const char __pyx_k_aHR0cHM6Ly97c3VifS5mYWNlYm9vay5j[] = "aHR0cHM6Ly97c3VifS5mYWNlYm9vay5jb20vbG9naW4vZGV2aWNlLWJhc2VkL3twYXRofQ==";
+    static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
+    static const char __pyx_k_https_api_whatsapp_com_send_phon[] = "https://api.whatsapp.com/send?phone=";
+    static const char __pyx_k_https_business_facebook_com_busi[] = "https://business.facebook.com/business_locations";
+    static const char __pyx_k_https_m_facebook_com_api_graphql[] = "https://m.facebook.com/api/graphql/";
+    static const char __pyx_k_https_m_facebook_com_profile_int[] = "https://m.facebook.com/profile/intro/edit/about/";
+    static const char __pyx_k_https_m_facebook_com_your_inform[] = "https://m.facebook.com/your_information/list?tile=PERSONAL_INFO_GROUPING";
+    static const char __pyx_k_https_mbasic_facebook_com_home_p[] = "https://mbasic.facebook.com/home.php";
+    static const char __pyx_k_https_mbasic_facebook_com_langua[] = "https://mbasic.facebook.com/language";
+    static const char __pyx_k_https_mbasic_facebook_com_profil[] = "https://mbasic.facebook.com/profile.php?v=info&lst=";
+    static const char __pyx_k_https_mbasic_facebook_com_settin[] = "https://mbasic.facebook.com/settings/apps";
+    static const char __pyx_k_is_logged_using_credentials_or_c[] = "is_logged_using_credentials_or_cookies";
+    static const char __pyx_k_Lumine_checksum_locals_generate_2[] = "Lumine.checksum.<locals>.generate_sig";
+    static const char __pyx_k_pensive_face_Kesalahan_tidak_da_2[] = ":pensive_face: Kesalahan tidak dapat terhubung ke Server.";
+    static const char __pyx_k_pensive_face_Kesalahkan_koneksi_2[] = ":pensive_face: Kesalahkan koneksi. Periksa koneksi internet anda, Atau biasanya jaringan yang anda pake tidak bisa Konek ke server MTF coba gunakan VPN sementara hanya untuk masuk ke MTF.";
+    static const char __pyx_k_pensive_face_Tidak_dapat_mengec_2[] = ":pensive_face: Tidak dapat mengecek opsi Cekpoint";
+    static const char __pyx_k_pensive_face_Tidak_dapat_mengec_3[] = ":pensive_face: Tidak dapat mengecek Opsi Cekpoin karena kata sandi akun salah";
+    static const char __pyx_k_Lumine_check_license_session_loc_2[] = "Lumine.check_license_session.<locals>.auth";
+    static const char __pyx_k_Lumine_is_logged_using_credentia_2[] = "Lumine.is_logged_using_credentials_or_cookies";
+    static const char __pyx_k_Lumine_load_configuration_app_lo_2[] = "Lumine.load_configuration_app.<locals>.ipinfo";
+    static const char __pyx_k_Lumine_load_configuration_app_lo_3[] = "Lumine.load_configuration_app.<locals>.exception_handler";
+    static const char __pyx_k_https_mbasic_facebook_com_profil_2[] = "https://mbasic.facebook.com/profile.php?v=friends";
+    static const char __pyx_k_https_mbasic_facebook_com_settin_2[] = "https://mbasic.facebook.com/settings/apps/tabbed";
  
 static PyObject *__pyx_pf_3run_module_is_instaled(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name);  
 static PyObject *__pyx_pf_3run_7Auth_FB_token(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_token);  
@@ -42913,11 +42925,11 @@ static CYTHON_INLINE PyObject * __Pyx_GetKwValue_FASTCALL(PyObject *kwnames, PyO
     {
         int eq = __Pyx_PyUnicode_Equals(s, PyTuple_GET_ITEM(kwnames, i), Py_EQ);
         if (unlikely(eq != 0)) {
-            if (unlikely(eq < 0)) return NULL;
+            if (unlikely(eq < 0)) return NULL;   
             return kwvalues[i];
         }
     }
-    return NULL;
+    return NULL;   
 }
 #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030d0000
 CYTHON_UNUSED static PyObject *__Pyx_KwargsAsDict_FASTCALL(PyObject *kwnames, PyObject *const *kwvalues) {
@@ -43004,7 +43016,7 @@ static int __Pyx_ParseOptionalKeywords(
         if (*name) {
             values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-            Py_INCREF(value);
+            Py_INCREF(value);  
             Py_DECREF(key);
 #endif
             key = NULL;
@@ -43023,7 +43035,7 @@ static int __Pyx_ParseOptionalKeywords(
                         && _PyString_Eq(**name, key)) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;   
 #endif
                     break;
                 }
@@ -43055,7 +43067,7 @@ static int __Pyx_ParseOptionalKeywords(
                 if (cmp == 0) {
                     values[name-argnames] = value;
 #if CYTHON_AVOID_BORROWED_REFS
-                    value = NULL;
+                    value = NULL;  
 #endif
                     break;
                 }
@@ -43990,10 +44002,9 @@ static int __Pyx__ArgTypeTest(PyObject *obj, PyTypeObject *type, const char *nam
 
  
 static CYTHON_INLINE int __Pyx_IterFinish(void) {
-    PyObject* exc_type;
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
-    exc_type = __Pyx_PyErr_CurrentExceptionType();
+    PyObject* exc_type = __Pyx_PyErr_CurrentExceptionType();
     if (unlikely(exc_type)) {
         if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration)))
             return -1;
@@ -45623,7 +45634,7 @@ static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS(PyObject *func, 
     default:
         return NULL;
     }
-    return ((__Pyx_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
+    return ((_PyCFunctionFastWithKeywords)(void(*)(void))def->ml_meth)(self, args, nargs, kwnames);
 }
 static PyObject * __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS_METHOD(PyObject *func, PyObject *const *args, size_t nargsf, PyObject *kwnames)
 {
@@ -46437,10 +46448,9 @@ static PyObject* __Pyx_PyInt_AddObjC(PyObject *op1, PyObject *op2, long intval, 
 
  
 static PyObject *__Pyx_SelflessCall(PyObject *method, PyObject *args, PyObject *kwargs) {
-    PyObject *result;
     PyObject *selfless_args = PyTuple_GetSlice(args, 1, PyTuple_Size(args));
     if (unlikely(!selfless_args)) return NULL;
-    result = PyObject_Call(method, selfless_args, kwargs);
+    PyObject *result = PyObject_Call(method, selfless_args, kwargs);
     Py_DECREF(selfless_args);
     return result;
 }
@@ -47653,7 +47663,7 @@ static PyCodeObject* __Pyx_CreateCodeObjectForTraceback(
     #else
     py_code = PyCode_NewEmpty(filename, funcname, py_line);
     #endif
-    Py_XDECREF(py_funcname);
+    Py_XDECREF(py_funcname);   
     return py_code;
 bad:
     Py_XDECREF(py_funcname);
