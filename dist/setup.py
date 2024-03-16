@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """
 ------------------------------------------------------
-    Dilarang mengubah atau mengedit file ini
+     Dilarang mengubah atau mengedit file ini
 ------------------------------------------------------
 """
 
