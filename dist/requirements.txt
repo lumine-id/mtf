@@ -1,9 +1,0 @@
-setuptools
-requests
-bs4
-cython
-GitPython
-rich
-pycryptodome
-ua-parser
-pynacl
